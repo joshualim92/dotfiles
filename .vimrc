@@ -13,6 +13,14 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'moll/vim-node'
 Plugin 'scrooloose/syntastic'
 Plugin 'jelera/vim-javascript-syntax'
+Plugin 'pangloss/vim-javascript'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'Raimondi/delimitMate'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'marijnh/tern_for_vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-git'
+Plugin 'rking/ag.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -71,6 +79,9 @@ map Q gq
 " Remap NerdTreeToggle
 map <C-n> :NERDTreeToggle<CR>
 
+" Close NERDTree after opening a file
+let NERDTreeQuitOnOpen = 1
+
 " CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,
 " so that you can undo CTRL-U after inserting a line break.
 inoremap <C-U> <C-G>u<C-U>
@@ -86,6 +97,12 @@ if &t_Co > 2 || has("gui_running")
   syntax on
   set hlsearch
 endif
+
+" Colours
+set t_Co=256
+syntax on
+set background=dark
+" colorscheme distinguished
 
 " Only do this part when compiled with support for autocommands.
 if has("autocmd")
@@ -128,3 +145,6 @@ if !exists(":DiffOrig")
   command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
 		  \ | wincmd p | diffthis
 endif
+
+" Enable Code Folding
+au FileType javascript call JavaScriptFold() "Javascript
