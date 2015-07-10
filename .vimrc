@@ -8,23 +8,26 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 Plugin 'godlygeek/tabular'
-Plugin 'scrooloose/nerdtree'
-Plugin 'kien/ctrlp.vim'
 Plugin 'moll/vim-node'
 Plugin 'scrooloose/syntastic'
 Plugin 'jelera/vim-javascript-syntax'
 Plugin 'pangloss/vim-javascript'
-Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'Raimondi/delimitMate'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'marijnh/tern_for_vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-git'
-Plugin 'rking/ag.vim'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'tpope/vim-vinegar'
+Plugin 'nathanaelkane/vim-indent-guides'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
+
+" Set indentation to 2 spaces
+set shiftwidth=2
+set tabstop=2
 
 " An example for a vimrc file.
 "
@@ -75,12 +78,6 @@ let g:syntastic_check_on_wq = 0
 
 " Don't use Ex mode, use Q for formatting
 map Q gq
-
-" Remap NerdTreeToggle
-map <C-n> :NERDTreeToggle<CR>
-
-" Close NERDTree after opening a file
-let NERDTreeQuitOnOpen = 1
 
 " CTRL-U in insert mode deletes a lot.  Use CTRL-G u to first break undo,
 " so that you can undo CTRL-U after inserting a line break.
@@ -148,3 +145,9 @@ endif
 
 " Enable Code Folding
 au FileType javascript call JavaScriptFold() "Javascript
+
+" Filetype Plugins enabled so that NERDCommenter works
+filetype plugin on
+
+" NetRW Tree Style
+let g:netrw_liststyle=3
