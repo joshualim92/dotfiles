@@ -29,7 +29,13 @@ Return a list of installed packages or nil for every skipped package."
     (package-refresh-contents))
 
 ;; Packages you want to ensure to install
-(ensure-package-installed 'zenburn-theme 'multi-term 'magit 'evil 'flycheck)
+(ensure-package-installed 'zenburn-theme 'multi-term
+			  'magit
+			  'evil
+			  'flycheck
+			  'apache-mode
+			  'syslog-mode
+			  'php-mode)
 
 ;; Show line numbers
 (global-linum-mode t)
@@ -37,6 +43,12 @@ Return a list of installed packages or nil for every skipped package."
 ;; Swap mac command and option keys for Meta
 (setq mac-option-modifier 'super)
 (setq mac-command-modifier 'meta)
+
+;; PHP Mode
+(add-to-list 'auto-mode-alist '("\\.module$" . php-mode))
+(add-to-list 'auto-mode-alist '("\\.inc$" . php-mode))
+(add-to-list 'auto-mode-alist '("\\.install$" . php-mode))
+(add-to-list 'auto-mode-alist '("\\.engine$" . php-mode))
 
 ;; Load zenburn theme
 (load-theme 'zenburn t)
