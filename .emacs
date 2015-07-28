@@ -1,4 +1,4 @@
-;Package manager
+;; Package manager
 (require 'package)
 
 (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/"))
@@ -31,10 +31,14 @@ Return a list of installed packages or nil for every skipped package."
 ;; Packages you want to ensure to install
 (ensure-package-installed 'zenburn-theme 'multi-term 'magit 'evil 'flycheck)
 
-;Show line numbers
+;; Show line numbers
 (global-linum-mode t)
 
-;Load zenburn theme
+;; Swap mac command and option keys for Meta
+(setq mac-option-modifier 'super)
+(setq mac-command-modifier 'meta)
+
+;; Load zenburn theme
 (load-theme 'zenburn t)
 
 (custom-set-variables
