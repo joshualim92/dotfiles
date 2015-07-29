@@ -2,7 +2,7 @@
 (require 'package)
 
 (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/"))
-(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
+;(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
 (add-to-list 'package-archives '("melpa-stable" . "http://stable.melpa.org/packages/"))
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 
@@ -35,7 +35,8 @@ Return a list of installed packages or nil for every skipped package."
 			  'flycheck
 			  'apache-mode
 			  'syslog-mode
-			  'php-mode)
+			  'php-mode
+			  'projectile)
 
 ;; Show line numbers
 (global-linum-mode t)
