@@ -2,8 +2,8 @@
 (require 'package)
 
 (add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/"))
-;(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
 (add-to-list 'package-archives '("melpa-stable" . "http://stable.melpa.org/packages/"))
+(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
 (add-to-list 'package-archives '("marmalade" . "http://marmalade-repo.org/packages/"))
 
 (setq package-enable-at-startup nil)
@@ -29,17 +29,30 @@ Return a list of installed packages or nil for every skipped package."
     (package-refresh-contents))
 
 ;; Packages you want to ensure to install
-(ensure-package-installed 'zenburn-theme 'multi-term
+(ensure-package-installed 'zenburn-theme
+			  'multi-term
 			  'magit
 			  'evil
 			  'flycheck
 			  'apache-mode
 			  'syslog-mode
 			  'php-mode
-			  'projectile)
+			  'projectile
+			  'neotree)
 
 ;; Show line numbers
 (global-linum-mode t)
+
+;; Neotree set to projectil
+(setq neo-theme 'ascii)
+(setq projectile-switch-project-action 'neotree-projectile-action)
+(global-set-key [f8] 'neotree-toggle)
+
+;; Start IDO
+(ido-mode t)
+
+;; Projectile
+(projectile-global-mode)
 
 ;; Swap mac command and option keys for Meta
 (setq mac-option-modifier 'super)
