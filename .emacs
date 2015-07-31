@@ -1,3 +1,6 @@
+;;; package --- summary
+;;; Commentary:
+;;; Code:
 ;; Package manager
 (require 'package)
 
@@ -103,3 +106,6 @@ Return a list of installed packages or nil for every skipped package."
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+(provide '.emacs)
+;;; .emacs ends here
