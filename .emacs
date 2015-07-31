@@ -38,10 +38,34 @@ Return a list of installed packages or nil for every skipped package."
 			  'syslog-mode
 			  'php-mode
 			  'projectile
-			  'neotree)
+			  'neotree
+			  'smartparens
+			  'aggressive-indent
+			  'whitespace-cleanup-mode
+			  'company
+			  'js2-mode)
 
 ;; Show line numbers
 (global-linum-mode t)
+
+;; js2-mode
+(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+
+;; flycheck-mode
+(add-hook 'after-init-hook #'global-flycheck-mode)
+
+;; Aggressive Indent Mode https://github.com/Malabarba/aggressive-indent-mode
+(global-aggressive-indent-mode 1)
+;;Example if I want to exclude certain modes (add-to-list 'aggressive-indent-excluded-modes 'html-mode)
+
+;;whitespace-cleanup-mode
+(global-whitespace-cleanup-mode)
+
+;; Smartparens
+(smartparens-global-mode t)
+
+;; company-mode
+(add-hook 'after-init-hook 'global-company-mode)
 
 ;; Neotree set to projectil
 (setq neo-theme 'ascii)
