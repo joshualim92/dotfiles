@@ -1,6 +1,7 @@
 ;;; package --- summary
 ;;; Commentary:
 ;;; Code:
+
 ;; Package manager
 (require 'package)
 
@@ -47,6 +48,15 @@ Return a list of installed packages or nil for every skipped package."
 			  'whitespace-cleanup-mode
 			  'company
 			  'js2-mode)
+
+;; Backward-kill-word to C-w
+(global-set-key "\C-w" 'backward-kill-word)
+(global-set-key "\C-x\C-k" 'kill-region)
+(global-set-key "\C-c\C-k" 'kill-region)
+
+;; Remove UI
+(if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
+(if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
 
 ;; Show line numbers
 (global-linum-mode t)
