@@ -38,7 +38,7 @@ Return a list of installed packages or nil for every skipped package."
 			  'company
 			  'evil
 			  'flycheck
-			  'ido-better-flex
+			  'flx-ido
 			  'js2-mode
 			  'magit
 			  'multi-term
@@ -93,7 +93,10 @@ Return a list of installed packages or nil for every skipped package."
 
 ;; Start IDO
 (ido-mode t)
-(ido-better-flex/enable)
+(ido-everywhere 1)
+(flx-ido-mode 1)
+;; disable ido faces to see flx highlights.
+(setq ido-use-faces nil)
 
 ;; Start smex
 (smex-initialize)
