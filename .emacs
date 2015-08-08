@@ -16,7 +16,7 @@
 (package-initialize)
 
 (defun ensure-package-installed (&rest packages)
-"Assure every package is installed, ask for installation if it’s not.
+  "Assure every package is installed, ask for installation if it’s not.
 
 Return a list of installed packages or nil for every skipped package."
   (mapcar
@@ -33,21 +33,23 @@ Return a list of installed packages or nil for every skipped package."
     (package-refresh-contents))
 
 ;; Packages you want to ensure to install
-(ensure-package-installed 'zenburn-theme
-			  'multi-term
-			  'magit
+(ensure-package-installed 'aggressive-indent
+			  'apache-mode
+			  'company
 			  'evil
 			  'flycheck
-			  'apache-mode
-			  'syslog-mode
+			  'ido-better-flex
+			  'js2-mode
+			  'magit
+			  'multi-term
+			  'neotree
 			  'php-mode
 			  'projectile
-			  'neotree
 			  'smartparens
-			  'aggressive-indent
+			  'smex
+			  'syslog-mode
 			  'whitespace-cleanup-mode
-			  'company
-			  'js2-mode)
+			  'zenburn-theme)
 
 ;; Evil-mode
 (evil-mode 1)
@@ -91,6 +93,14 @@ Return a list of installed packages or nil for every skipped package."
 
 ;; Start IDO
 (ido-mode t)
+(ido-better-flex/enable)
+
+;; Start smex
+(smex-initialize)
+(global-set-key (kbd "M-x") 'smex)
+(global-set-key (kbd "M-X") 'smex-major-mode-commands)
+;; This is your old M-x.
+(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 
 ;; Projectile
 (projectile-global-mode)
