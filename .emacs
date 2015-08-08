@@ -54,6 +54,7 @@ Return a list of installed packages or nil for every skipped package."
 ;; Evil-mode
 (evil-mode 1)
 (setq evil-default-state 'emacs) ; start evil-mode in emacs mode.  Only toggle on with C-z
+(add-to-list 'evil-emacs-state-modes 'undo-tree-mode)
 
 ;; Backward-kill-word to C-w
 (global-set-key "\C-w" 'backward-kill-word)
