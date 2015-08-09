@@ -49,8 +49,12 @@ Return a list of installed packages or nil for every skipped package."
 			  'smartparens
 			  'smex
 			  'syslog-mode
+			  'tdd
 			  'whitespace-cleanup-mode
 			  'zenburn-theme)
+
+;; Add to PATH for emacs env
+(setenv "PATH" (concat (getenv "PATH") ":/usr/local/bin"))
 
 ;; Backward-kill-word to C-w
 (global-set-key "\C-w" 'backward-kill-word)
@@ -71,7 +75,8 @@ Return a list of installed packages or nil for every skipped package."
 (add-to-list 'evil-emacs-state-modes 'undo-tree-mode)
 
 ;; ElScreen
-(setq elscreen-prefix-key "\C-zc\z")
+(setq elscreen-prefix-key "\C-c\z")
+(setq elscreen-display-tab 'nil)
 (elscreen-start)
 
 ;; js2-mode
