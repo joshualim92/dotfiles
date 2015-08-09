@@ -36,6 +36,7 @@ Return a list of installed packages or nil for every skipped package."
 (ensure-package-installed 'aggressive-indent
 			  'apache-mode
 			  'company
+			  'elscreen
 			  'evil
 			  'flycheck
 			  'flx-ido
