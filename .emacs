@@ -49,13 +49,7 @@ Return a list of installed packages or nil for every skipped package."
 			  'smex
 			  'syslog-mode
 			  'whitespace-cleanup-mode
-			  'workgroups2
 			  'zenburn-theme)
-
-;; Evil-mode
-(evil-mode 1)
-(setq evil-default-state 'emacs) ; start evil-mode in emacs mode.  Only toggle on with C-z
-(add-to-list 'evil-emacs-state-modes 'undo-tree-mode)
 
 ;; Backward-kill-word to C-w
 (global-set-key "\C-w" 'backward-kill-word)
@@ -69,6 +63,15 @@ Return a list of installed packages or nil for every skipped package."
 
 ;; Show line numbers
 (global-linum-mode t)
+
+;; Evil-mode
+(evil-mode 1)
+(setq evil-default-state 'emacs) ; start evil-mode in emacs mode.  Only toggle on with C-z
+(add-to-list 'evil-emacs-state-modes 'undo-tree-mode)
+
+;; ElScreen
+(setq elscreen-prefix-key "\C-zc\z")
+(elscreen-start)
 
 ;; js2-mode
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
@@ -142,9 +145,6 @@ Return a list of installed packages or nil for every skipped package."
   ;; If there is more than one, they won't work right.
   )
  )
-
-;; Workgroups2 Mode
-(workgroups-mode 1)
 
 (provide '.emacs)
 ;;; .emacs ends here
