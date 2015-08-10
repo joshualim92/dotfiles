@@ -16,14 +16,14 @@
 (package-initialize)
 
 (defun ensure-package-installed (&rest packages)
-  "Assure every package is installed, ask for installation if it’s not.
+  "Assure every PACKAGES is installed, ask for installation if it’s not.
 
 Return a list of installed packages or nil for every skipped package."
   (mapcar
    (lambda (package)
      (if (package-installed-p package)
 	 nil
-       (if (y-or-n-p (format "Package %s is missing. Install it? " package))
+       (if (y-or-n-p (format "Package %s is missing.  Install it? " package))
 	   (package-install package)
 	 package)))
    packages))
@@ -56,6 +56,10 @@ Return a list of installed packages or nil for every skipped package."
 ;; Add to PATH for emacs env
 (setenv "PATH" (concat (getenv "PATH") ":/usr/local/bin"))
 
+;; Swap mac command and option keys for Meta
+(setq mac-option-modifier 'super)
+(setq mac-command-modifier 'meta)
+
 ;; Backward-kill-word to C-w
 (global-set-key "\C-w" 'backward-kill-word)
 (global-set-key "\C-x\C-k" 'kill-region)
@@ -70,11 +74,13 @@ Return a list of installed packages or nil for every skipped package."
 (global-linum-mode t)
 
 ;; Evil-mode
+(require 'evil)
 (evil-mode 1)
 (setq evil-default-state 'emacs) ; start evil-mode in emacs mode.  Only toggle on with C-z
 (add-to-list 'evil-emacs-state-modes 'undo-tree-mode)
 
 ;; ElScreen
+(require 'elscreen)
 (setq elscreen-prefix-key "\C-c\z")
 (setq elscreen-display-tab 'nil)
 (elscreen-start)
@@ -97,12 +103,8 @@ Return a list of installed packages or nil for every skipped package."
 ;; company-mode
 (add-hook 'after-init-hook 'global-company-mode)
 
-;; Neotree set to projectil
-(setq neo-theme 'ascii)
-(setq projectile-switch-project-action 'neotree-projectile-action)
-(global-set-key [f8] 'neotree-toggle)
-
 ;; Start IDO
+(require 'ido)
 (ido-mode t)
 (ido-everywhere 1)
 (flx-ido-mode 1)
@@ -117,11 +119,14 @@ Return a list of installed packages or nil for every skipped package."
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 
 ;; Projectile
+(require 'projectile)
 (projectile-global-mode)
 
-;; Swap mac command and option keys for Meta
-(setq mac-option-modifier 'super)
-(setq mac-command-modifier 'meta)
+;; Neotree set to projectile
+(require 'neotree)
+(setq neo-theme 'ascii)
+(setq projectile-switch-project-action 'neotree-projectile-action)
+(global-set-key [f8] 'neotree-toggle)
 
 ;; PHP Mode
 (add-to-list 'auto-mode-alist '("\\.module$" . php-mode))
