@@ -35,6 +35,7 @@ Return a list of installed packages or nil for every skipped package."
 ;; Packages you want to ensure to install
 (ensure-package-installed 'aggressive-indent
 			  'apache-mode
+			  'back-button
 			  'company
 			  'elscreen
 			  'evil
@@ -127,6 +128,10 @@ Return a list of installed packages or nil for every skipped package."
 (setq neo-theme 'ascii)
 (setq projectile-switch-project-action 'neotree-projectile-action)
 (global-set-key [f8] 'neotree-toggle)
+
+;; Back Button
+(require 'back-button)
+(back-button-mode 1)
 
 ;; PHP Mode
 (add-to-list 'auto-mode-alist '("\\.module$" . php-mode))
