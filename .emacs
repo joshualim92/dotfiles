@@ -88,6 +88,11 @@ Return a list of installed packages or nil for every skipped package."
 
 ;; js2-mode
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+(setq js2-mode-hook
+      '(lambda () (progn
+                    (set-variable 'indent-tabs-mode nil))))
+
+(setq-default indent-tabs-mode nil)
 
 ;; flycheck-mode
 (add-hook 'after-init-hook #'global-flycheck-mode)
@@ -149,18 +154,15 @@ Return a list of installed packages or nil for every skipped package."
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
    (quote
-    ("04dd0236a367865e591927a3810f178e8d33c372ad5bfef48b5ce90d4b476481" "ab04c00a7e48ad784b52f34aa6bfa1e80d0c3fcacc50e1189af3651013eb0d58" "a0feb1322de9e26a4d209d1cfa236deaf64662bb604fa513cca6a057ddf0ef64" "95a6ac1b01dcaed4175946b581461e16e1b909d354ada79770c0821e491067c6" default)))
+	("04dd0236a367865e591927a3810f178e8d33c372ad5bfef48b5ce90d4b476481" "ab04c00a7e48ad784b52f34aa6bfa1e80d0c3fcacc50e1189af3651013eb0d58" "a0feb1322de9e26a4d209d1cfa236deaf64662bb604fa513cca6a057ddf0ef64" "95a6ac1b01dcaed4175946b581461e16e1b909d354ada79770c0821e491067c6" default)))
  '(flx-ido-mode t)
+ '(global-aggressive-indent-mode t)
  '(global-company-mode t)
- '(js2-basic-offset 2)
+ '(js2-basic-offset 4)
+ '(js2-bounce-indent-p t)
  '(smartparens-global-mode t)
- (custom-set-faces
-  ;; custom-set-faces was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
-  )
- )
+ '(tab-width 4)
+ '(tdd-mode t))
 
 (provide '.emacs)
 ;;; .emacs ends here
