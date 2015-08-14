@@ -88,10 +88,6 @@ Return a list of installed packages or nil for every skipped package."
 
 ;; js2-mode
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
-(setq js2-mode-hook
-      '(lambda () (progn
-                    (set-variable 'indent-tabs-mode nil))))
-
 (setq-default indent-tabs-mode nil)
 
 ;; flycheck-mode
@@ -143,6 +139,14 @@ Return a list of installed packages or nil for every skipped package."
 (add-to-list 'auto-mode-alist '("\\.inc$" . php-mode))
 (add-to-list 'auto-mode-alist '("\\.install$" . php-mode))
 (add-to-list 'auto-mode-alist '("\\.engine$" . php-mode))
+
+;; Function to show ansi colour in compilation buffer
+(require 'ansi-color)
+(defun colorize-compilation-buffer ()
+  (toggle-read-only)
+  (ansi-color-apply-on-region (point-min) (point-max))
+  (toggle-read-only))
+(add-hook 'compilation-filter-hook 'colorize-compilation-buffer)
 
 ;; Load zenburn theme
 (load-theme 'zenburn t)
