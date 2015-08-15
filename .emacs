@@ -22,10 +22,10 @@ Return a list of installed packages or nil for every skipped package."
   (mapcar
    (lambda (package)
      (if (package-installed-p package)
-	 nil
+         nil
        (if (y-or-n-p (format "Package %s is missing.  Install it? " package))
-	   (package-install package)
-	 package)))
+           (package-install package)
+         package)))
    packages))
 
 ;; Make sure to have downloaded archive description.
@@ -34,25 +34,25 @@ Return a list of installed packages or nil for every skipped package."
 
 ;; Packages you want to ensure to install
 (ensure-package-installed 'aggressive-indent
-			  'apache-mode
-			  'back-button
-			  'company
-			  'elscreen
-			  'evil
-			  'flycheck
-			  'flx-ido
-			  'js2-mode
-			  'magit
-			  'multi-term
-			  'neotree
-			  'php-mode
-			  'projectile
-			  'smartparens
-			  'smex
-			  'syslog-mode
-			  'tdd
-			  'whitespace-cleanup-mode
-			  'zenburn-theme)
+                          'apache-mode
+                          'back-button
+                          'company
+                          'elscreen
+                          'evil
+                          'flycheck
+                          'flx-ido
+                          'js2-mode
+                          'magit
+                          'multi-term
+                          'neotree
+                          'php-mode
+                          'projectile
+                          'smartparens
+                          'smex
+                          'syslog-mode
+                          'tdd
+                          'whitespace-cleanup-mode
+                          'zenburn-theme)
 
 ;; Add to PATH for emacs env
 (setenv "PATH" (concat (getenv "PATH") ":/usr/local/bin"))
@@ -75,10 +75,11 @@ Return a list of installed packages or nil for every skipped package."
 (global-linum-mode t)
 
 ;; Evil-mode
+(setq evil-want-C-u-scroll t)
 (require 'evil)
-(evil-mode 1)
-(setq evil-default-state 'emacs) ; start evil-mode in emacs mode.  Only toggle on with C-z
-(add-to-list 'evil-emacs-state-modes 'undo-tree-mode)
+(evil-mode)
+;;(setq evil-default-state 'emacs) ; start evil-mode in emacs mode.  Only toggle on with C-z
+;;add-to-list 'evil-emacs-state-modes 'undo-tree-mode)
 
 ;; ElScreen
 (require 'elscreen)
@@ -129,6 +130,13 @@ Return a list of installed packages or nil for every skipped package."
 (setq neo-theme 'ascii)
 (setq projectile-switch-project-action 'neotree-projectile-action)
 (global-set-key [f8] 'neotree-toggle)
+(add-hook 'neotree-mode-hook
+          (lambda ()
+            (define-key evil-normal-state-local-map (kbd "TAB") 'neotree-enter)
+            (define-key evil-normal-state-local-map (kbd "SPC") 'neotree-enter)
+            (define-key evil-normal-state-local-map (kbd "q") 'neotree-hide)
+            (define-key evil-normal-state-local-map (kbd "RET") 'neotree-enter)))
+
 
 ;; Back Button
 (require 'back-button)
@@ -158,7 +166,7 @@ Return a list of installed packages or nil for every skipped package."
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
    (quote
-	("04dd0236a367865e591927a3810f178e8d33c372ad5bfef48b5ce90d4b476481" "ab04c00a7e48ad784b52f34aa6bfa1e80d0c3fcacc50e1189af3651013eb0d58" "a0feb1322de9e26a4d209d1cfa236deaf64662bb604fa513cca6a057ddf0ef64" "95a6ac1b01dcaed4175946b581461e16e1b909d354ada79770c0821e491067c6" default)))
+    ("04dd0236a367865e591927a3810f178e8d33c372ad5bfef48b5ce90d4b476481" "ab04c00a7e48ad784b52f34aa6bfa1e80d0c3fcacc50e1189af3651013eb0d58" "a0feb1322de9e26a4d209d1cfa236deaf64662bb604fa513cca6a057ddf0ef64" "95a6ac1b01dcaed4175946b581461e16e1b909d354ada79770c0821e491067c6" default)))
  '(flx-ido-mode t)
  '(global-aggressive-indent-mode t)
  '(global-company-mode t)
@@ -166,7 +174,6 @@ Return a list of installed packages or nil for every skipped package."
  '(js2-bounce-indent-p t)
  '(smartparens-global-mode t)
  '(tab-width 4)
- '(tdd-mode t))
 
-(provide '.emacs)
+ (provide '.emacs)
 ;;; .emacs ends here
