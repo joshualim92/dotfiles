@@ -62,8 +62,8 @@ Return a list of installed packages or nil for every skipped package."
 (setq mac-command-modifier 'meta)
 
 ;; Backward-kill-word to C-w
-;;(global-set-key "\C-w" 'backward-kill-word)
-;;(global-set-key "\C-x\C-k" 'kill-region)
+(global-set-key "\C-w" 'backward-kill-word)
+(global-set-key "\C-x\C-k" 'kill-region)
 
 ;; Remove UI
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
