@@ -62,9 +62,8 @@ Return a list of installed packages or nil for every skipped package."
 (setq mac-command-modifier 'meta)
 
 ;; Backward-kill-word to C-w
-(global-set-key "\C-w" 'backward-kill-word)
-(global-set-key "\C-x\C-k" 'kill-region)
-(global-set-key "\C-c\C-k" 'kill-region)
+;;(global-set-key "\C-w" 'backward-kill-word)
+;;(global-set-key "\C-x\C-k" 'kill-region)
 
 ;; Remove UI
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
@@ -78,8 +77,8 @@ Return a list of installed packages or nil for every skipped package."
 (setq evil-want-C-u-scroll t)
 (require 'evil)
 (evil-mode)
-;;(setq evil-default-state 'emacs) ; start evil-mode in emacs mode.  Only toggle on with C-z
-;;add-to-list 'evil-emacs-state-modes 'undo-tree-mode)
+(setq evil-default-state 'emacs) ; start evil-mode in emacs mode.  Only toggle on with C-z
+(add-to-list 'evil-emacs-state-modes 'undo-tree-mode)
 
 ;; ElScreen
 (require 'elscreen)
@@ -98,6 +97,7 @@ Return a list of installed packages or nil for every skipped package."
 ;;Example if I want to exclude certain modes (add-to-list 'aggressive-indent-excluded-modes 'html-mode)
 
 ;;whitespace-cleanup-mode
+
 (global-whitespace-cleanup-mode)
 
 ;; Smartparens
@@ -174,6 +174,7 @@ Return a list of installed packages or nil for every skipped package."
  '(js2-bounce-indent-p t)
  '(smartparens-global-mode t)
  '(tab-width 4)
+ )
 
- (provide '.emacs)
+(provide '.emacs)
 ;;; .emacs ends here
