@@ -73,9 +73,18 @@ Return a list of installed packages or nil for every skipped package."
 ;; Show line numbers
 (global-linum-mode t)
 
+;; Ask "y" or "n" instead of "yes" or "no". Yes, laziness is great.
+(fset 'yes-or-no-p 'y-or-n-p)
+
+;; Highlight corresponding parentheses when cursor is on one
+(show-paren-mode t)
+
+;; Save backup files in a dedicated directory
+(setq backup-directory-alist '(("." . "~/.emacs_saves")))
+
 ;; Evil-mode
-(setq evil-want-C-u-scroll t)
 (require 'evil)
+(setq evil-want-C-u-scroll t)
 (evil-mode)
 (setq evil-default-state 'emacs) ; start evil-mode in emacs mode.  Only toggle on with C-z
 (add-to-list 'evil-emacs-state-modes 'undo-tree-mode)
