@@ -41,6 +41,7 @@ Return a list of installed packages or nil for every skipped package."
                           'evil
                           'flycheck
                           'flx-ido
+                          'impatient-mode
                           'js2-mode
                           'magit
                           'multi-term
@@ -51,6 +52,7 @@ Return a list of installed packages or nil for every skipped package."
                           'smex
                           'syslog-mode
                           'tdd
+                          'web-mode
                           'whitespace-cleanup-mode
                           'zenburn-theme)
 
@@ -84,7 +86,6 @@ Return a list of installed packages or nil for every skipped package."
 
 ;; Evil-mode
 (require 'evil)
-(setq evil-want-C-u-scroll t)
 (evil-mode)
 (setq evil-default-state 'emacs) ; start evil-mode in emacs mode.  Only toggle on with C-z
 (add-to-list 'evil-emacs-state-modes 'undo-tree-mode)
@@ -151,6 +152,10 @@ Return a list of installed packages or nil for every skipped package."
 (require 'back-button)
 (back-button-mode 1)
 
+;; Web Mode
+(require 'web-mode)
+(web-mode)
+
 ;; PHP Mode
 (add-to-list 'auto-mode-alist '("\\.module$" . php-mode))
 (add-to-list 'auto-mode-alist '("\\.inc$" . php-mode))
@@ -179,11 +184,17 @@ Return a list of installed packages or nil for every skipped package."
  '(flx-ido-mode t)
  '(global-aggressive-indent-mode t)
  '(global-company-mode t)
- '(js2-basic-offset 4)
+ '(js2-basic-offset 2)
  '(js2-bounce-indent-p t)
  '(smartparens-global-mode t)
  '(tab-width 4)
- )
+ '(tdd-mode t))
 
 (provide '.emacs)
 ;;; .emacs ends here
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
