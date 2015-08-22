@@ -38,11 +38,13 @@ Return a list of installed packages or nil for every skipped package."
                           'back-button
                           'company
                           'elscreen
+                          'emr
                           'evil
                           'flycheck
                           'flx-ido
                           'impatient-mode
                           'js2-mode
+                          'js2-refactor
                           'magit
                           'multi-term
                           'neotree
@@ -96,9 +98,9 @@ Return a list of installed packages or nil for every skipped package."
 (setq elscreen-display-tab 'nil)
 (elscreen-start)
 
-;; js2-mode
-(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
-(setq-default indent-tabs-mode nil)
+;; Emacs Refactor
+(define-key prog-mode-map (kbd "M-RET") 'emr-show-refactor-menu)
+(add-hook 'prog-mode-hook 'emr-initialize)
 
 ;; flycheck-mode
 (add-hook 'after-init-hook #'global-flycheck-mode)
@@ -107,7 +109,6 @@ Return a list of installed packages or nil for every skipped package."
 ;;Example if I want to exclude certain modes (add-to-list 'aggressive-indent-excluded-modes 'html-mode)
 
 ;;whitespace-cleanup-mode
-
 (global-whitespace-cleanup-mode)
 
 ;; Smartparens
@@ -151,6 +152,14 @@ Return a list of installed packages or nil for every skipped package."
 ;; Back Button
 (require 'back-button)
 (back-button-mode 1)
+
+;; js2-mode
+(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+(setq-default indent-tabs-mode nil)
+
+;; js2-refactor
+(require 'js2-refactor)
+(add-hook 'js2-mode-hook #'js2-refactor-mode)
 
 ;; Web Mode
 (require 'web-mode)
