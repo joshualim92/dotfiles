@@ -42,7 +42,6 @@ Return a list of installed packages or nil for every skipped package."
                           'evil
                           'flycheck
                           'flx-ido
-                          'hideshowvis
                           'impatient-mode
                           'js2-mode
                           'js2-refactor
@@ -119,7 +118,7 @@ Return a list of installed packages or nil for every skipped package."
 (smartparens-global-mode t)
 
 ;; Hide Show Minor Mode
-(hs-minor-mode)
+(add-hook 'prog-mode-hook #'hs-minor-mode)
 
 ;; company-mode
 (add-hook 'after-init-hook 'global-company-mode)
