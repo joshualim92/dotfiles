@@ -198,10 +198,9 @@ Return a list of installed packages or nil for every skipped package."
  '(js2-basic-offset 2)
  '(js2-bounce-indent-p t)
  '(smartparens-global-mode t)
- '(tab-width 4)
- '(tdd-mode t))
+ '(tab-width 4))
 
-(provide '.emacs)
+ (provide '.emacs)
 ;;; .emacs ends here
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
