@@ -87,6 +87,9 @@ Return a list of installed packages or nil for every skipped package."
 ;; Save backup files in a dedicated directory
 (setq backup-directory-alist '(("." . "~/.emacs_saves")))
 
+;; Use zsh
+(setq multi-term-program "/bin/zsh")
+
 ;; Evil-mode
 (require 'evil)
 (evil-mode)
@@ -164,10 +167,6 @@ Return a list of installed packages or nil for every skipped package."
 ;; js2-refactor
 (require 'js2-refactor)
 (add-hook 'js2-mode-hook #'js2-refactor-mode)
-
-;; Web Mode
-(require 'web-mode)
-(web-mode)
 
 ;; PHP Mode
 (add-to-list 'auto-mode-alist '("\\.module$" . php-mode))
