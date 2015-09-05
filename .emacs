@@ -91,9 +91,9 @@ Return a list of installed packages or nil for every skipped package."
 
 ;; Evil-mode
 (require 'evil)
-(evil-mode)
-(setq evil-default-state 'emacs) ; start evil-mode in emacs mode.  Only toggle on with C-z
-(add-to-list 'evil-emacs-state-modes 'undo-tree-mode)
+(evil-mode t)
+;;(setq evil-default-state 'emacs) ; start evil-mode in emacs mode.  Only toggle on with C-z
+;;(add-to-list 'evil-emacs-state-modes 'undo-tree-mode)
 
 ;; ElScreen
 (require 'elscreen)
