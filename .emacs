@@ -62,6 +62,8 @@ Return a list of installed packages or nil for every skipped package."
 (setenv "PATH" (concat (getenv "PATH") ":/usr/local/bin"))
 
 ;; Swap mac command and option keys for Meta
+(defvar mac-option-modifier)
+(defvar mac-command-modifier)
 (setq mac-option-modifier 'super)
 (setq mac-command-modifier 'meta)
 
@@ -87,6 +89,7 @@ Return a list of installed packages or nil for every skipped package."
 (setq backup-directory-alist '(("." . "~/.emacs_saves")))
 
 ;; Use zsh
+(defvar multi-term-program)
 (setq multi-term-program "/bin/zsh")
 
 ;; Evil-mode
