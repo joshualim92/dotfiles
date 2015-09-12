@@ -91,16 +91,20 @@ Return a list of installed packages or nil for every skipped package."
 (defvar multi-term-program)
 (setq multi-term-program "/bin/zsh")
 
+;; Swap kill buffer command so window closes when killing buffer
+(substitute-key-definition 'kill-buffer
+                           'kill-buffer-and-window
+                           global-map)
+
 ;; Evil-mode
 (require 'evil)
 (evil-mode t)
-(setq evil-default-state 'emacs) ; start evil-mode in emacs mode.  Only toggle on with C-z
-(add-to-list 'evil-emacs-state-modes 'undo-tree-mode)
+;;(setq evil-default-state 'emacs) ; start evil-mode in emacs mode.  Only toggle on with C-z
+;;(add-to-list 'evil-emacs-state-modes 'undo-tree-mode)
 
 ;; Undo Tree Mode
-(define-key undo-tree-map (kbd "C-_") nil)
-(global-set-key (kbd "C--") 'undo-tree-undo)
-(global-set-key (kbd "C-_") 'undo-tree-redo)
+(global-set-key (kbd "C-;") 'undo-tree-undo)
+(global-set-key (kbd "C-:") 'undo-tree-redo)
 
 ;; ElScreen
 (require 'elscreen)
