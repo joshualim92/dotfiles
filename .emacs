@@ -97,6 +97,11 @@ Return a list of installed packages or nil for every skipped package."
 (setq evil-default-state 'emacs) ; start evil-mode in emacs mode.  Only toggle on with C-z
 (add-to-list 'evil-emacs-state-modes 'undo-tree-mode)
 
+;; Undo Tree Mode
+(define-key undo-tree-map (kbd "C-_") nil)
+(global-set-key (kbd "C--") 'undo-tree-undo)
+(global-set-key (kbd "C-_") 'undo-tree-redo)
+
 ;; ElScreen
 (require 'elscreen)
 (setq elscreen-prefix-key "\C-c\z")
