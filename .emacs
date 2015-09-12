@@ -62,8 +62,9 @@ Return a list of installed packages or nil for every skipped package."
 (setenv "PATH" (concat (getenv "PATH") ":/usr/local/bin"))
 
 ;; Swap mac command and option keys for Meta
+(setq mac-control-modifier 'meta)
 (setq mac-option-modifier 'super)
-(setq mac-command-modifier 'meta)
+(setq mac-command-modifier 'control)
 
 ;; Backward-kill-word to C-w
 (global-set-key "\C-w" 'backward-kill-word)
