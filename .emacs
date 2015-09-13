@@ -49,6 +49,8 @@ Return a list of installed packages or nil for every skipped package."
                           'multi-term
                           'neotree
                           'php-mode
+                          'powerline
+                          'powerline-evil
                           'projectile
                           'smartparens
                           'smex
@@ -105,6 +107,10 @@ Return a list of installed packages or nil for every skipped package."
 ;; Undo Tree Mode
 (global-set-key (kbd "C-;") 'undo-tree-undo)
 (global-set-key (kbd "C-:") 'undo-tree-redo)
+
+;; Powerline
+(require 'powerline)
+(powerline-evil-vim-color-theme)
 
 ;; ElScreen
 (require 'elscreen)
