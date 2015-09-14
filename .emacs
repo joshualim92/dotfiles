@@ -101,8 +101,8 @@ Return a list of installed packages or nil for every skipped package."
 ;; Evil-mode
 (require 'evil)
 (evil-mode t)
-(setq evil-default-state 'emacs) ; start evil-mode in emacs mode.  Only toggle on with C-z
-(add-to-list 'evil-emacs-state-modes 'undo-tree-mode)
+;;(setq evil-default-state 'emacs) ; start evil-mode in emacs mode.  Only toggle on with C-z
+;;(add-to-list 'evil-emacs-state-modes 'undo-tree-mode)
 
 ;; Undo Tree Mode
 (global-set-key (kbd "C-;") 'undo-tree-undo)
@@ -110,7 +110,8 @@ Return a list of installed packages or nil for every skipped package."
 
 ;; Powerline
 (require 'powerline)
-(powerline-default-theme)
+;;(powerline-default-theme)
+(powerline-evil-vim-color-theme)
 
 ;; ElScreen
 (require 'elscreen)
