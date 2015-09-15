@@ -104,10 +104,6 @@ Return a list of installed packages or nil for every skipped package."
 (setq evil-default-state 'emacs) ; start evil-mode in emacs mode.  Only toggle on with C-z
 (add-to-list 'evil-emacs-state-modes 'undo-tree-mode)
 
-;; Undo Tree Mode
-(global-set-key (kbd "C-;") 'undo-tree-undo)
-(global-set-key (kbd "C-:") 'undo-tree-redo)
-
 ;; Powerline
 (require 'powerline)
 (powerline-default-theme)
