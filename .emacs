@@ -33,7 +33,8 @@ Return a list of installed packages or nil for every skipped package."
     (package-refresh-contents))
 
 ;; Packages you want to ensure to install
-(ensure-package-installed 'aggressive-indent
+(ensure-package-installed 'ag
+                          'aggressive-indent
                           'apache-mode
                           'back-button
                           'company
@@ -42,6 +43,7 @@ Return a list of installed packages or nil for every skipped package."
                           'evil
                           'flycheck
                           'flx-ido
+                          'ido-vertical-mode
                           'impatient-mode
                           'js2-mode
                           'js2-refactor
@@ -138,12 +140,20 @@ Return a list of installed packages or nil for every skipped package."
 (add-hook 'after-init-hook 'global-company-mode)
 
 ;; Start IDO
-(require 'ido)
-(ido-mode t)
+(require 'ido-vertical-mode)
+(setq ido-use-faces t)
+(set-face-attribute 'ido-vertical-first-match-face nil
+                    :background nil
+                    :foreground "orange")
+(set-face-attribute 'ido-vertical-only-match-face nil
+                    :background nil
+                    :foreground nil)
+(set-face-attribute 'ido-vertical-match-face nil
+                    :foreground nil)
+(ido-vertical-mode 1)
 (ido-everywhere 1)
 (flx-ido-mode 1)
-;; disable ido faces to see flx highlights.
-(setq ido-use-faces nil)
+(setq ido-vertical-define-keys 'C-n-and-C-p-only)
 
 ;; Start smex
 (smex-initialize)
