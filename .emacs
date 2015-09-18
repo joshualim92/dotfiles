@@ -94,6 +94,12 @@ Return a list of installed packages or nil for every skipped package."
 ;; Use zsh
 (defvar multi-term-program)
 (setq multi-term-program "/bin/zsh")
+;; Add esc key as C-c C-e
+(defun term-send-esc ()
+  "Send ESC in term mode."
+  (interactive)
+  (term-send-raw-string "\e"))
+(add-to-list 'term-bind-key-alist '("C-c C-e" . term-send-escape))
 
 ;; Swap kill buffer command so window closes when killing buffer
 (substitute-key-definition 'kill-buffer
