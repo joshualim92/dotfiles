@@ -70,6 +70,9 @@ Return a list of installed packages or nil for every skipped package."
 (setq mac-option-modifier 'super)
 (setq mac-command-modifier 'control)
 
+;; Allow copy and paste to clipboard
+(setq x-select-enable-clipboard t)
+
 ;; Backward-kill-word to C-w
 (global-set-key "\C-w" 'backward-kill-word)
 (global-set-key "\C-x\C-k" 'kill-region)
@@ -93,6 +96,7 @@ Return a list of installed packages or nil for every skipped package."
 
 ;; Use zsh
 (defvar multi-term-program)
+(require 'multi-term)
 (setq multi-term-program "/bin/zsh")
 ;; Add esc key as C-c C-e
 (defun term-send-esc ()
@@ -156,6 +160,7 @@ Return a list of installed packages or nil for every skipped package."
                     :foreground nil)
 (set-face-attribute 'ido-vertical-match-face nil
                     :foreground nil)
+(ido-mode 1)
 (ido-vertical-mode 1)
 (ido-everywhere 1)
 (flx-ido-mode 1)
