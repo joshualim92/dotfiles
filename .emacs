@@ -43,6 +43,7 @@ Return a list of installed packages or nil for every skipped package."
                           'evil
                           'flycheck
                           'flx-ido
+                          'groovy-mode
                           'ido-vertical-mode
                           'impatient-mode
                           'js2-mode
@@ -180,6 +181,7 @@ Return a list of installed packages or nil for every skipped package."
 ;; Projectile
 (require 'projectile)
 (projectile-global-mode)
+(setq projectile-enable-caching t)
 
 ;; Neotree set to projectile
 (require 'neotree)
@@ -241,3 +243,9 @@ Return a list of installed packages or nil for every skipped package."
 
 (provide '.emacs)
 ;;; .emacs ends here
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
