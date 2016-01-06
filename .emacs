@@ -236,10 +236,12 @@ Return a list of installed packages or nil for every skipped package."
  '(flx-ido-mode t)
  '(global-aggressive-indent-mode t)
  '(global-company-mode t)
+ '(js-indent-level 2)
  '(js2-basic-offset 2)
  '(js2-bounce-indent-p t)
  '(smartparens-global-mode t)
- '(tab-width 4))
+ '(tab-width 4)
+ '(tdd-mode t))
 
 (provide '.emacs)
 ;;; .emacs ends here
