@@ -84,8 +84,8 @@ Return a list of installed packages or nil for every skipped package."
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
 
 ;; Set Transparency
-(set-frame-parameter (selected-frame) 'alpha '(85 50))
-(add-to-list 'default-frame-alist '(alpha 85 50))
+(set-frame-parameter (selected-frame) 'alpha '(85 60))
+(add-to-list 'default-frame-alist '(alpha 85 60))
 ;; Transparency toggle
 (eval-when-compile (require 'cl))
 (defun toggle-transparency ()
@@ -95,7 +95,7 @@ Return a list of installed packages or nil for every skipped package."
        100)
       (set-frame-parameter nil 'alpha '(100 100))
     (set-frame-parameter nil 'alpha '(85 50))))
-(global-set-key (kbd "C-c t") 'toggle-transparency)
+(global-set-key (kbd "C-c C-t") 'toggle-transparency)
 
 ;; Show line numbers
 (global-linum-mode t)
