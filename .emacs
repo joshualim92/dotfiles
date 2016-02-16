@@ -93,7 +93,7 @@ Return a list of installed packages or nil for every skipped package."
   (if (/=
        (cadr (frame-parameter nil 'alpha))
        100)
-      (set-frame-paramePter nil 'alpha '(100 100))
+      (set-frame-parameter nil 'alpha '(100 100))
     (set-frame-parameter nil 'alpha '(90 75))))
 (global-set-key (kbd "C-c t") 'toggle-transparency)
 
