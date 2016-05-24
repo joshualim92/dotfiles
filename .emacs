@@ -73,6 +73,9 @@ Return a list of installed packages or nil for every skipped package."
 (setq mac-option-modifier 'super)
 (setq mac-command-modifier 'control)
 
+;; Bypass OS X keybindings
+(setq mac-pass-command-to-system nil)
+
 ;; Allow copy and paste to clipboard
 (setq x-select-enable-clipboard t)
 
