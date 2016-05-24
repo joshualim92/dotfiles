@@ -206,7 +206,7 @@ Return a list of installed packages or nil for every skipped package."
 (require 'neotree)
 (setq neo-theme 'ascii)
 (setq projectile-switch-project-action 'neotree-projectile-action)
-(global-set-key [f8] 'neotree-toggle)
+(global-set-key (kbd "C-c n") 'neotree-toggle)
 (add-hook 'neotree-mode-hook
           (lambda ()
             (define-key evil-normal-state-local-map (kbd "TAB") 'neotree-enter)
