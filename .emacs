@@ -50,6 +50,7 @@ Return a list of installed packages or nil for every skipped package."
                           'js2-refactor
                           'magit
                           'multi-term
+                          'multiple-cursors
                           'neotree
                           'php-mode
                           'powerline
@@ -232,6 +233,12 @@ Return a list of installed packages or nil for every skipped package."
 (add-to-list 'auto-mode-alist '("\\.inc$" . php-mode))
 (add-to-list 'auto-mode-alist '("\\.install$" . php-mode))
 (add-to-list 'auto-mode-alist '("\\.engine$" . php-mode))
+
+;; multiple-cursors
+(require 'multiple-cursors)
+(global-set-key (kbd "C->") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
+(global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
 
 ;; Function to show ansi colour in compilation buffer
 (require 'ansi-color)
