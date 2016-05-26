@@ -123,6 +123,9 @@ Return a list of installed packages or nil for every skipped package."
 ;; Don't swtich terminals after closing one
 (setq multi-term-switch-after-close nil)
 
+;; Add keybinding for term-line-mode
+(add-to-list 'term-bind-key-alist '("C-c C-j" . term-line-mode))
+
 ;; Add esc key as C-c C-e
 (require 'multi-term)
 (defun term-send-esc ()
