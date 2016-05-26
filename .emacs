@@ -120,6 +120,9 @@ Return a list of installed packages or nil for every skipped package."
 (require 'multi-term)
 (setq multi-term-program "/bin/zsh")
 
+;; Don't swtich terminals after closing one
+(setq multi-term-switch-after-close nil)
+
 ;; Add esc key as C-c C-e
 (require 'multi-term)
 (defun term-send-esc ()
