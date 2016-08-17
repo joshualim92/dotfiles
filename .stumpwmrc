@@ -1,0 +1,17 @@
+;; -*-lisp-*-
+(in-package :stumpwm)
+
+;; HH:MM Timezone (UTC offset), Day Mon Year
+(setf *screen-mode-line-format*
+      (list '(:eval (run-shell-command "date '+%R %b %d' |tr -d [:cntrl:]" t)) " | %c | %l | [^B%n^b] %W"))
+
+;; Click to focus
+(setf *mouse-focus-policy* :click)
+
+;; Shortcut to lock the screen
+(defcommand lock-screen () ()
+  "lock the screen"
+  (run-or-raise "xscreensaver-command -lock" '(:instance "xscreensaver")))
+
+(define-key *root-map* (kbd "L") "lock-screen")
+;;; init.lisp ends here
