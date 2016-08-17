@@ -103,6 +103,10 @@ Return a list of installed packages or nil for every skipped package."
     (set-frame-parameter nil 'alpha '(90 75))))
 (global-set-key (kbd "C-c t") 'toggle-transparency)
 
+;; Winner Mode
+(when (fboundp 'winner-mode)
+  (winner-mode 1))
+
 ;; Show line numbers
 (global-linum-mode t)
 
