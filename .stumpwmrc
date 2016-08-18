@@ -14,4 +14,12 @@
   (run-or-raise "xscreensaver-command -lock" '(:instance "xscreensaver")))
 
 (define-key *root-map* (kbd "L") "lock-screen")
+
+;; Shortcut to start up Conkeror
+(defcommand conkeror () ()
+  "Open up Conkeror"
+  (run-or-raise "firefox -app ~/conkeror/application.ini" '(:instance "Conkeror")))
+
+(define-key *root-map* (kbd "C") "conkeror")
+
 ;;; init.lisp ends here
