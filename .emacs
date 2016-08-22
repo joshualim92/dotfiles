@@ -147,6 +147,14 @@ Return a list of installed packages or nil for every skipped package."
   (term-send-raw-string "\e"))
 (add-to-list 'term-bind-key-alist '("C-c C-e" . term-send-esc))
 
+(add-hook 'term-mode-hook 'my-inhibit-global-linum-mode)
+
+(defun my-inhibit-global-linum-mode ()
+  "Counter-act 'global-linum-mode'."
+  (add-hook 'after-change-major-mode-hook
+            (lambda () (linum-mode 0))
+            :append :local))
+
 ;; Swap kill buffer command so window closes when killing buffer
 (substitute-key-definition 'kill-buffer
                            'kill-buffer-and-window
