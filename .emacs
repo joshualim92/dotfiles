@@ -62,6 +62,7 @@ Return a list of installed packages or nil for every skipped package."
                           'smex
                           'syslog-mode
                           'tdd
+                          'w3m
                           'web-mode
                           'whitespace-cleanup-mode
                           'zenburn-theme)
@@ -231,6 +232,14 @@ Return a list of installed packages or nil for every skipped package."
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
 ;; This is your old M-x.
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
+
+;; w3m
+(add-to-list 'load-path "~/emacs-w3m/")
+(require 'w3m-load)
+
+;; Set conkeror as browse-url default browser
+(setq browse-url-generic-program (executable-find "conkeror"))
+(setq browse-url-browser-function 'browse-url-generic)
 
 ;; Projectile
 (require 'projectile)
