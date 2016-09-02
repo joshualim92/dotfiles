@@ -173,6 +173,13 @@ Return a list of installed packages or nil for every skipped package."
 (powerline-default-theme)
 ;;(powerline-evil-vim-color-theme)
 
+;; Org Mode
+(require 'org)
+(define-key global-map "\C-cl" 'org-store-link)
+(define-key global-map "\C-ca" 'org-agenda)
+(setq org-log-done t)
+(setq org-agenda-files (list "~/org/work.org"))
+
 ;; ElScreen
 (require 'elscreen)
 (setq elscreen-prefix-key "\C-c\z")
