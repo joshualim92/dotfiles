@@ -258,10 +258,12 @@ Return a list of installed packages or nil for every skipped package."
             (define-key evil-normal-state-local-map (kbd "q") 'neotree-hide)
             (define-key evil-normal-state-local-map (kbd "RET") 'neotree-enter)))
 
-
 ;; Back Button
 (require 'back-button)
 (back-button-mode 1)
+
+;; groovy-mode
+(add-to-list 'auto-mode-alist '("\\.gsp\\'" . groovy-mode))
 
 ;; js2-mode
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
