@@ -232,10 +232,6 @@ Return a list of installed packages or nil for every skipped package."
 ;; This is your old M-x.
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 
-;; w3m
-(add-to-list 'load-path "~/emacs-w3m/")
-(require 'w3m-load)
-
 ;; Projectile
 (require 'projectile)
 (projectile-mode)
