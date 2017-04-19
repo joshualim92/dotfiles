@@ -238,7 +238,7 @@ Return a list of installed packages or nil for every skipped package."
 
 ;; Projectile
 (require 'projectile)
-(projectile-global-mode)
+(projectile-mode)
 (setq projectile-enable-caching t)
 
 ;; Neotree set to projectile
