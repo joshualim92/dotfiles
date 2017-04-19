@@ -57,7 +57,6 @@ Return a list of installed packages or nil for every skipped package."
                           'powerline-evil
                           'projectile
                           'sbt-mode
-                          'scala-mode2
                           'smartparens
                           'smex
                           'syslog-mode
