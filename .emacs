@@ -236,10 +236,6 @@ Return a list of installed packages or nil for every skipped package."
 (add-to-list 'load-path "~/emacs-w3m/")
 (require 'w3m-load)
 
-;; Set conkeror as browse-url default browser
-(setq browse-url-generic-program (executable-find "conkeror"))
-(setq browse-url-browser-function 'browse-url-generic)
-
 ;; Projectile
 (require 'projectile)
 (projectile-global-mode)
