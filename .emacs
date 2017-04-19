@@ -256,6 +256,11 @@ Return a list of installed packages or nil for every skipped package."
 ;; groovy-mode
 (add-to-list 'auto-mode-alist '("\\.gsp\\'" . groovy-mode))
 
+;; tern
+(add-to-list 'load-path "~/tern/emacs/")
+(autoload 'tern-mode "tern.el" nil t)
+(add-hook 'js2-mode-hook (lambda () (tern-mode t)))
+
 ;; js2-mode
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 (setq-default indent-tabs-mode nil)
