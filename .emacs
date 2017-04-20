@@ -40,6 +40,7 @@ Return a list of installed packages or nil for every skipped package."
                           'company
                           'elscreen
                           'emr
+                          'exec-path-from-shell
                           'evil
                           'flycheck
                           'flx-ido
@@ -68,6 +69,8 @@ Return a list of installed packages or nil for every skipped package."
 
 ;; Add to PATH for emacs env
 (setenv "PATH" (concat (getenv "PATH") ":/usr/local/bin"))
+(when (memq window-system '(mac ns x))
+  (exec-path-from-shell-initialize))
 
 ;; Swap mac command and option keys for Meta
 (setq mac-control-modifier 'meta)
