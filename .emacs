@@ -62,7 +62,6 @@ Return a list of installed packages or nil for every skipped package."
                           'smex
                           'syslog-mode
                           'tdd
-                          'w3m
                           'web-mode
                           'whitespace-cleanup-mode
                           'zenburn-theme)
