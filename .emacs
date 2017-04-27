@@ -50,6 +50,7 @@ Return a list of installed packages or nil for every skipped package."
                           'js2-mode
                           'js2-refactor
                           'magit
+                          'mocha
                           'multi-term
                           'multiple-cursors
                           'neotree
