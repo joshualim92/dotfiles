@@ -159,6 +159,10 @@ Return a list of installed packages or nil for every skipped package."
             (lambda () (linum-mode 0))
             :append :local))
 
+;; Shortcut for switching buffers
+(global-set-key (kbd "M-<tab>") 'previous-buffer)
+(global-set-key (kbd "M-S-<tab>") 'next-buffer)
+
 ;; Swap kill buffer command so window closes when killing buffer
 (substitute-key-definition 'kill-buffer
                            'kill-buffer-and-window
