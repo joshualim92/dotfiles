@@ -181,6 +181,12 @@ Return a list of installed packages or nil for every skipped package."
 (powerline-default-theme)
 ;;(powerline-evil-vim-color-theme)
 
+;; yasnippet
+(add-to-list 'load-path
+             "~/.emacs.d/plugins/yasnippet")
+(require 'yasnippet)
+(yas-global-mode 1)
+
 ;; Org Mode
 (require 'org)
 (define-key global-map "\C-cl" 'org-store-link)
