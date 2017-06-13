@@ -33,7 +33,8 @@ Return a list of installed packages or nil for every skipped package."
     (package-refresh-contents))
 
 ;; Packages you want to ensure to install
-(ensure-package-installed 'ag
+(ensure-package-installed 'ace-jump-mode
+                          'ag
                           'aggressive-indent
                           'apache-mode
                           'back-button
@@ -261,6 +262,23 @@ Return a list of installed packages or nil for every skipped package."
             (define-key evil-normal-state-local-map (kbd "SPC") 'neotree-enter)
             (define-key evil-normal-state-local-map (kbd "q") 'neotree-hide)
             (define-key evil-normal-state-local-map (kbd "RET") 'neotree-enter)))
+
+;; Ace Jump
+(autoload
+  'ace-jump-mode
+  "ace-jump-mode"
+  "Emacs quick move minor mode"
+  t)
+;; you can select the key you prefer to
+(define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
+(autoload
+  'ace-jump-mode-pop-mark
+  "ace-jump-mode"
+  "Ace jump back:-)"
+  t)
+(eval-after-load "ace-jump-mode"
+  '(ace-jump-mode-enable-mark-sync))
+(define-key global-map (kbd "C-x SPC") 'ace-jump-mode-pop-mark)
 
 ;; Back Button
 (require 'back-button)
