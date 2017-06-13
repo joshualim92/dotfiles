@@ -163,11 +163,6 @@ Return a list of installed packages or nil for every skipped package."
 (global-set-key (kbd "M-<tab>") 'previous-buffer)
 (global-set-key (kbd "M-S-<tab>") 'next-buffer)
 
-;; Swap kill buffer command so window closes when killing buffer
-(substitute-key-definition 'kill-buffer
-                           'kill-buffer-and-window
-                           global-map)
-
 ;; Evil-mode
 (require 'evil)
 (evil-mode t)
