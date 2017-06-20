@@ -89,7 +89,7 @@ Return a list of installed packages or nil for every skipped package."
 (global-set-key "\C-x\C-k" 'kill-region)
 
 ;; Fullscreen
-;;(set-frame-parameter nil 'fullscreen 'fullboth)
+(set-frame-parameter nil 'fullscreen 'fullboth)
 
 ;; Window resize keybindings
 (global-set-key (kbd "S-C-<left>") 'shrink-window-horizontally)
