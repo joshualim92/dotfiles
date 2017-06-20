@@ -103,18 +103,18 @@ Return a list of installed packages or nil for every skipped package."
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
 
 ;; Set Transparency
-(set-frame-parameter (selected-frame) 'alpha '(90 75))
-(add-to-list 'default-frame-alist '(alpha 90 75))
+;; (set-frame-parameter (selected-frame) 'alpha '(100 100))
+;; (add-to-list 'default-frame-alist '(alpha 100 100))
 ;; Transparency toggle
-(eval-when-compile (require 'cl))
-(defun toggle-transparency ()
-  (interactive)
-  (if (/=
-       (cadr (frame-parameter nil 'alpha))
-       100)
-      (set-frame-parameter nil 'alpha '(100 100))
-    (set-frame-parameter nil 'alpha '(90 75))))
-(global-set-key (kbd "C-c t") 'toggle-transparency)
+;; (eval-when-compile (require 'cl))
+;; (defun toggle-transparency ()
+;;   (interactive)
+;;   (if (/=
+;;        (cadr (frame-parameter nil 'alpha))
+;;        100)
+;;       (set-frame-parameter nil 'alpha '(100 100))
+;;     (set-frame-parameter nil 'alpha '(90 75))))
+;; (global-set-key (kbd "C-c t") 'toggle-transparency)
 
 ;; Winner Mode
 (when (fboundp 'winner-mode)
