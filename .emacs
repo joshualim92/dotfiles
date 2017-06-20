@@ -270,6 +270,10 @@ Return a list of installed packages or nil for every skipped package."
             (define-key evil-normal-state-local-map (kbd "q") 'neotree-hide)
             (define-key evil-normal-state-local-map (kbd "RET") 'neotree-enter)))
 
+;; Avy
+(global-set-key (kbd "C-:") 'avy-goto-char)
+(global-set-key (kbd "C-\"") 'avy-goto-line)
+
 ;; Ace Jump
 (autoload
   'ace-jump-mode
@@ -336,6 +340,8 @@ Return a list of installed packages or nil for every skipped package."
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(css-indent-offset 2)
+ '(avy-all-windows (quote all-frames))
+ '(avy-background t)
  '(custom-safe-themes
    (quote
     ("04dd0236a367865e591927a3810f178e8d33c372ad5bfef48b5ce90d4b476481" "ab04c00a7e48ad784b52f34aa6bfa1e80d0c3fcacc50e1189af3651013eb0d58" "a0feb1322de9e26a4d209d1cfa236deaf64662bb604fa513cca6a057ddf0ef64" "95a6ac1b01dcaed4175946b581461e16e1b909d354ada79770c0821e491067c6" default)))
@@ -345,6 +351,10 @@ Return a list of installed packages or nil for every skipped package."
  '(js-indent-level 2)
  '(js2-basic-offset 2)
  '(js2-bounce-indent-p t)
+ '(package-selected-packages
+   (quote
+    (avy ace-jump-mode mocha guess-offset smart-tab zenburn-theme whitespace-cleanup-mode web-mode w3m tdd syslog-mode smex smartparens sbt-mode powerline-evil php-mode nvm neotree multi-term magit js2-refactor impatient-mode ido-vertical-mode groovy-mode flycheck flx-ido exec-path-from-shell emr elscreen company back-button apache-mode aggressive-indent ag)))
+ '(projectile-mode t nil (projectile))
  '(smartparens-global-mode t)
  '(tab-width 4)
  '(tdd-mode t))
