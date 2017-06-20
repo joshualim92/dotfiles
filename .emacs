@@ -178,7 +178,8 @@ Return a list of installed packages or nil for every skipped package."
 
 ;; yasnippet
 (add-to-list 'load-path
-             "~/.emacs.d/plugins/yasnippet")
+             "~/.emacs.d/plugins/yasnippet"
+             "~/.emacs.d/snippets")
 (require 'yasnippet)
 (yas-global-mode 1)
 
