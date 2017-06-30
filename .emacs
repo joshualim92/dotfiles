@@ -38,6 +38,7 @@ Return a list of installed packages or nil for every skipped package."
                           'aggressive-indent
                           'apache-mode
                           'back-button
+                          'buffer-move
                           'company
                           'elscreen
                           'emr
@@ -90,6 +91,12 @@ Return a list of installed packages or nil for every skipped package."
 
 ;; Fullscreen
 (set-frame-parameter nil 'fullscreen 'fullboth)
+
+;; buffer-move
+(global-set-key (kbd "C-c b p") 'buf-move-up)
+(global-set-key (kbd "C-c b n") 'buf-move-down)
+(global-set-key (kbd "C-c b b") 'buf-move-left)
+(global-set-key (kbd "C-c b f") 'buf-move-right)
 
 ;; Window resize keybindings
 (global-set-key (kbd "S-C-<left>") 'shrink-window-horizontally)
