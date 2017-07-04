@@ -49,6 +49,7 @@ Return a list of installed packages or nil for every skipped package."
                           'groovy-mode
                           'ido-vertical-mode
                           'impatient-mode
+                          'import-js
                           'js2-mode
                           'js2-refactor
                           'magit
