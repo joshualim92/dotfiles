@@ -91,7 +91,7 @@ Return a list of installed packages or nil for every skipped package."
 (global-set-key "\C-x\C-k" 'kill-region)
 
 ;; Fullscreen
-(set-frame-parameter nil 'fullscreen 'fullboth)
+;; (set-frame-parameter nil 'fullscreen 'fullboth)
 
 ;; buffer-move
 (global-set-key (kbd "C-c b p") 'buf-move-up)
