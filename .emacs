@@ -314,6 +314,7 @@ Return a list of installed packages or nil for every skipped package."
 
 ;; js2-mode
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+(add-to-list 'auto-mode-alist '("\\.jsx\\'" . js2-mode))
 (setq-default indent-tabs-mode nil)
 
 ;; js2-refactor
