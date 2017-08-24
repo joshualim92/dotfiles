@@ -159,6 +159,10 @@ Return a list of installed packages or nil for every skipped package."
   (term-send-raw-string "\e"))
 (add-to-list 'term-bind-key-alist '("C-c C-e" . term-send-esc))
 
+(add-hook 'term-mode-hook
+          (lambda()
+            (yas-minor-mode -1)))
+
 (add-hook 'term-mode-hook 'my-inhibit-global-linum-mode)
 
 (defun my-inhibit-global-linum-mode ()
