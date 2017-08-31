@@ -17,3 +17,6 @@ set history=100
 set number
 set ignorecase
 set incsearch
+
+" Delete whitespace
+autocmd BufWritePre * :%s/\s\+$//e
