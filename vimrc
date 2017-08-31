@@ -8,6 +8,9 @@ set expandtab
 set smartindent
 set autoindent
 
+" Show matching parenthesis
+set showmatch
+
 set encoding=utf-8
 set hidden
 set history=100
