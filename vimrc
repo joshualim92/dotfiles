@@ -1,5 +1,6 @@
 set nocompatible
 filetype plugin indent on
+colorscheme badwolf
 syntax enable
 set nowrap
 set encoding=utf-8
