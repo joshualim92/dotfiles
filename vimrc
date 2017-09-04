@@ -34,3 +34,11 @@ set foldenable " enable folding
 
 " Delete whitespace
 autocmd BufWritePre * :%s/\s\+$//e
+
+" Ack.vim
+
+" Ack default use ag
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
+nnoremap <Leader>a :Ack!<Space>

@@ -1,3 +1,6 @@
 [submodule "pack/my-plugins/start/fzf"]
 	path = pack/my-plugins/start/fzf
 	url = git@github.com:junegunn/fzf.git
+[submodule "pack/my-plugins/start/ack"]
+	path = pack/my-plugins/start/ack
+	url = https://github.com/mileszs/ack.vim.git
