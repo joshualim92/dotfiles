@@ -17,6 +17,7 @@ set autoindent
 
 " UI Config
 set number " show line numbers
+set relativenumber
 set wildmenu " visual autocomplete for command menu
 set showmatch " Show matching parenthesis
 
