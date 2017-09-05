@@ -53,11 +53,7 @@ plugins=(git)
 
 # User configuration
 # Variables
-export NODE_ENV=local
-export DMM_ENVIRONMENT=local
-export JAVA_HOME=/usr/java/jdk1.7.0_79
-export SCALA_HOME=/usr/bin/scala
-export PATH="/home/jlim/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/java/jdk1.7.0_79/bin:$SCALA_HOME/bin:/home/jlim/play"
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
