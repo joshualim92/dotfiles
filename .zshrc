@@ -82,9 +82,11 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-#alias emac='env TERM=xterm-256color emacsclient -nw'
 alias es='emacsclient -c'
 alias emac='emacsclient'
+
+# call correct ctags
+alias ctags='`brew --prefix`/bin/ctags'
 
 # git command aliases
 alias gs='git status '
