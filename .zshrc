@@ -89,10 +89,6 @@ source $ZSH/oh-my-zsh.sh
 #alias emac='env TERM=xterm-256color emacsclient -nw'
 alias es='emacsclient -c'
 alias emac='emacsclient'
-alias sshhome='env TERM=xterm-256color ssh joshualim@174.6.124.53'
-alias runImtQa='grails -Djava.net.preferIPv4Stack=true -Dgrails.env=development_using_qa_db_provision run-app'
-alias sbt='~/sbt/bin/sbt'
-alias conkeror='firefox -app ~/conkeror/application.ini'
 
 # git command aliases
 alias gs='git status '
@@ -108,11 +104,5 @@ function generateSshKey() {
     ssh-add ~/.ssh/id_rsa
 }
 
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/home/jlim/.sdkman"
-[[ -s "/home/jlim/.sdkman/bin/sdkman-init.sh" ]] && source "/home/jlim/.sdkman/bin/sdkman-init.sh"
-
 export NVM_DIR="/home/jlim/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
-export GRAILS_OPTS="-Xms1024m -Xmx2048m -XX:PermSize=512m -XX:MaxPermSize=512m"
