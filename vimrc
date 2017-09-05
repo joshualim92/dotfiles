@@ -22,6 +22,10 @@ set relativenumber
 set wildmenu " visual autocomplete for command menu
 set showmatch " Show matching parenthesis
 
+" :find
+set path+=**
+set wildignore+=*/node_modules/*
+
 " Searching
 set ignorecase
 set incsearch
