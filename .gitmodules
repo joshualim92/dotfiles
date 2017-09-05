@@ -4,3 +4,6 @@
 [submodule "pack/my-plugins/start/ack"]
 	path = pack/my-plugins/start/ack
 	url = https://github.com/mileszs/ack.vim.git
+[submodule "pack/my-plugins/start/syntastic"]
+	path = pack/my-plugins/start/syntastic
+	url = https://github.com/vim-syntastic/syntastic.git
