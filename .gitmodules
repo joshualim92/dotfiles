@@ -1,12 +1,9 @@
-[submodule "pack/my-plugins/start/fzf"]
-	path = pack/my-plugins/start/fzf
-	url = git@github.com:junegunn/fzf.git
-[submodule "pack/my-plugins/start/ack"]
-	path = pack/my-plugins/start/ack
+[submodule "vim/pack/my-plugins/start/fzf"]
+	path = vim/pack/my-plugins/start/fzf
+	url = https://github.com/junegunn/fzf.git
+[submodule "vim/pack/my-plugins/start/ack"]
+	path = vim/pack/my-plugins/start/ack
 	url = https://github.com/mileszs/ack.vim.git
-[submodule "pack/my-plugins/start/syntastic"]
-	path = pack/my-plugins/start/syntastic
-	url = https://github.com/vim-syntastic/syntastic.git
-[submodule "pack/my-plugins/start/nerdtree"]
-	path = pack/my-plugins/start/nerdtree
-	url = https://github.com/scrooloose/nerdtree
+[submodule "vim/pack/my-plugins/start/nerdtree"]
+	path = vim/pack/my-plugins/start/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
