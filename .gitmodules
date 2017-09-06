@@ -10,3 +10,6 @@
 [submodule "vim/pack/my-plugins/start/vim-javascript"]
 	path = vim/pack/my-plugins/start/vim-javascript
 	url = https://github.com/pangloss/vim-javascript.git
+[submodule "vim/pack/my-plugins/start/vim-javascript-syntax"]
+	path = vim/pack/my-plugins/start/vim-javascript-syntax
+	url = https://github.com/jelera/vim-javascript-syntax.git
