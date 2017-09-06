@@ -7,3 +7,6 @@
 [submodule "pack/my-plugins/start/syntastic"]
 	path = pack/my-plugins/start/syntastic
 	url = https://github.com/vim-syntastic/syntastic.git
+[submodule "pack/my-plugins/start/nerdtree"]
+	path = pack/my-plugins/start/nerdtree
+	url = https://github.com/scrooloose/nerdtree
