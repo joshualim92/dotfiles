@@ -7,3 +7,6 @@
 [submodule "vim/pack/my-plugins/start/nerdtree"]
 	path = vim/pack/my-plugins/start/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
+[submodule "vim/pack/my-plugins/start/vim-javascript"]
+	path = vim/pack/my-plugins/start/vim-javascript
+	url = https://github.com/pangloss/vim-javascript.git
