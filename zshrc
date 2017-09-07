@@ -53,6 +53,7 @@ plugins=(git)
 
 # User configuration
 # Variables
+export PATH=/usr/local/bin:$PATH
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
