@@ -1,6 +1,6 @@
 set nocompatible
 filetype plugin indent on
-colorscheme badwolf
+colorscheme Tomorrow-Night
 syntax enable
 set nowrap
 set encoding=utf-8
