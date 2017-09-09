@@ -1,7 +1,7 @@
 set nocompatible
 filetype plugin indent on
-colorscheme Tomorrow-Night
 syntax enable
+colorscheme delek
 set nowrap
 set encoding=utf-8
 set hidden
