@@ -6,7 +6,6 @@ set nowrap
 set encoding=utf-8
 set hidden
 set history=100
-set clipboard=unnamed " Allow yanking to clipboard
 
 " Spaces & Tabs
 " tabstop, softabstop, shiftwidth can be configured 'locally'
