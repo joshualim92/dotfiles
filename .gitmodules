@@ -22,3 +22,9 @@
 [submodule "vim/pack/my-plugins/start/tmuxline.vim"]
 	path = vim/pack/my-plugins/start/tmuxline.vim
 	url = https://github.com/edkolev/tmuxline.vim.git
+[submodule "vim-airline-themes"]
+	path = vim-airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes.git
+[submodule "vim/pack/my-plugins/start/vim-airline-themes"]
+	path = vim/pack/my-plugins/start/vim-airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes.git
