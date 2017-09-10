@@ -19,3 +19,6 @@
 [submodule "vim/pack/my-plugins/start/vim-airline"]
 	path = vim/pack/my-plugins/start/vim-airline
 	url = https://github.com/bling/vim-airline
+[submodule "vim/pack/my-plugins/start/tmuxline.vim"]
+	path = vim/pack/my-plugins/start/tmuxline.vim
+	url = https://github.com/edkolev/tmuxline.vim.git
