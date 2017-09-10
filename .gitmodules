@@ -28,3 +28,6 @@
 [submodule "vim/pack/my-plugins/start/vim-airline-themes"]
 	path = vim/pack/my-plugins/start/vim-airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes.git
+[submodule "pure"]
+	path = pure
+	url = https://github.com/sindresorhus/pure.git
