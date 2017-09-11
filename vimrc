@@ -7,6 +7,9 @@ set encoding=utf-8
 set hidden
 set history=100
 
+" Map leader key to be space
+let mapleader = ' '
+
 " Allow vim to copy and paste to system clipboard
 set clipboard=unnamed
 
