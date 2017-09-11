@@ -6,6 +6,10 @@ set nowrap
 set encoding=utf-8
 set hidden
 set history=100
+
+" Allow vim to copy and paste to system clipboard
+set clipboard=unnamed
+
 " Set mouse mode on
 set ttymouse=xterm2 " Allows for mouse mode inside tmux
 set mouse=a
