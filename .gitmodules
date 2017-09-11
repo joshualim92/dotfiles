@@ -31,3 +31,6 @@
 [submodule "pure"]
 	path = pure
 	url = https://github.com/sindresorhus/pure.git
+[submodule "vim/pack/my-plugins/start/vim-tmux-navigator"]
+	path = vim/pack/my-plugins/start/vim-tmux-navigator
+	url = https://github.com/christoomey/vim-tmux-navigator
