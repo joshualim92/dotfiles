@@ -58,6 +58,17 @@ let g:airline#extensions#tabline#left_alt_sep = '|'
 " Set tmuxline preset
 let g:tmuxline_preset = 'full'
 
+" Syntatsic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_javascript_checkers=['eslint']
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
 " Ack.vim
 " Ack default use ag
 if executable('ag')
