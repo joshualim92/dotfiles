@@ -43,3 +43,6 @@
 [submodule "vim/pack/my-plugins/start/syntastic"]
 	path = vim/pack/my-plugins/start/syntastic
 	url = https://github.com/vim-syntastic/syntastic.git
+[submodule "vim/pack/my-plugins/start/syntastic-local-eslint.vim"]
+	path = vim/pack/my-plugins/start/syntastic-local-eslint.vim
+	url = https://github.com/mtscout6/syntastic-local-eslint.vim.git
