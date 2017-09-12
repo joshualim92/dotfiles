@@ -37,3 +37,6 @@
 [submodule "vim/pack/my-plugins/start/vim-commentary"]
 	path = vim/pack/my-plugins/start/vim-commentary
 	url = https://github.com/tpope/vim-commentary.git
+[submodule "vim/pack/my-plugins/start/vim-surround"]
+	path = vim/pack/my-plugins/start/vim-surround
+	url = https://github.com/tpope/vim-surround.git
