@@ -5,7 +5,7 @@ colorscheme delek
 set nowrap
 set encoding=utf-8
 set hidden
-set history=100
+set history=1000
 
 " Map leader key to be space
 let mapleader = ' '
