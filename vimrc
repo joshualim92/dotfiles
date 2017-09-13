@@ -10,6 +10,9 @@ set history=1000
 " Map leader key to be space
 let mapleader = ' '
 
+" Set <C-U> to be undo during insert mode
+inoremap <C-U> <C-G>u<C-U>
+
 " Allow vim to copy and paste to system clipboard
 set clipboard=unnamed
 
