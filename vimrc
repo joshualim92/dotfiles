@@ -36,6 +36,7 @@ set relativenumber
 set wildmenu " visual autocomplete for command menu
 set showmatch " Show matching parenthesis
 set scrolloff=1 "Min number of lines to keep above and below cursor
+set showcmd " display incomplete commands
 
 " :find
 set path+=**
