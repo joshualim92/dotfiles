@@ -25,6 +25,7 @@ set mouse=a
 set tabstop=4 " number of visual spaces per TAB
 set softtabstop=4 " number of spaces in tab when editing
 set shiftwidth=4
+set smarttab
 set expandtab " tabs are spaces
 set smartindent
 set autoindent
@@ -34,6 +35,7 @@ set number " show line numbers
 set relativenumber
 set wildmenu " visual autocomplete for command menu
 set showmatch " Show matching parenthesis
+set scrolloff=1 "Min number of lines to keep above and below cursor
 
 " :find
 set path+=**
