@@ -13,6 +13,9 @@ let mapleader = ' '
 " Set <C-U> to be undo during insert mode
 inoremap <C-U> <C-G>u<C-U>
 
+" Allow backspacing over everything in insert mode
+set backspace=indent,eol,start
+
 " Allow vim to copy and paste to system clipboard
 set clipboard=unnamed
 
