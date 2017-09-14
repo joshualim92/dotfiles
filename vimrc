@@ -76,3 +76,7 @@ nnoremap <Leader>a :Ack!<Space>
 
 " NERDTree
 nmap <leader>ne :NERDTreeToggle<CR>
+
+" Tern
+let g:tern_map_keys=1 "enable keyboard shortcuts
+let g:tern_show_argument_hints='on_hold' "show argument hints
