@@ -40,3 +40,6 @@
 [submodule "vim/pack/my-plugins/start/ale"]
 	path = vim/pack/my-plugins/start/ale
 	url = https://github.com/w0rp/ale.git
+[submodule "vim/pack/my-plugins/start/YouCompleteMe"]
+	path = vim/pack/my-plugins/start/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe.git
