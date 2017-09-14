@@ -37,12 +37,12 @@
 [submodule "vim/pack/my-plugins/start/vim-surround"]
 	path = vim/pack/my-plugins/start/vim-surround
 	url = https://github.com/tpope/vim-surround.git
-[submodule "vim/pack/my-plugins/start/ale"]
+[submodule "vim/pack/my-plugins/start/ale"] # Requires additional linters
 	path = vim/pack/my-plugins/start/ale
 	url = https://github.com/w0rp/ale.git
-[submodule "vim/pack/my-plugins/start/YouCompleteMe"]
+[submodule "vim/pack/my-plugins/start/YouCompleteMe"] # Requires additional installation
 	path = vim/pack/my-plugins/start/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe.git
-[submodule "vim/pack/my-plugins/start/tern_for_vim"]
+[submodule "vim/pack/my-plugins/start/tern_for_vim"] # npm install in tern_for_vim
 	path = vim/pack/my-plugins/start/tern_for_vim
 	url = https://github.com/ternjs/tern_for_vim.git
