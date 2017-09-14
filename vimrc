@@ -68,10 +68,10 @@ let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:tmuxline_preset = 'full'
 
 " Ack.vim
-" Ack default use ag
 if executable('ag')
-  let g:ackprg = 'ag --vimgrep'
+  let g:ackprg = 'ag --vimgrep' " Ack default use ag if possible
 endif
+" Map Ack.vim
 nnoremap <Leader>a :Ack!<Space>
 
 " NERDTree
