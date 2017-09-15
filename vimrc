@@ -80,3 +80,11 @@ nmap <leader>ne :NERDTreeToggle<CR>
 " Tern
 let g:tern_map_keys=1 "enable keyboard shortcuts
 let g:tern_show_argument_hints='on_hold' "show argument hints
+
+" Better Rainbow Parentheses
+au VimEnter * RainbowParenthesesToggle " Load on start
+" Load if syntax is enabled
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
+au Syntax * RainbowParenthesesLoadChevrons
