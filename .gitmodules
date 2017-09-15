@@ -46,3 +46,6 @@
 [submodule "vim/pack/my-plugins/start/tern_for_vim"] # npm install in tern_for_vim
 	path = vim/pack/my-plugins/start/tern_for_vim
 	url = https://github.com/ternjs/tern_for_vim.git
+[submodule "vim/pack/my-plugins/start/rainbow_parentheses.vim"]
+	path = vim/pack/my-plugins/start/rainbow_parentheses.vim
+	url = https://github.com/kien/rainbow_parentheses.vim.git
