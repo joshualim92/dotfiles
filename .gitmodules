@@ -58,3 +58,6 @@
 [submodule "vim/pack/my-plugins/start/vim-snippets"]
 	path = vim/pack/my-plugins/start/vim-snippets
 	url = https://github.com/honza/vim-snippets.git
+[submodule "vim/pack/my-plugins/start/supertab"]
+	path = vim/pack/my-plugins/start/supertab
+	url = https://github.com/ervandew/supertab.git

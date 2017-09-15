@@ -88,3 +88,14 @@ au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 au Syntax * RainbowParenthesesLoadChevrons
+
+" Make YouCompleteMe compatible with UltiSnips (using supertab)
+let g:ycm_key_list_select_completion=['<C-N>']
+let g:ycm_key_list_previous_completion=['<C-P>']
+let g:SuperTabDefaultCompletionType='<C-N>'
+
+" Better key bindings for UltiSnipsExpandTrigger
+let g:UltiSnipsExpandTrigger='<tab>'
+let g:UltiSnipsJumpForwardTrigger='<tab>'
+let g:UltiSnipsJumpBackwardTrigger='<S-tab>'
+let g:UltiSnipsEditSplit='vertical' " :UltiSnipsEditSplit vertically
