@@ -89,14 +89,6 @@ alias emac='emacsclient'
 # call correct ctags
 alias ctags='`brew --prefix`/bin/ctags'
 
-# git command aliases
-alias gs='git status '
-alias ga='git add '
-alias gb='git branch '
-alias gc='git commit'
-alias gd='git diff'
-alias go='git checkout '
-
 function generateSshKey() {
     ssh-keygen -t rsa -b 4096 -C "joshua.lim@dominionmarinemedia.com"
     eval "$(ssh-agent -s)"
