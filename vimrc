@@ -16,9 +16,6 @@ inoremap <C-U> <C-G>u<C-U>
 " Allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
-" Allow vim to copy and paste to system clipboard
-set clipboard=unnamed
-
 " Set mouse mode on
 set ttymouse=xterm2 " Allows for mouse mode inside tmux
 set mouse=a
