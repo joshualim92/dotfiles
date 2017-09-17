@@ -32,6 +32,11 @@ set smarttab
 set expandtab " tabs are spaces
 set smartindent
 set autoindent
+" Change cterm Search highlighting to be just 'reverse' for 'delek'
+" Doesn't work well with iterm2 material-design-colors
+if g:colors_name == 'delek'
+    hi Search cterm=reverse ctermfg=NONE ctermbg=NONE
+endif
 " Set MatchParen to be reverse instead of color=6
 hi MatchParen cterm=reverse
 
