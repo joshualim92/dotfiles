@@ -32,6 +32,8 @@ set smarttab
 set expandtab " tabs are spaces
 set smartindent
 set autoindent
+" Set MatchParen to be reverse instead of color=6
+hi MatchParen cterm=reverse
 
 " UI Config
 set number " show line numbers
