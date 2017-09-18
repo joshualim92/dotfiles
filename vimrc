@@ -8,7 +8,7 @@ set hidden
 set history=1000
 
 " Map leader key to be space
-let mapleader = ' '
+let mapleader=' '
 
 " Set <C-U> to be undo during insert mode
 inoremap <C-U> <C-G>u<C-U>
@@ -68,16 +68,16 @@ autocmd BufWritePre * :%s/\s\+$//e
 
 " Set airline theme
 let g:airline_theme='base16color'
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline#extensions#tabline#enabled=1
+let g:airline#extensions#tabline#left_sep=' '
+let g:airline#extensions#tabline#left_alt_sep='|'
 
 " Set tmuxline preset
-let g:tmuxline_preset = 'full'
+let g:tmuxline_preset='full'
 
 " Ack.vim
 if executable('ag')
-  let g:ackprg = 'ag --vimgrep' " Ack default use ag if possible
+  let g:ackprg='ag --vimgrep' " Ack default use ag if possible
 endif
 " Map Ack.vim
 nnoremap <Leader>a :Ack!<Space>
