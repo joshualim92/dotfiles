@@ -64,3 +64,6 @@
 [submodule "vim/pack/my-plugins/start/vimux"]
 	path = vim/pack/my-plugins/start/vimux
 	url = https://github.com/benmills/vimux.git
+[submodule "vim/pack/my-plugins/start/vim-sleuth"]
+	path = vim/pack/my-plugins/start/vim-sleuth
+	url = https://github.com/tpope/vim-sleuth.git
