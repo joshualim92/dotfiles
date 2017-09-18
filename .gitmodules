@@ -67,3 +67,6 @@
 [submodule "vim/pack/my-plugins/start/vim-sleuth"]
 	path = vim/pack/my-plugins/start/vim-sleuth
 	url = https://github.com/tpope/vim-sleuth.git
+[submodule "vim/pack/my-plugins/start/vim-repeat"]
+	path = vim/pack/my-plugins/start/vim-repeat
+	url = https://github.com/tpope/vim-repeat.git
