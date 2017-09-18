@@ -56,6 +56,9 @@ set hlsearch
 nnoremap <leader><space> :nohlsearch<CR>
 
 " Folding
+if g:colors_name == 'delek'
+    hi Folded cterm=standout ctermbg=White
+endif
 set foldmethod=indent " fold-method to follow indents
 set foldlevel=99 " open with folds open
 
