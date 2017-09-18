@@ -62,6 +62,7 @@ endif
 set foldmethod=indent " fold-method to follow indents
 set foldlevel=99 " open with folds open
 nnoremap <tab> za
+nnoremap <S-tab> zA
 
 " Delete whitespace
 autocmd BufWritePre * :%s/\s\+$//e
