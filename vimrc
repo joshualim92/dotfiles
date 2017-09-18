@@ -29,13 +29,6 @@ set smarttab
 set expandtab " tabs are spaces
 set smartindent
 set autoindent
-" Change cterm Search highlighting to be just 'reverse' for 'delek'
-" Doesn't work well with iterm2 material-design-colors
-if g:colors_name == 'delek'
-    hi Search cterm=reverse ctermfg=NONE ctermbg=NONE
-endif
-" Set MatchParen to be reverse instead of color=6
-hi MatchParen cterm=reverse
 
 " UI Config
 set number " show line numbers
@@ -43,6 +36,14 @@ set relativenumber
 set wildmenu " visual autocomplete for command menu
 set scrolloff=5 "Min number of lines to keep above and below cursor
 set showcmd " display incomplete commands
+" Set MatchParen to be reverse instead of color=6
+hi MatchParen cterm=reverse
+
+" Following highlight changes are because delek doesn't work well with iterm2 material-design-colors
+if g:colors_name == 'delek'
+    hi Search cterm=reverse ctermfg=NONE ctermbg=NONE
+    hi Folded cterm=standout ctermbg=White
+endif
 
 " :find
 set path+=**
@@ -56,9 +57,6 @@ set hlsearch
 nnoremap <leader><space> :nohlsearch<CR>
 
 " Folding
-if g:colors_name == 'delek'
-    hi Folded cterm=standout ctermbg=White
-endif
 set foldmethod=indent " fold-method to follow indents
 set foldlevel=99 " open with folds open
 nnoremap <tab> za
