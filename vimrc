@@ -76,7 +76,7 @@ let g:tmuxline_preset='full'
 
 " Ack.vim
 if executable('ag')
-  let g:ackprg='ag --vimgrep' " Ack default use ag if possible
+    let g:ackprg='ag --vimgrep' " Ack default use ag if possible
 endif
 " Map Ack.vim
 nnoremap <Leader>a :Ack!<Space>
