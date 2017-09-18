@@ -70,3 +70,6 @@
 [submodule "vim/pack/my-plugins/start/vim-repeat"]
 	path = vim/pack/my-plugins/start/vim-repeat
 	url = https://github.com/tpope/vim-repeat.git
+[submodule "vim/pack/my-plugins/start/vim-better-whitespace"]
+	path = vim/pack/my-plugins/start/vim-better-whitespace
+	url = https://github.com/ntpeters/vim-better-whitespace.git
