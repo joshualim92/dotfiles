@@ -82,7 +82,7 @@ endif
 nnoremap <Leader>a :Ack!<Space>
 
 " NERDTree
-nmap <leader>ne :NERDTreeToggle<CR>
+nmap <leader>nt :NERDTreeToggle<CR>
 
 " Tern
 let g:tern_map_keys=1 "enable keyboard shortcuts
