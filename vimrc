@@ -56,7 +56,8 @@ set hlsearch
 nnoremap <leader><space> :nohlsearch<CR>
 
 " Folding
-set foldenable " enable folding
+set foldmethod=indent " fold-method to follow indents
+set foldlevel=99 " open with folds open
 
 " Delete whitespace
 autocmd BufWritePre * :%s/\s\+$//e
