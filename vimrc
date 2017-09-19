@@ -42,7 +42,7 @@ hi MatchParen cterm=reverse
 " Following highlight changes are because delek doesn't work well with iterm2
 " material-design-colors
 if g:colors_name == 'delek'
-    hi Search cterm=reverse ctermfg=NONE ctermbg=NONE
+    hi Search cterm=reverse ctermbg=LightBlue
     hi Folded cterm=standout ctermbg=White
     hi ColorColumn ctermbg=237
 endif
