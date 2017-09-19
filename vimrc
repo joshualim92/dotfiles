@@ -27,6 +27,7 @@ set smarttab
 set expandtab " tabs are spaces
 set smartindent
 set autoindent
+set textwidth=78
 
 " UI Config
 set number " show line numbers
