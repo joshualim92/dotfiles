@@ -44,7 +44,7 @@ hi MatchParen cterm=reverse
 if g:colors_name == 'delek'
     hi Search cterm=reverse ctermfg=NONE ctermbg=NONE
     hi Folded cterm=standout ctermbg=White
-    hi ColorColumn ctermbg=Grey
+    hi ColorColumn ctermbg=237
 endif
 
 " :find
