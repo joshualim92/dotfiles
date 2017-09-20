@@ -136,3 +136,24 @@ map <Leader>vx :VimuxInterruptRunner<CR>
 
 " Zoom the runner pane (use <bind-key> z to restore runner pane)
 map <Leader>vz :call VimuxZoomRunner()<CR>
+
+" ----------------------------------------------------------------------------
+" FZF Select buffer
+" ----------------------------------------------------------------------------
+function! s:buflist()
+  redir => ls
+  silent ls
+  redir END
+  return split(ls, '\n')
+endfunction
+
+function! s:bufopen(e)
+  execute 'buffer' matchstr(a:e, '^[ 0-9]*')
+endfunction
+
+nnoremap <silent> <Leader>b :call fzf#run({
+\   'source':  reverse(<sid>buflist()),
+\   'sink':    function('<sid>bufopen'),
+\   'options': '+m --prompt="Buf> "',
+\   'down':    len(<sid>buflist()) + 2
+\ })<CR>
