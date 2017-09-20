@@ -5,6 +5,7 @@ colorscheme delek
 set encoding=utf-8
 set hidden
 set history=1000
+set autoread
 
 " Map leader key to be space
 let mapleader=' '
