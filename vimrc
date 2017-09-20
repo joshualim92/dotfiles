@@ -85,9 +85,6 @@ let g:airline#extensions#tabline#left_alt_sep='|'
 " Set tmuxline preset
 let g:tmuxline_preset='full'
 
-" CtrlP
-let g:ctrlp_cmd = 'CtrlPMixed'
-
 " Ack.vim
 if executable('ag')
     let g:ackprg='ag --vimgrep' " Ack default use ag if possible
