@@ -49,6 +49,9 @@ if g:colors_name == 'delek'
     hi DiffAdd cterm=reverse ctermfg=121 ctermbg=NONE
     hi DiffChange ctermbg=NONE
     hi DiffDelete ctermbg=9
+    " Statusline colors
+    hi StatusLine ctermfg=NONE ctermbg=234
+    hi WildMenu ctermbg=121
 endif
 
 " :find
