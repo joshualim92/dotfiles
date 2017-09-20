@@ -45,6 +45,10 @@ if g:colors_name == 'delek'
     hi Search cterm=reverse ctermbg=LightBlue
     hi Folded cterm=standout ctermbg=White
     hi ColorColumn ctermbg=237
+    " Diff colors
+    hi DiffAdd cterm=reverse ctermfg=121 ctermbg=NONE
+    hi DiffChange ctermbg=NONE
+    hi DiffDelete ctermbg=9
 endif
 
 " :find
