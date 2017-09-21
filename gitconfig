@@ -1,0 +1,13 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+#	name = Joshua Lim
+#	email = joshualim@Joshuas-MBP.hitronhub.home
+[core]
+	editor = vim
+[pull]
+	rebase = true
+[fetch]
+	prune = true
+[merge]
+	tool = vimdiff
