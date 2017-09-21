@@ -18,7 +18,9 @@ function! BuildYCM(info)
                 --clang-completer --tern-completer
         endif
 endfunction
-Plug 'Valloric/YouCompleteMe', { 'for': ['javascript', 'c', 'cpp'], 'do': function('BuildYCM')  }
+Plug 'Valloric/YouCompleteMe',
+            \ { 'for': ['javascript', 'c', 'cpp'],
+            \ 'do': function('BuildYCM')  }
 
 " Linting
 Plug 'w0rp/ale'
