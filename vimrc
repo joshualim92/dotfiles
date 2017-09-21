@@ -1,3 +1,52 @@
+" ============================================================================
+" START VIM-PLUG
+" ============================================================================
+call plug#begin('~/.vim/plugged')
+
+" Editing
+Plug 'tpope/vim-sleuth'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
+Plug 'jiangmiao/auto-pairs'
+Plug 'tpope/vim-repeat'
+Plug 'ternjs/tern_for_vim', { 'for': ['javascript'], 'do': 'npm install'}
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets' | Plug 'ervandew/supertab'
+
+function! BuildYCM(info)
+        if a:info.status == 'installed' || a:info.force
+                !./install.py
+                --clang-completer --tern-completer
+        endif
+endfunction
+Plug 'Valloric/YouCompleteMe', { 'for': ['javascript', 'c', 'cpp'], 'do': function('BuildYCM')  }
+
+" Linting
+Plug 'w0rp/ale'
+Plug 'ntpeters/vim-better-whitespace'
+
+" Browsing
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+
+" UI
+Plug 'bling/vim-airline' | Plug 'vim-airline/vim-airline-themes'
+Plug 'kien/rainbow_parentheses.vim'
+
+" Syntax
+Plug 'pangloss/vim-javascript'
+Plug 'jelera/vim-javascript-syntax'
+
+" Tmux
+Plug 'edkolev/tmuxline.vim'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'benmills/vimux'
+
+call plug#end()
+" ============================================================================
+" END VIM-PLUG
+" ============================================================================
+
 set nocompatible
 filetype plugin indent on
 syntax enable
@@ -137,27 +186,9 @@ map <Leader>vx :VimuxInterruptRunner<CR>
 " Zoom the runner pane (use <bind-key> z to restore runner pane)
 map <Leader>vz :call VimuxZoomRunner()<CR>
 
-" ----------------------------------------------------------------------------
-" FZF Open files
-" ----------------------------------------------------------------------------
-nnoremap <silent><Leader>f :FZF -m<CR>
-" ----------------------------------------------------------------------------
-" FZF Select buffer
-" ----------------------------------------------------------------------------
-function! s:buflist()
-  redir => ls
-  silent ls
-  redir END
-  return split(ls, '\n')
-endfunction
-
-function! s:bufopen(e)
-  execute 'buffer' matchstr(a:e, '^[ 0-9]*')
-endfunction
-
-nnoremap <silent> <Leader>b :call fzf#run({
-\   'source':  reverse(<sid>buflist()),
-\   'sink':    function('<sid>bufopen'),
-\   'options': '+m --prompt="Buf> "',
-\   'down':    len(<sid>buflist()) + 2
-\ })<CR>
+" FZF
+nnoremap <silent> <Leader>f     :Files<CR>
+nnoremap <silent> <Leader>b     :Buffers<CR>
+nnoremap <silent> <Leader>ag    :Ag <C-R><C-W><CR>
+xnoremap <silent> <Leader>ag    y:Ag <C-R>"<CR>
+nnoremap <silent> <Leader>`     :Marks<CR>
