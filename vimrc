@@ -44,6 +44,9 @@ Plug 'edkolev/tmuxline.vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'benmills/vimux'
 
+" Git
+Plug 'tpope/vim-fugitive'
+
 call plug#end()
 " ============================================================================
 " END VIM-PLUG
