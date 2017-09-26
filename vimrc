@@ -124,8 +124,6 @@ nnoremap <leader><space> :nohlsearch<CR>
 set foldmethod=indent " fold-method to follow indents
 set foldlevel=99 " open with folds open
 set foldminlines=0 " allows for folding of single lines
-nnoremap <tab> za
-nnoremap <S-tab> zA
 
 " Delete whitespace
 autocmd BufWritePre * :%s/\s\+$//e
