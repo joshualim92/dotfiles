@@ -14,8 +14,7 @@ Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets' | Plug 'ervandew/supertab'
 
 function! BuildYCM(info)
         if a:info.status == 'installed' || a:info.force
-                !./install.py
-                --clang-completer --tern-completer
+                !./install.py --clang-completer --tern-completer
         endif
 endfunction
 Plug 'Valloric/YouCompleteMe',
