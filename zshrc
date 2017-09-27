@@ -83,11 +83,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias es='emacsclient -c'
-alias emac='emacsclient'
-
-# call correct ctags
-alias ctags='`brew --prefix`/bin/ctags'
 
 function generateSshKey() {
     ssh-keygen -t rsa -b 4096 -C "joshua.lim@dominionmarinemedia.com"
