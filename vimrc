@@ -192,6 +192,6 @@ map <Leader>vz :call VimuxZoomRunner()<CR>
 " FZF
 nnoremap <silent> <Leader>f     :Files<CR>
 nnoremap <silent> <Leader>b     :Buffers<CR>
-nnoremap <silent> <Leader>ag    :Ag <C-R><C-W><CR>
+nnoremap <Leader>ag             :Ag<Space>
 xnoremap <silent> <Leader>ag    y:Ag <C-R>"<CR>
 nnoremap <silent> <Leader>`     :Marks<CR>
