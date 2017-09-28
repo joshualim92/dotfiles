@@ -5,7 +5,7 @@ alias gbv="git branch -a -vv"
 
 # Vim
 alias swpl="find . -name \"*.swp\""
-alias swpr="find . -name \"*.swp\" -exec rm {} +"
+alias swpr="find . -name \"*.swp\" -exec rm -i {} +"
 
 # Emacs
 alias es="emacsclient -c"
