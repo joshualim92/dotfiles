@@ -29,7 +29,7 @@ Plug 'ntpeters/vim-better-whitespace'
 " Browsing
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'scrooloose/nerdtree'
 
 " UI
 Plug 'bling/vim-airline' | Plug 'vim-airline/vim-airline-themes'
@@ -145,7 +145,7 @@ endif
 nnoremap <Leader>a :Ack!<Space>
 
 " NERDTree
-nmap <leader>n :NERDTreeToggle<CR>
+nnoremap <leader>n :NERDTreeToggle<CR>
 
 " Tern
 let g:tern_map_keys=1 "enable keyboard shortcuts
