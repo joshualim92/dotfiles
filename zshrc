@@ -91,3 +91,15 @@ function generateSshKey() {
 }
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+suspended_jobs() {
+    local sj
+    sj=$(jobs 2>/dev/null | tail -n 1)
+    if [[ $sj == ""  ]]; then
+        echo ""
+    else
+        echo "%{$FG[208]%}✱%f "
+    fi
+}
+
+PROMPT+='$(suspended_jobs)'
