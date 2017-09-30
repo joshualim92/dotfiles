@@ -91,12 +91,11 @@ set wildmenu " visual autocomplete for command menu
 set scrolloff=5 "Min number of lines to keep above and below cursor
 set showcmd " display incomplete commands
 set colorcolumn=+1
-" Set MatchParen to be reverse instead of color=6
-hi MatchParen cterm=reverse
 
 " Following highlight changes are because delek doesn't work well with iterm2
 " material-design-colors
 if g:colors_name == 'delek'
+    hi MatchParen cterm=underline ctermbg=NONE
     hi Search cterm=reverse ctermbg=LightBlue
     hi Folded cterm=standout ctermbg=White
     hi ColorColumn ctermbg=237
