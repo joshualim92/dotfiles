@@ -5,6 +5,8 @@
 #	email = joshualim@Joshuas-MBP.hitronhub.home
 [core]
 	editor = vim
+[push]
+	default = simple
 [pull]
 	rebase = true
 [fetch]
