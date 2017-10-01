@@ -30,6 +30,7 @@ Plug 'ntpeters/vim-better-whitespace'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-unimpaired'
 
 " UI
 Plug 'bling/vim-airline' | Plug 'vim-airline/vim-airline-themes'
