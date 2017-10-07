@@ -57,7 +57,12 @@ call plug#end()
 set nocompatible
 filetype plugin indent on
 syntax enable
-colorscheme delek
+set background=dark
+if has("gui_running")
+    colorscheme Tomorrow-Night
+else
+    colorscheme delek
+endif
 set encoding=utf-8
 set hidden
 set history=1000
