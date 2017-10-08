@@ -53,7 +53,7 @@ plugins=(git vi-mode)
 
 # User configuration
 # Variables
-export PATH=/usr/local/bin:$PATH
+export PATH=/usr/local/bin:$(go env GOPATH)/bin:$PATH
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
