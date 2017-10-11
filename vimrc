@@ -40,6 +40,7 @@ Plug 'kien/rainbow_parentheses.vim'
 " Syntax
 Plug 'pangloss/vim-javascript'
 Plug 'jelera/vim-javascript-syntax'
+Plug 'mxw/vim-jsx'
 
 " Tmux
 Plug 'edkolev/tmuxline.vim'
