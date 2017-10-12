@@ -36,6 +36,7 @@ Plug 'tpope/vim-unimpaired'
 " UI
 Plug 'bling/vim-airline' | Plug 'vim-airline/vim-airline-themes'
 Plug 'kien/rainbow_parentheses.vim'
+Plug 'vim-scripts/ZoomWin'
 
 " Syntax
 Plug 'pangloss/vim-javascript'
