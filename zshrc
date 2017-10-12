@@ -5,7 +5,7 @@ export ZSH=~/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="refined"
+ZSH_THEME=""
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -58,6 +58,10 @@ export PATH=/usr/local/bin:$(go env GOPATH)/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
+
+# Add pure prompt
+autoload -U promptinit; promptinit
+prompt pure
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
