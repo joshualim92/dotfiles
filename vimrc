@@ -70,6 +70,11 @@ set hidden
 set history=1000
 set autoread
 
+" Move backup, swap, and undo files in separate directory
+set backupdir=~/.vim/backup//
+set directory=~/.vim/swap//
+set undodir=~/.vim/undo//
+
 " Map leader key to be space
 let mapleader=' '
 
