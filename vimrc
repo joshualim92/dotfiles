@@ -42,6 +42,7 @@ Plug 'vim-scripts/ZoomWin'
 Plug 'pangloss/vim-javascript'
 Plug 'jelera/vim-javascript-syntax'
 Plug 'mxw/vim-jsx'
+Plug 'heavenshell/vim-jsdoc'
 
 " Tmux
 Plug 'edkolev/tmuxline.vim'
@@ -210,3 +211,10 @@ nnoremap <silent> <Leader>b     :Buffers<CR>
 nnoremap <Leader>ag             :Ag <C-R><C-W>
 xnoremap <silent> <Leader>ag    y:Ag <C-R>"<CR>
 nnoremap <silent> <Leader>`     :Marks<CR>
+
+" Javascript
+
+" vim-jsdoc
+let g:jsdoc_allow_input_prompt = 1
+let g:jsdoc_input_description = 1
+let g:jsdoc_enable_es6 = 1
