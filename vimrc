@@ -152,6 +152,12 @@ let g:airline#extensions#tabline#left_alt_sep='|'
 " Set tmuxline preset
 let g:tmuxline_preset='full'
 
+" Ale
+let g:ale_fixers = {
+            \ 'javascript': ['prettier', 'eslint'],
+            \ 'json': ['prettier', 'eslint']
+            \ }
+
 " Ack.vim
 if executable('ag')
     let g:ackprg='ag --vimgrep' " Ack default use ag if possible
