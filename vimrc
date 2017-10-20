@@ -33,6 +33,9 @@ Plug 'junegunn/fzf.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-unimpaired'
 
+" Themes
+Plug 'chriskempson/base16-vim'
+
 " UI
 Plug 'bling/vim-airline' | Plug 'vim-airline/vim-airline-themes'
 Plug 'kien/rainbow_parentheses.vim'
@@ -61,11 +64,7 @@ set nocompatible
 filetype plugin indent on
 syntax enable
 set background=dark
-if has("gui_running")
-    colorscheme Tomorrow-Night
-else
-    colorscheme delek
-endif
+let base16colorspace=256  " Access colors present in 256 colorspace
 set encoding=utf-8
 set hidden
 set history=1000
@@ -106,23 +105,23 @@ set wildmenu " visual autocomplete for command menu
 set scrolloff=5 "Min number of lines to keep above and below cursor
 set showcmd " display incomplete commands
 set colorcolumn=+1
+hi MatchParen cterm=underline ctermbg=NONE
 
 " Following highlight changes are because delek doesn't work well with iterm2
 " material-design-colors
-if g:colors_name == 'delek'
-    hi MatchParen cterm=underline ctermbg=NONE
-    hi Search cterm=reverse ctermbg=LightBlue
-    hi Folded cterm=standout ctermbg=White
-    hi ColorColumn ctermbg=237
-    " Diff colors
-    hi DiffAdd ctermfg=15 ctermbg=28
-    hi DiffChange ctermfg=15 ctermbg=18
-    hi DiffDelete ctermfg=15 ctermbg=124
-    hi DiffText ctermfg=15 ctermbg=0
-    " Statusline colors
-    hi StatusLine ctermfg=NONE ctermbg=234
-    hi WildMenu ctermbg=121
-endif
+" if g:colors_name == 'delek'
+"     hi Search cterm=reverse ctermbg=LightBlue
+"     hi Folded cterm=standout ctermbg=White
+"     hi ColorColumn ctermbg=237
+"     " Diff colors
+"     hi DiffAdd ctermfg=15 ctermbg=28
+"     hi DiffChange ctermfg=15 ctermbg=18
+"     hi DiffDelete ctermfg=15 ctermbg=124
+"     hi DiffText ctermfg=15 ctermbg=0
+"     " Statusline colors
+"     hi StatusLine ctermfg=NONE ctermbg=234
+"     hi WildMenu ctermbg=121
+" endif
 
 " :find
 set path+=**
@@ -144,7 +143,7 @@ set foldminlines=0 " allows for folding of single lines
 autocmd BufWritePre * :%s/\s\+$//e
 
 " Set airline theme
-let g:airline_theme='base16color'
+let g:airline_theme = 'base16'
 let g:airline#extensions#tabline#enabled=1
 let g:airline#extensions#tabline#left_sep=' '
 let g:airline#extensions#tabline#left_alt_sep='|'
@@ -224,3 +223,4 @@ nnoremap <silent> <Leader>`     :Marks<CR>
 let g:jsdoc_allow_input_prompt = 1
 let g:jsdoc_input_description = 1
 let g:jsdoc_enable_es6 = 1
+colorscheme base16-default-dark
