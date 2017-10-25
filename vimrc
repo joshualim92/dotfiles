@@ -131,9 +131,10 @@ set wildignore+=*/node_modules/*
 " Searching
 set ignorecase
 set incsearch
-set hlsearch
-" turn off search highlight
-nnoremap <leader><space> :nohlsearch<CR>
+" Set nohlsearch before starting next search
+nnoremap / :set nohlsearch<CR>/
+" Toggle hlsearch
+nnoremap <leader><space> :set hls!<CR>
 
 " Folding
 set foldmethod=indent " fold-method to follow indents
