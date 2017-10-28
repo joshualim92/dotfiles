@@ -52,3 +52,11 @@ afterEach(() => {
 	${0:${VISUAL}}
 });
 endsnippet
+
+snippet st "sinon stub" b
+sinon.stub($1, '$2');$0
+endsnippet
+
+snippet re "sinon .restore()" b
+$1.$2.restore();$0
+endsnippet
