@@ -32,6 +32,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-unimpaired'
+Plug 'mbbill/undotree'
 
 " Themes
 Plug 'chriskempson/base16-vim'
