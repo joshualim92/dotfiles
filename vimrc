@@ -71,6 +71,7 @@ set encoding=utf-8
 set hidden
 set history=1000
 set autoread
+set guifont=Monaco:h13
 
 " Move backup, swap, and undo files in separate directory
 set backupdir=~/.vim/backup//
