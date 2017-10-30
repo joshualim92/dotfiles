@@ -83,6 +83,7 @@ let mapleader=' '
 
 " Set <C-U> to be undo during insert mode
 inoremap <C-U> <C-G>u<C-U>
+nnoremap <leader>u :UndotreeToggle<CR>
 
 " Allow backspacing over everything in insert mode
 set backspace=indent,eol,start
