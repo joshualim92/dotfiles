@@ -4,7 +4,6 @@ alias sb16t="setbase16theme"
 
 # Git
 alias gbv="git branch -a -vv"
-alias grbia="git rebase -i --autosquash"
 
 # Vim
 alias swpl="find . -name \"*.swp\""

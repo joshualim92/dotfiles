@@ -13,3 +13,5 @@
 	prune = true
 [merge]
 	tool = vimdiff
+[rebase]
+	autosquash = true
