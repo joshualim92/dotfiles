@@ -15,3 +15,5 @@
 	tool = vimdiff
 [rebase]
 	autosquash = true
+[include]
+	path = ./git/aliases
