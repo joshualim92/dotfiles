@@ -217,6 +217,9 @@ map <Leader>vx :VimuxInterruptRunner<CR>
 " Zoom the runner pane (use <bind-key> z to restore runner pane)
 map <Leader>vz :call VimuxZoomRunner()<CR>
 
+" Git
+au BufNewFile,BufRead ~/dotfiles/git/* setf gitconfig
+
 " FZF
 nnoremap <silent> <Leader>f     :Files<CR>
 nnoremap <silent> <Leader>b     :Buffers<CR>

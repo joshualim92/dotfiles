@@ -1,2 +1,91 @@
 [alias]
+	# Config
+	la = config --get-regexp ^alias
+
+	# Add
+	a = add
+	aa = add --all
+	ap = add -p
+
+	# Branch
+	b = branch
+	bd = branch -d
+	bD = branch -D
+	bm = branch --move
 	bv = branch -a -vv
+
+	# Checkout
+	co = checkout
+	cob = checkout -b
+	cop = checkout -p
+
+	# Commit
+	c = commit
+	ca = commit -a
+	caf = commit -a --fixup
+	cafh = commit -a --fixup head
+	cam = commit --amend
+	cas = commit -a --squash
+	cash = commit -a --squash head
+	cf = commit --fixup
+	cfh = commit --fixup head
+	cs = commit --squash
+	csh = commit --squash head
+
+	# Diff
+	d = diff
+	dca = diff --cached
+
+	# Fetch
+	f = fetch
+
+	# Log
+	lg = log --stat
+	lgg = log --graph
+	lgga = log --graph --decorate --all
+	lgp = log --stat -p
+	lo = log --oneline --decorate --graph
+	loa = log --oneline --decorate --graph --all
+	lop = log --oneline --decorate --graph --patch
+	lol = log --graph --pretty='%Cred%h%Creset -%C(yellow)%d%Creset %s \
+		%Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	lola = log --graph --pretty='%Cred%h%Creset -%C(yellow)%d%Creset %s \
+		%Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --all
+
+	# Merge
+	m = merge
+
+	# Mergetool
+	mtvim = mergetool --no-prompt --tool=vimdiff
+
+	# Pull
+	l = pull
+
+	# Push
+	p = push
+	pf = push -f
+	pu = push -u
+
+	# Reset
+	rs = reset
+	rsh = reset head~
+
+	# Rebase
+	rb = rebase
+	rba = rebase --abort
+	rbc = rebase --continue
+	rbi = rebase -i
+	rbihh = rebase -i head~~
+	rbs = rebase --skip
+
+	# Stash
+	sta = stash save
+	staa = stash apply
+	stc = stash clear
+	std = stash drop
+	stl = stash list
+	stp = stash pop
+	sts = stash show --text
+
+	# Status
+	st = status
