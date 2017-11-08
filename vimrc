@@ -229,3 +229,19 @@ let g:jsdoc_allow_input_prompt = 1
 let g:jsdoc_input_description = 1
 let g:jsdoc_enable_es6 = 1
 colorscheme base16-default-dark
+
+" Functions
+function OpenAlternateFile ()
+    let command = "vs "
+    let file_path = expand("%")
+    let file_path_parts = split(file_path, "/")
+
+    if file_path_parts[0] == "test"
+        execute command . join(file_path_parts[1:], "/")
+    elseif file_path_parts[0] == "src"
+        execute command . "test/" . join(file_path_parts[1:], "/")
+    else
+        execute command . "test/" . file_path
+    endif
+endfunction
+nnoremap <Leader>ot :call OpenAlternateFile()<CR>
