@@ -218,7 +218,7 @@ map <Leader>vz :call VimuxZoomRunner()<CR>
 let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
 nnoremap <silent> <Leader>f     :Files<CR>
 nnoremap <silent> <Leader>b     :Buffers<CR>
-nnoremap <Leader>ag             :Ag <C-R><C-W>
+nnoremap <Leader>ag             :Ag<Space>
 xnoremap <silent> <Leader>ag    y:Ag <C-R>"<CR>
 nnoremap <silent> <Leader>`     :Marks<CR>
 
