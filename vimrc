@@ -83,7 +83,7 @@ let mapleader=' '
 
 " Set <C-U> to be undo during insert mode
 inoremap <C-U> <C-G>u<C-U>
-nnoremap <leader>u :UndotreeToggle<CR>
+nnoremap <Leader>u :UndotreeToggle<CR>
 
 " Allow backspacing over everything in insert mode
 set backspace=indent,eol,start
@@ -137,7 +137,7 @@ set incsearch
 " Set nohlsearch before starting next search
 nnoremap / :set nohlsearch<CR>/
 " Toggle hlsearch
-nnoremap <leader><space> :set hls!<CR>
+nnoremap <Leader><space> :set hls!<CR>
 
 " Folding
 set foldmethod=indent " fold-method to follow indents
@@ -167,10 +167,11 @@ if executable('ag')
     let g:ackprg='ag --vimgrep' " Ack default use ag if possible
 endif
 " Map Ack.vim
-nnoremap <Leader>a :Ack!<Space>
+nnoremap <Leader>ak :Ack!<Space>
 
 " NERDTree
-nnoremap <leader>n :NERDTreeToggle<CR>
+nnoremap <Leader>nt :NERDTreeToggle<CR>
+nnoremap <Leader>nf :NERDTreeFind<CR>
 
 " Tern
 let g:tern_map_keys=1 "enable keyboard shortcuts
