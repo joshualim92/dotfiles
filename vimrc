@@ -65,6 +65,7 @@ call plug#end()
 set nocompatible
 filetype plugin indent on
 syntax enable
+set timeoutlen=1000 ttimeoutlen=0
 set background=dark
 let base16colorspace=256  " Access colors present in 256 colorspace
 set encoding=utf-8
