@@ -15,5 +15,6 @@ alias tl="tmux ls"
 alias tn="tmux new -s"
 
 # Vim
+alias v="vim"
 alias swpl="find . -name \"*.swp\""
 alias swpr="find . -name \"*.swp\" -exec rm -i {} +"
