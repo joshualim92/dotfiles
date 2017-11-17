@@ -217,7 +217,6 @@ map <Leader>vx :VimuxInterruptRunner<CR>
 map <Leader>vz :call VimuxZoomRunner()<CR>
 
 " FZF
-let $FZF_DEFAULT_COMMAND = 'ag --hidden --ignore .git -g ""'
 nnoremap <silent> <Leader>f     :Files<CR>
 nnoremap <silent> <Leader>b     :Buffers<CR>
 nnoremap <Leader>ag             :Ag<Space>
