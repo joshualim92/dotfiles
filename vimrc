@@ -224,6 +224,8 @@ xnoremap <silent> <Leader>ag    y:Ag <C-R>"<CR>
 nnoremap <silent> <Leader>`     :Marks<CR>
 
 " Javascript
+" Cleanup mocha test file of .only
+command! CleanUpTest %s/.only//g
 
 " vim-jsdoc
 let g:jsdoc_allow_input_prompt = 1
