@@ -234,8 +234,8 @@ let g:jsdoc_enable_es6 = 1
 colorscheme base16-default-dark
 
 " Functions
-function OpenAlternateFile ()
-    let command = "vs "
+function! OpenAlternateFile (command)
+    let command = a:command . " "
     let file_path = expand("%")
     let file_path_parts = split(file_path, "/")
 
@@ -247,4 +247,6 @@ function OpenAlternateFile ()
         execute command . "test/" . file_path
     endif
 endfunction
-nnoremap <Leader>ot :call OpenAlternateFile()<CR>
+nnoremap <Leader>oae :call OpenAlternateFile("e")<CR>
+nnoremap <Leader>oas :call OpenAlternateFile("sp")<CR>
+nnoremap <Leader>oav :call OpenAlternateFile("vs")<CR>
