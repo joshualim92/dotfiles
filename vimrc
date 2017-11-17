@@ -226,6 +226,8 @@ nnoremap <silent> <Leader>`     :Marks<CR>
 " Javascript
 " Cleanup mocha test file of .only
 command! CleanUpTest %s/.only//g
+" Add .only to mocha test
+nnoremap <LocalLeader>only ?\(it\\|describe\)('<CR>f(i.only<ESC><C-O>:w<CR>
 
 " vim-jsdoc
 let g:jsdoc_allow_input_prompt = 1
