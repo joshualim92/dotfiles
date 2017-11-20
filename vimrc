@@ -33,6 +33,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-unimpaired'
 Plug 'mbbill/undotree'
+Plug 'shime/vim-livedown', { 'do': 'npm install -g livedown' }
 
 " Themes
 Plug 'chriskempson/base16-vim'
