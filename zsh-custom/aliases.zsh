@@ -13,6 +13,7 @@ alias td="tmux detach"
 alias tks="tmux kill-session -t"
 alias tl="tmux ls"
 alias tn="tmux new -s"
+alias ts="tmux switchc -t"
 
 # Vim
 alias v="vim"
