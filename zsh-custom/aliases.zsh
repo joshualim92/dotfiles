@@ -7,6 +7,7 @@ alias emac="emacsclient"
 alias es="emacsclient -c"
 
 # Tmux
+alias t="tmux"
 alias ta="tmux a"
 alias tat="tmux a -t"
 alias td="tmux detach"
