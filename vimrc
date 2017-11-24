@@ -226,7 +226,7 @@ nnoremap <silent> <Leader>`     :Marks<CR>
 
 " Javascript
 " Cleanup mocha test file of .only
-command! CleanUpTest %s/.only//g
+command! CleanUpTest %s/.only(/(/g
 " Remove \" in JSON keys and convert \" to \' in values
 command! -range ConvJsonKey :silent
             \ <line1>,<line2>s/"\(\w\+\)":/\1:/g | <line1>,<line2>s/"/'/g
