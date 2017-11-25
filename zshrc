@@ -97,6 +97,8 @@ prompt pure
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+setopt HIST_IGNORE_ALL_DUPS
+
 function generateSshKey() {
     ssh-keygen -t rsa -b 4096 -C "joshua.lim@dominionmarinemedia.com"
     eval "$(ssh-agent -s)"
