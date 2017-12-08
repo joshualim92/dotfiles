@@ -16,6 +16,10 @@ snippet imp "ES6 import"
 import $1 from '$3${2:$1}';$0
 endsnippet
 
+snippet creq "const require()" b
+const $1 = require('$3${2:$1}');$0
+endsnippet
+
 # Mocha
 snippet des "describe('thing', () => { ... })" b
 describe('${1:}', () => {
