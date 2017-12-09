@@ -106,8 +106,13 @@ function generateSshKey() {
 }
 
 function setbase16theme() {
-   base16-manager set $1
-   sed -i "s/\(colorscheme base16\)-.*/\1-${1}/g" "$HOME/dotfiles/vimrc"
+   if [[ $1 ]]; then
+      base16-manager set $1
+      # sed -i "s/\(colorscheme base16\)-.*/\1-${1}/g" "$HOME/dotfiles/vimrc"
+   else
+      base16-manager set-random
+   fi
+
    source ~/.zshrc
 }
 

@@ -1,6 +1,7 @@
 alias ctags="`brew --prefix`/bin/ctags" # call correct ctags
 
-alias sb16t="setbase16theme"
+alias bm="base16-manager"
+alias bms="setbase16theme"
 
 # Emacs
 alias emac="emacsclient"
