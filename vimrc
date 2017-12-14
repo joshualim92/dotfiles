@@ -132,7 +132,6 @@ hi MatchParen cterm=underline ctermbg=NONE
 
 " :find
 set path+=**
-set wildignore+=*/node_modules/*
 
 " Searching
 set ignorecase
