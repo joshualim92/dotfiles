@@ -7,6 +7,9 @@ alias bms="setbase16theme"
 alias emac="emacsclient"
 alias es="emacsclient -c"
 
+# Source
+alias soz="source ~/.zshrc"
+
 # Tmux
 alias t="tmux"
 alias ta="tmux a"
