@@ -40,7 +40,6 @@ Plug 'chriskempson/base16-vim'
 
 " UI
 Plug 'bling/vim-airline' | Plug 'vim-airline/vim-airline-themes'
-Plug 'kien/rainbow_parentheses.vim'
 Plug 'vim-scripts/ZoomWin'
 
 " Syntax
@@ -178,14 +177,6 @@ nnoremap <Leader>nf :NERDTreeFind<CR>
 " Tern
 let g:tern_map_keys=1 "enable keyboard shortcuts
 let g:tern_show_argument_hints='on_hold' "show argument hints
-
-" Better Rainbow Parentheses
-au VimEnter * RainbowParenthesesToggle " Load on start
-" Load if syntax is enabled
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
-au Syntax * RainbowParenthesesLoadChevrons
 
 " Make YouCompleteMe compatible with UltiSnips (using supertab)
 let g:ycm_key_list_select_completion=['<C-N>']
