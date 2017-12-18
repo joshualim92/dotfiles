@@ -225,6 +225,8 @@ command! -range ConvJsonKey :silent
             \ <line1>,<line2>s/"\(\w\+\)":/\1:/g | <line1>,<line2>s/"/'/g
 " Add .only to mocha test
 nnoremap <LocalLeader>only ?\(it\\|describe\)('<CR>f(i.only<ESC><C-O>:w<CR>
+" Run nodemon npm t in vimux
+nnoremap <LocalLeader>vpnt :VimuxPromptCommand<CR>nodemon -x "npm t"<CR>
 
 " vim-jsdoc
 let g:jsdoc_allow_input_prompt = 1
