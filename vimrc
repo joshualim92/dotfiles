@@ -43,10 +43,9 @@ Plug 'bling/vim-airline' | Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-scripts/ZoomWin'
 
 " Syntax
-Plug 'pangloss/vim-javascript'
-Plug 'jelera/vim-javascript-syntax'
-Plug 'mxw/vim-jsx'
 Plug 'heavenshell/vim-jsdoc'
+Plug 'jelera/vim-javascript-syntax'
+Plug 'sheerun/vim-polyglot'
 
 " Tmux
 Plug 'edkolev/tmuxline.vim'
