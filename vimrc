@@ -67,6 +67,7 @@ syntax enable
 set timeoutlen=1000 ttimeoutlen=0
 set background=dark
 let base16colorspace=256  " Access colors present in 256 colorspace
+colorscheme base16-default-dark
 set encoding=utf-8
 set hidden
 set history=1000
@@ -232,7 +233,6 @@ nnoremap <LocalLeader>vpnt :VimuxPromptCommand<CR>nodemon -x "npm t"<CR>
 let g:jsdoc_allow_input_prompt = 1
 let g:jsdoc_input_description = 1
 let g:jsdoc_enable_es6 = 1
-colorscheme base16-default-dark
 
 " Functions
 function! OpenAlternateFile (command)
