@@ -40,6 +40,7 @@ Plug 'chriskempson/base16-vim'
 
 " UI
 Plug 'bling/vim-airline' | Plug 'vim-airline/vim-airline-themes'
+Plug 'luochen1990/rainbow'
 Plug 'vim-scripts/ZoomWin'
 
 " Syntax
@@ -112,6 +113,7 @@ set scrolloff=5 "Min number of lines to keep above and below cursor
 set showcmd " display incomplete commands
 set colorcolumn=+1
 hi MatchParen cterm=underline ctermbg=NONE
+let g:rainbow_active=1
 
 " Following highlight changes are because delek doesn't work well with iterm2
 " material-design-colors
