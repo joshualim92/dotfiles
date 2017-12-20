@@ -2,6 +2,8 @@ alias ctags="`brew --prefix`/bin/ctags" # call correct ctags
 
 alias cl="clear"
 
+alias ls="ls --color=auto"
+
 alias bm="base16-manager"
 alias bms="setbase16theme"
 
