@@ -76,6 +76,10 @@ set autoread
 set autowriteall
 set guifont=Monaco:h13
 
+" Use up and down for command-line history as they search on partial matches
+cnoremap <C-N> <Down>
+cnoremap <C-P> <Up>
+
 " Move backup, swap, and undo files in separate directory
 set backupdir=~/.vim/backup//
 set directory=~/.vim/swap//
