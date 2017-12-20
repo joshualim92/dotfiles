@@ -4,14 +4,15 @@
 call plug#begin('~/.vim/plugged')
 
 " Editing
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets' | Plug 'ervandew/supertab'
+Plug 'jiangmiao/auto-pairs'
+Plug 'roxma/vim-window-resize-easy'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'ternjs/tern_for_vim', { 'for': ['javascript'], 'do': 'npm install'}
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-surround'
-Plug 'tpope/vim-commentary'
-Plug 'jiangmiao/auto-pairs'
-Plug 'tpope/vim-repeat'
-Plug 'roxma/vim-window-resize-easy'
-Plug 'ternjs/tern_for_vim', { 'for': ['javascript'], 'do': 'npm install'}
-Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets' | Plug 'ervandew/supertab'
 
 function! BuildYCM(info)
         if a:info.status == 'installed' || a:info.force
