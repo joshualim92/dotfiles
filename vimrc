@@ -117,7 +117,6 @@ set wildmenu " visual autocomplete for command menu
 set scrolloff=5 "Min number of lines to keep above and below cursor
 set showcmd " display incomplete commands
 set colorcolumn=+1
-hi MatchParen cterm=underline ctermbg=NONE
 let g:rainbow_active=1
 
 if empty($TMUX)
