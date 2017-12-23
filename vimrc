@@ -118,6 +118,7 @@ set scrolloff=5 "Min number of lines to keep above and below cursor
 set showcmd " display incomplete commands
 set colorcolumn=+1
 let g:rainbow_active=1
+nnoremap <Leader>rt :RainbowToggle<CR>
 nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
 augroup CursorLine
   au!
