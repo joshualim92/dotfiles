@@ -5,6 +5,7 @@
 #	email = joshualim@Joshuas-MBP.hitronhub.home
 [core]
 	editor = vim
+	excludesfile = ~/.ignore
 [push]
 	default = simple
 [pull]
