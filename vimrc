@@ -137,22 +137,6 @@ else
     let &t_SR = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=2\x7\<Esc>\\"
 endif
 
-" Following highlight changes are because delek doesn't work well with iterm2
-" material-design-colors
-" if g:colors_name == 'delek'
-"     hi Search cterm=reverse ctermbg=LightBlue
-"     hi Folded cterm=standout ctermbg=White
-"     hi ColorColumn ctermbg=237
-"     " Diff colors
-"     hi DiffAdd ctermfg=15 ctermbg=28
-"     hi DiffChange ctermfg=15 ctermbg=18
-"     hi DiffDelete ctermfg=15 ctermbg=124
-"     hi DiffText ctermfg=15 ctermbg=0
-"     " Statusline colors
-"     hi StatusLine ctermfg=NONE ctermbg=234
-"     hi WildMenu ctermbg=121
-" endif
-
 " :find
 set path+=**
 
