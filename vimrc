@@ -28,12 +28,12 @@ Plug 'w0rp/ale'
 Plug 'ntpeters/vim-better-whitespace'
 
 " Browsing
-Plug 'mileszs/ack.vim'
+Plug 'jremmen/vim-ripgrep'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'mbbill/undotree'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-unimpaired'
-Plug 'mbbill/undotree'
 Plug 'shime/vim-livedown', { 'do': 'npm install -g livedown' }
 
 " Themes
@@ -186,12 +186,9 @@ let g:ale_fixers = {
             \ 'json': ['prettier', 'eslint']
             \ }
 
-" Ack.vim
-if executable('ag')
-    let g:ackprg='ag --vimgrep' " Ack default use ag if possible
-endif
-" Map Ack.vim
-nnoremap <Leader>ak :Ack!<Space>
+" vim-ripgrep
+let g:rg_highlight=1
+nnoremap <Leader>rg :Rg<Space>
 
 " NERDTree
 nnoremap <Leader>nt :NERDTreeToggle<CR>
