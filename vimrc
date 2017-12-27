@@ -31,6 +31,7 @@ Plug 'ntpeters/vim-better-whitespace'
 Plug 'jremmen/vim-ripgrep'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+Plug 'ludovicchabant/vim-gutentags'
 Plug 'mbbill/undotree'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-unimpaired'
