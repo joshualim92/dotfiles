@@ -12,7 +12,8 @@ alias emac="emacsclient"
 alias es="emacsclient -c"
 
 # Source
-alias soz="source ~/.zshrc"
+alias -g so="source"
+alias -g zr="~/.zshrc"
 
 # Tmux
 alias t="tmux"
