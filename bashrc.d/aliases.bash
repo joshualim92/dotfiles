@@ -3,6 +3,9 @@ alias la='ls -A'
 alias ll='ls -lh'
 alias ls='ls --color=auto'
 
+# Cat
+alias cat='ccat'
+
 alias dir='dir --color=auto'
 alias vdir='vdir --color=auto'
 

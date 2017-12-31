@@ -10,6 +10,7 @@ brew install macvim --with-override-system-vim
 brew install \
     base16-manager \
     bash \
+    ccat \
     cmake \
     coreutils \
     findutils \
