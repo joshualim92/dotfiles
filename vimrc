@@ -36,6 +36,7 @@ Plug 'mbbill/undotree'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-unimpaired'
 Plug 'shime/vim-livedown', { 'do': 'npm install -g livedown' }
+Plug 'vim-scripts/gitignore'
 
 " Themes
 Plug 'chriskempson/base16-vim'
@@ -116,6 +117,7 @@ set textwidth=78
 set number " show line numbers
 set relativenumber
 set wildmenu " visual autocomplete for command menu
+set wildmode=list:full
 set scrolloff=5 "Min number of lines to keep above and below cursor
 set showcmd " display incomplete commands
 set colorcolumn=+1
@@ -140,6 +142,7 @@ endif
 
 " :find
 set path+=**
+set wildignore+=*node_modules/*,*.git/*
 
 " Searching
 set ignorecase
