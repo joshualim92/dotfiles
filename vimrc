@@ -216,6 +216,9 @@ map <Leader>vz :call VimuxZoomRunner()<CR>
 " Git
 au BufNewFile,BufRead ~/dotfiles/git/* setf gitconfig
 
+" Fugitive
+nnoremap <silent> <Leader>gs :Gstatus<CR>
+
 " FZF
 nnoremap <silent> <Leader>f     :Files<CR>
 nnoremap <silent> <Leader>b     :Buffers<CR>
