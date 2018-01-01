@@ -62,6 +62,7 @@ HISTFILESIZE=1000000
 HISTSIZE=1000000
 
 export PATH=/usr/local/opt/coreutils/libexec/gnubin:/usr/local/bin:$(go env GOPATH)/bin:$PATH
+export MANPATH=/usr/local/opt/coreutils/libexec/gnuman:$MANPATH
 
 # BASE16
 # `git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell`
