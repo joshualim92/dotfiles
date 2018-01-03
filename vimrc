@@ -154,10 +154,8 @@ set foldminlines=0 " allows for folding of single lines
 autocmd BufWritePre * :%s/\s\+$//e
 
 " Set airline theme
-let g:airline_theme = 'base16'
-let g:airline#extensions#tabline#enabled=1
-let g:airline#extensions#tabline#left_sep=' '
-let g:airline#extensions#tabline#left_alt_sep='|'
+let g:airline_extensions=['ale', 'tabline']
+let g:airline_theme='base16'
 
 " Set tmuxline preset
 let g:tmuxline_preset='full'
