@@ -23,7 +23,7 @@ alias g='git'
 
 # Source
 alias so='source'
-alias bash_profile='source ~/.bash_profile'
+alias bp='source ~/.bash_profile'
 alias bashrc='source ~/.bashrc'
 
 # Tmux
