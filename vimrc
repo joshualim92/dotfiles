@@ -5,6 +5,8 @@ call plug#begin('~/.vim/plugged')
 
 " Editing
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets' | Plug 'ervandew/supertab'
+Plug 'Valloric/YouCompleteMe',
+      \ {'do': './install.py --go-completer --js-completer' }
 Plug 'jiangmiao/auto-pairs'
 Plug 'roxma/vim-window-resize-easy'
 Plug 'terryma/vim-multiple-cursors'
@@ -13,15 +15,6 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-surround'
-
-function! BuildYCM(info)
-        if a:info.status == 'installed' || a:info.force
-                !./install.py --clang-completer --tern-completer
-        endif
-endfunction
-Plug 'Valloric/YouCompleteMe',
-            \ { 'for': ['javascript', 'c', 'cpp'],
-            \ 'do': function('BuildYCM')  }
 
 " Linting
 Plug 'w0rp/ale'
