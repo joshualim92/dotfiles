@@ -18,7 +18,6 @@ brew install \
     git \
     htop \
     node \
-    reattach-to-user-namespace \
     ripgrep \
     the_silver_searcher \
     tmux \
