@@ -6,14 +6,17 @@ call plug#begin('~/.vim/plugged')
 " Editing
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets' | Plug 'ervandew/supertab'
 Plug 'Valloric/YouCompleteMe',
-      \ {'do': './install.py --go-completer --js-completer' }
+            \ {'do': './install.py --go-completer --js-completer' }
 Plug 'jiangmiao/auto-pairs'
 Plug 'roxma/vim-window-resize-easy'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'ternjs/tern_for_vim', { 'for': ['javascript'], 'do': 'npm install'}
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-sleuth'
+Plug 'tpope/vim-sleuth' "{{{
+    let g:sleuth_automatic=0
+"}}}
+
 Plug 'tpope/vim-surround'
 
 " Linting
@@ -25,6 +28,7 @@ Plug 'jremmen/vim-ripgrep'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'ludovicchabant/vim-gutentags'
+
 Plug 'mbbill/undotree'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-unimpaired'
@@ -52,6 +56,11 @@ Plug 'benmills/vimux'
 " Git
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
+
+augroup load_sleuth
+    autocmd!
+    autocmd InsertEnter * :Sleuth | autocmd! load_sleuth
+augroup END
 
 call plug#end()
 " ============================================================================
@@ -118,9 +127,9 @@ let g:rainbow_active=1
 nnoremap <Leader>rt :RainbowToggle<CR>
 nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
 augroup CursorLine
-  au!
-  au VimEnter,WinEnter,BufWinEnter * setlocal cursorline cursorcolumn
-  au WinLeave * setlocal nocursorline nocursorcolumn
+    au!
+    au VimEnter,WinEnter,BufWinEnter * setlocal cursorline cursorcolumn
+    au WinLeave * setlocal nocursorline nocursorcolumn
 augroup END
 
 if empty($TMUX)
@@ -231,14 +240,17 @@ augroup filetype_javascript
     command! CleanUpTest %s/.only(/(/g
     " Remove \" in JSON keys and convert \" to \' in values
     command! -range ConvJsonKey :silent
-          \ <line1>,<line2>s/"\(\w\+\)":/\1:/g | <line1>,<line2>s/"/'/g
+                \ <line1>,<line2>s/"\(\w\+\)":/\1:/g | <line1>,<line2>s/"/'/g
 
     " Add .only to mocha test
     au FileType javascript nnoremap <buffer>
-          \ <LocalLeader>only ?\(it\\|describe\)('<CR>f(i.only<ESC><C-O>:w<CR>
+                \ <LocalLeader>only
+                \ ?\(it\\|describe\)('<CR>f(i.only<ESC><C-O>:w<CR>
+
     " Run nodemon npm t in vimux
     au FileType javascript nnoremap <buffer>
-          \ <LocalLeader>vpnt :VimuxPromptCommand<CR>nodemon -x "npm t"<CR>
+                \ <LocalLeader>vpnt
+                \ :VimuxPromptCommand<CR>nodemon -x "npm t"<CR>
 
     function! OpenAlternateFile (command)
         let command = a:command . " "
@@ -255,9 +267,9 @@ augroup filetype_javascript
     endfunction
 
     au FileType javascript nnoremap <buffer>
-          \ <Leader>oae :call OpenAlternateFile("e")<CR>
+                \ <Leader>oae :call OpenAlternateFile("e")<CR>
     au FileType javascript nnoremap <buffer>
-          \ <Leader>oas :call OpenAlternateFile("sp")<CR>
+                \ <Leader>oas :call OpenAlternateFile("sp")<CR>
     au FileType javascript nnoremap <buffer>
-          \ <Leader>oav :call OpenAlternateFile("vs")<CR>
+                \ <Leader>oav :call OpenAlternateFile("vs")<CR>
 augroup END
