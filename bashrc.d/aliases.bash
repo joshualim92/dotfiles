@@ -21,6 +21,9 @@ alias es='emacsclient -c'
 # Git
 alias g='git'
 
+# jobs
+alias jb='jobs'
+
 # Source
 alias so='source'
 alias bp='source ~/.bash_profile'
