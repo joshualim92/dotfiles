@@ -52,7 +52,6 @@ ln -s ~/dotfiles/ignore ~/.ignore
 # vim
 mv ~/.vim ~/.vim.bak
 ln -s ~/dotfiles/vim ~/.vim
-mkdir ~/.vim/backup ~/.vim/swap ~/.vim/undo
 
 # ctags
 mv ~/.ctags.d ~/.ctags.d.bak

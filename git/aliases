@@ -32,6 +32,9 @@
 	cs = commit --squash
 	csh = commit --squash head
 
+	# Ctags
+	ctags = !.git/hooks/ctags
+
 	# Diff
 	d = diff
 	dca = diff --cached

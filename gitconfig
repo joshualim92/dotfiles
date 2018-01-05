@@ -20,3 +20,5 @@
 	verbose = true
 [include]
 	path = ./git/aliases
+[init]
+	templatedir = ~/dotfiles/git/git_template
