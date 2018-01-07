@@ -62,7 +62,7 @@ HISTCONTROL=ignoreboth
 HISTFILESIZE=1000000
 HISTSIZE=1000000
 
-export PATH=/usr/local/opt/coreutils/libexec/gnubin:/usr/local/bin:$(go env GOPATH)/bin:$PATH
+export PATH=$HOME/dotfiles/bin:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/bin:$(go env GOPATH)/bin:$PATH
 export MANPATH=/usr/local/opt/coreutils/libexec/gnuman:$MANPATH
 
 # BASE16
