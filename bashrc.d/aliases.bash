@@ -18,6 +18,9 @@ alias bms='setbase16theme'
 alias emac='emacsclient'
 alias es='emacsclient -c'
 
+# grep
+alias gr='grep'
+
 # Git
 alias g='git'
 
