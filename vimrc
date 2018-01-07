@@ -11,18 +11,11 @@ Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets' " {{{
 	let g:UltiSnipsEditSplit='vertical' " :UltiSnipsEditSplit vertically
 " }}}
 Plug 'Valloric/YouCompleteMe', {
-			\ 'on': [],
 			\ 'do': './install.py --go-completer --js-completer'
 			\} " {{{
 
 	let g:ycm_key_list_select_completion=['<C-N>']
 	let g:ycm_key_list_previous_completion=['<C-P>']
-
-	augroup ycm_loader
-		autocmd!
-		autocmd InsertEnter * call plug#load('YouCompleteMe')
-					\ | autocmd! ycm_loader
-	augroup END
 " }}}
 Plug 'airblade/vim-gitgutter' " {{{
 	let g:gitgutter_enabled=0
