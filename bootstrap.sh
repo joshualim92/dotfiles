@@ -24,6 +24,10 @@ brew install \
     tree \
     z
 
+ # Add the brew bash shell to the list of allowed shells
+sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
+chsh -s /usr/local/bin/bash
+
 # bash-it
 git clone --depth=1 https://github.com/Bash-it/bash-it.git ~/.bash_it
 ~/.bash_it/install.sh --interactive

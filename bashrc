@@ -54,8 +54,9 @@ source "$BASH_IT"/bash_it.sh
 
 set -o vi
 
-shopt -s histappend
 shopt -s expand_aliases
+shopt -s globstar
+shopt -s histappend
 
 HISTCONTROL=ignoreboth
 HISTFILESIZE=1000000
