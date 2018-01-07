@@ -18,8 +18,6 @@ Plug 'Valloric/YouCompleteMe', {
 	let g:ycm_key_list_previous_completion=['<C-P>']
 " }}}
 Plug 'airblade/vim-gitgutter' " {{{
-	let g:gitgutter_enabled=0
-	nnoremap <Leader>gg :GitGutterToggle<CR>
 " }}}
 Plug 'benmills/vimux' "{{{
 	nnoremap <Leader>vp :VimuxPromptCommand<CR>
