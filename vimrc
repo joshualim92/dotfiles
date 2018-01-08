@@ -109,6 +109,7 @@ syntax enable
 set autoread autowriteall
 set backspace=indent,eol,start
 set encoding=utf-8
+set foldcolumn=1 nofoldenable
 set guifont=Monaco:h13
 set hidden
 set history=1000
