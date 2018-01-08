@@ -75,7 +75,8 @@ BASE16_SHELL=$HOME/.base16-manager/chriskempson/base16-shell
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
 
 # Revert back to using bash reverse history
-export FZF_DEFAULT_COMMAND='rg --files --hidden --smart-case --glob "!.git/*"'
+export FZF_DEFAULT_COMMAND='rg --files --hidden --smart-case \
+--glob "!.git/*" 2> /dev/null'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 . $(brew --prefix)/etc/profile.d/z.sh

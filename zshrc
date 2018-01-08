@@ -116,7 +116,8 @@ function setbase16theme() {
    source ~/.zshrc
 }
 
-export FZF_DEFAULT_COMMAND='rg --files --hidden --smart-case --glob "!.git/*"'
+export FZF_DEFAULT_COMMAND='rg --files --hidden --smart-case \
+--glob "!.git/*" 2> /dev/null'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -f ~/.fzf.colors ] && source ~/.fzf.colors
