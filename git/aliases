@@ -81,6 +81,9 @@
 	rbihh = rebase -i head~~
 	rbs = rebase --skip
 
+	# Show
+	sh = show
+
 	# Stash
 	sta = stash save
 	staa = stash apply
