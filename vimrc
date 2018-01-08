@@ -170,6 +170,11 @@ augroup END
 " ============================================================================
 " END CURSOR SHAPE
 " ============================================================================
+augroup MakeLoadView
+	au!
+	autocmd BufWinLeave *.* mkview
+	autocmd BufWinEnter *.* silent loadview
+augroup END
 
 " Delete whitespace
 autocmd BufWritePre * :%s/\s\+$//e
