@@ -154,10 +154,12 @@ endif
 
 " CursorLine
 augroup CursorLine
-au!
-nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
-au VimEnter,WinEnter,BufWinEnter * setlocal cursorline cursorcolumn
-au WinLeave * setlocal nocursorline nocursorcolumn
+	au!
+	nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
+	let s:ftToIgnore = ["ruby"]
+	au VimEnter,WinEnter,BufWinEnter * if index(s:ftToIgnore, &ft) < 0
+				\ | setlocal cursorline cursorcolumn
+	au WinLeave * setlocal nocursorline nocursorcolumn
 augroup END
 " ============================================================================
 " END CURSOR SHAPE
