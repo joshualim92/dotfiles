@@ -79,7 +79,7 @@ export FZF_DEFAULT_COMMAND='rg --files --hidden --smart-case \
 --glob "!.git/*" 2> /dev/null'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
-. $(brew --prefix)/etc/profile.d/z.sh
+source $(brew --prefix)/etc/profile.d/z.sh
 
 for config in "$HOME"/dotfiles/bashrc.d/*.bash ; do
     source "$config"
