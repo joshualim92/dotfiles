@@ -106,7 +106,6 @@ call plug#end()
 set nocompatible
 filetype plugin indent on
 syntax enable
-let base16colorspace=256 " Access colors present in 256 colorspace
 set autoread autowriteall
 set backspace=indent,eol,start
 set encoding=utf-8
@@ -124,6 +123,12 @@ set textwidth=78 colorcolumn=+1
 set timeoutlen=1000 ttimeoutlen=0
 set wildignore+=*node_modules/*
 set wildmenu wildmode=list:full
+
+if filereadable(expand("~/dotfiles/vim/colorscheme.vim"))
+	let base16colorspace=256 " Access colors present in 256 colorspace
+	source ~/dotfiles/vim/colorscheme.vim
+endif
+
 " ============================================================================
 " END SETTINGS
 " ============================================================================
