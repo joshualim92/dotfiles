@@ -99,13 +99,13 @@ prompt pure
 
 setopt HIST_IGNORE_ALL_DUPS
 
-function generateSshKey() {
+generateSshKey() {
     ssh-keygen -t rsa -b 4096 -C "joshua.lim@dominionmarinemedia.com"
     eval "$(ssh-agent -s)"
     ssh-add ~/.ssh/id_rsa
 }
 
-function setbase16theme() {
+setbase16theme() {
    if [[ $1 ]]; then
       base16-manager set $1
       # sed -i "s/\(colorscheme base16\)-.*/\1-${1}/g" "$HOME/dotfiles/vimrc"
