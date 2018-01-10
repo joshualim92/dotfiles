@@ -89,6 +89,7 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive' " {{{
 	nnoremap <silent> <Leader>gs :Gstatus<CR>
 " }}}
+Plug 'tpope/vim-rails'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
