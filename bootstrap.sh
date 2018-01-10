@@ -24,6 +24,9 @@ brew install \
     tree \
     z
 
+brew tap caskroom/fonts
+brew cask install font-fira-code
+
  # Add the brew bash shell to the list of allowed shells
 sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
 chsh -s /usr/local/bin/bash
