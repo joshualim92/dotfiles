@@ -13,6 +13,7 @@ brew install \
     ccat \
     cmake \
     coreutils \
+    fd
     findutils \
     fpp \
     git \

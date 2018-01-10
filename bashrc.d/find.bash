@@ -1,4 +1,4 @@
-fd() {
+fin() {
     command find . \
         -not -path "*/.git/*" \
         -not -path "*/vim/plugged/*" \
@@ -6,6 +6,6 @@ fd() {
         -ipath "*$1*" "${@:2}"
 }
 
-fdv() {
+finev() {
     fd $1 $2 -exec vim {} +
 }
