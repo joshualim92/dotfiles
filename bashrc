@@ -65,16 +65,9 @@ HISTSIZE=1000000
 export PATH=$HOME/dotfiles/bin:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/bin:$(go env GOPATH)/bin:$PATH
 export MANPATH=/usr/local/opt/coreutils/libexec/gnuman:$MANPATH
 
-# BASE16
-# `git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell`
-# base16-manager (https://github.com/AuditeMarlow/base16-manager)
-# base16-manager install chriskempson/base16-shell
-# base16-manager install nicodebo/base16-fzf
-# base16-manager set default-dark
 BASE16_SHELL=$HOME/.base16-manager/chriskempson/base16-shell
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
 
-# Revert back to using bash reverse history
 export FZF_DEFAULT_COMMAND='rg --files --hidden --smart-case \
 --glob "!.git/*" 2> /dev/null'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
