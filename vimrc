@@ -60,6 +60,11 @@ Plug 'mbbill/undotree' " {{{
 Plug 'octref/RootIgnore'
 Plug 'roxma/vim-window-resize-easy'
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] } " {{{
+	let NERDTreeAutoDeleteBuffer=1
+	let NERDTreeMapHelp='<LocalLeader>?'
+	let NERDTreeQuitOnOpen=1
+	let NERDTreeWinSize=33
+
 	nnoremap <Leader>nt :NERDTreeToggle<CR>
 	nnoremap <Leader>nf :NERDTreeFind<CR>
 
