@@ -1,9 +1,9 @@
 fin() {
     command find . \
+        -ipath "*$1*" "${@:2}" \
         -not -path "*/.git/*" \
-        -not -path "*/vim/plugged/*" \
         -not -path "*/node_modules/*" \
-        -ipath "*$1*" "${@:2}"
+        -not -path "*/vim/plugged/*"
 }
 
 finev() {
