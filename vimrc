@@ -59,25 +59,6 @@ Plug 'mbbill/undotree' " {{{
 " }}}
 Plug 'octref/RootIgnore'
 Plug 'roxma/vim-window-resize-easy'
-Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] } " {{{
-	let NERDTreeAutoDeleteBuffer=1
-	let NERDTreeMapHelp='<LocalLeader>?'
-	let NERDTreeQuitOnOpen=1
-	let NERDTreeWinSize=33
-
-	nnoremap <Leader>nt :NERDTreeToggle<CR>
-	nnoremap <Leader>nf :NERDTreeFind<CR>
-
-	augroup nerd_loader
-		autocmd!
-		autocmd VimEnter * silent! autocmd! FileExplorer
-		autocmd BufEnter,BufNew *
-					\ if isdirectory(expand('<amatch>'))
-					\|   call plug#load('nerdtree')
-					\|   execute 'autocmd! nerd_loader'
-					\| endif
-	augroup END
-" }}}
 Plug 'sheerun/vim-polyglot'
 Plug 'shime/vim-livedown', {
 			\ 'for': 'markdown',
@@ -94,6 +75,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-vinegar'
 Plug 'vim-scripts/ZoomWin'
 Plug 'w0rp/ale' " {{{
 	let g:ale_fixers = {
