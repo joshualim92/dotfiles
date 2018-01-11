@@ -19,8 +19,10 @@ brew install \
     fd
     findutils \
     fpp \
+    gawk \
     git \
     htop \
+    moreutils \
     node \
     ripgrep \
     the_silver_searcher \
