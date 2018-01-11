@@ -80,7 +80,7 @@ Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
 Plug 'vim-scripts/ZoomWin'
 Plug 'w0rp/ale' " {{{
-	let g:ale_fixers = {
+	let g:ale_fixers={
 				\ 'javascript': ['prettier', 'eslint'],
 				\ 'json': ['prettier', 'eslint']
 				\}
