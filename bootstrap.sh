@@ -13,6 +13,7 @@ brew install \
     ccat \
     cmake \
     coreutils \
+    fasd \
     fd
     findutils \
     fpp \
@@ -22,8 +23,7 @@ brew install \
     ripgrep \
     the_silver_searcher \
     tmux \
-    tree \
-    z
+    tree
 
 brew tap caskroom/fonts
 brew cask install font-fira-code
