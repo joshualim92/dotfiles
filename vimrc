@@ -9,6 +9,8 @@ Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets' " {{{
 	let g:UltiSnipsJumpForwardTrigger='<tab>'
 	let g:UltiSnipsJumpBackwardTrigger='<S-tab>'
 	let g:UltiSnipsEditSplit='vertical' " :UltiSnipsEditSplit vertically
+
+	command! UltiSnipsList call UltiSnips#ListSnippets()
 " }}}
 Plug 'Valloric/YouCompleteMe', {
 			\ 'do': './install.py --go-completer --js-completer'
