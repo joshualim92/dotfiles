@@ -79,6 +79,8 @@ for config in "$HOME"/dotfiles/bashrc.d/*.bash ; do
 done
 unset -v config
 
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
+
 generateSshKey() {
     ssh-keygen -t rsa -b 4096 -C "joshua.lim@dominionmarinemedia.com"
     eval "$(ssh-agent -s)"
