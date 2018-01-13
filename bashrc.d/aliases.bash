@@ -22,6 +22,7 @@ alias es='emacsclient -c'
 alias gr='grep'
 
 # Git
+complete -o bashdefault -o default -o nospace -F _git g
 alias g='git'
 
 # jobs
@@ -33,6 +34,7 @@ alias bp='source ~/.bash_profile'
 alias bashrc='source ~/.bashrc'
 
 # Tmux
+complete -o bashdefault -o default -o nospace -F _tmux t
 alias t='tmux'
 alias ta='tmux a'
 alias tat='tmux a -t'
