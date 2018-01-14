@@ -1,34 +1,66 @@
-alias l='ls -lah'
-alias la='ls -A'
-alias ll='ls -lh'
-alias ls='ls --color=auto'
+alias ~='cd ~'
+alias ..='cd ..'         # Go up one directory
+alias cd..='cd ..'       # Common misspelling for going up one directory
+alias ...='cd ../..'     # Go up two directories
+alias ....='cd ../../..' # Go up three directories
+alias -- -='cd -'        # Go back
 
-# Cat
-alias cat='ccat'
-
-alias dir='dir --color=auto'
-alias vdir='vdir --color=auto'
-
-alias grep="grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn}"
-
+# base16-manager
 alias bm='base16-manager'
 alias bms='setbase16theme'
+
+# cat
+alias cat='ccat'
+
+# clear
+alias c='clear'
+
+# dir
+alias dir='dir --color=auto'
+alias vdir='vdir --color=auto'
 
 # Emacs
 alias emac='emacsclient'
 alias es='emacsclient -c'
 
-# grep
-alias gr='grep'
-
 # Git
 complete -o bashdefault -o default -o nospace -F _git g
 alias g='git'
 
+# grep
+# colored grep
+# Need to check an existing file for a pattern that will be found to ensure
+# that the check works when on an OS that supports the color option
+if grep --color=auto 'a' '${BASH_IT}/'*.md &> /dev/null
+then
+  alias grep='grep --color=auto'
+  export GREP_COLOR='1;33'
+fi
+alias grep='grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn}'
+alias gr='grep'
+
+# history
+alias h='history'
+
+# ls
+if ls --color -d . &> /dev/null
+then
+  alias ls='ls --color=auto'
+elif ls -G -d . &> /dev/null
+then
+  alias ls='ls -G'        # Compact view, show colors
+fi
+
+alias sl=ls
+alias la='ls -AF'       # Compact view, show hidden
+alias ll='ls -al'
+alias l='ls -lah'
+alias l1='ls -1'
+
 # jobs
 alias jb='jobs'
 
-# Source
+# source
 alias so='source'
 alias bp='source ~/.bash_profile'
 alias bashrc='source ~/.bashrc'
@@ -47,5 +79,3 @@ alias tsl='tmux switchc -l'
 
 # Vim
 alias v='vim'
-alias swpl='find . -name "*.swp"'
-alias swpr='find . -name "*.swp" -exec rm -i {} +'
