@@ -57,6 +57,9 @@ alias ll='ls -al'
 alias l='ls -lah'
 alias l1='ls -1'
 
+# MacOS
+alias addUpNext='osascript /Users/joshualim92/Library/Mobile\ Documents/com~apple~ScriptEditor2/Documents/add_to_up_next.scpt'
+
 # jobs
 alias jb='jobs'
 
