@@ -38,6 +38,7 @@ Plug 'ervandew/supertab' " {{{
 	let g:SuperTabDefaultCompletionType='<C-N>'
 " }}}
 Plug 'heavenshell/vim-jsdoc', { 'for': 'javascript' }
+Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'jelera/vim-javascript-syntax', { 'for': 'javascript' }
 Plug 'jiangmiao/auto-pairs'
 Plug 'jremmen/vim-ripgrep' " {{{
