@@ -42,6 +42,15 @@ alias gr='grep'
 # history
 alias h='history'
 
+# itunes
+alias it='itunes'
+alias iti='itunes info'
+alias itn='itunes next'
+alias ito='itunes open'
+alias itpa='itunes pause'
+alias itpl='itunes play'
+alias itpr='itunes previous'
+
 # ls
 if ls --color -d . &> /dev/null
 then
