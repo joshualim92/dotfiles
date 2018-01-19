@@ -39,15 +39,15 @@ alias bottomright corner bottom-right resize:screenSizeX/2;screenSizeY/2
 #   m  ,  .
 #
 bind u:ctrl;cmd  ${topleft}
-bind j:ctrl;cmd  ${lefthalf}
+# bind j:ctrl;cmd  ${lefthalf}
 bind m:ctrl;cmd  ${bottomleft}
 
-bind i:ctrl;cmd  ${tophalf}
+# bind i:ctrl;cmd  ${tophalf}
 bind ;:ctrl;cmd  ${full}
-bind k:ctrl;cmd  ${bottomhalf}
+# bind k:ctrl;cmd  ${bottomhalf}
 
 bind o:ctrl;cmd  ${topright}
-bind l:ctrl;cmd  ${righthalf}
+# bind l:ctrl;cmd  ${righthalf}
 bind .:ctrl;cmd  ${bottomright}
 
 
