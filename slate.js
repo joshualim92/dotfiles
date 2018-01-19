@@ -68,10 +68,10 @@ function getCycleStates(states) {
 }
 
 // Window cycling functions.
-var leftCycleOp = getCycleStates(['leftBarHalf', 'leftBarThird', 'leftBarTwoThirds']);
-var rightCycleOp = getCycleStates(['rightBarHalf', 'rightBarThird', 'rightBarTwoThirds']);
-var topCycleOp = getCycleStates(['topBarHalf', 'topBarThird', 'topBarTwoThirds']);
-var bottomCycleOp = getCycleStates(['bottomBarHalf', 'bottomBarThird', 'bottomBarTwoThirds']);
+var leftCycleOp = getCycleStates(['leftBarHalf', 'leftBarTwoThirds', 'leftBarThird']);
+var rightCycleOp = getCycleStates(['rightBarHalf', 'rightBarTwoThirds', 'rightBarThird']);
+var topCycleOp = getCycleStates(['topBarHalf', 'topBarTwoThirds', 'topBarThird']);
+var bottomCycleOp = getCycleStates(['bottomBarHalf', 'bottomBarTwoThirds', 'bottomBarThird']);
 
 // Bind the window cycling functions.
 S.bind('j:ctrl,cmd', leftCycleOp);
