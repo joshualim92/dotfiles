@@ -109,7 +109,6 @@ set list listchars=tab:→\ ,extends:›,precedes:‹,nbsp:·,trail:␣ showbrea
 set mouse=a ttymouse=xterm2 " Allows for mouse mode inside tmux
 set number relativenumber
 set path+=**
-set scrolloff=5 "Min number of lines to keep above and below cursor
 set showcmd " display incomplete commands
 set textwidth=78 colorcolumn=+1
 set timeoutlen=1000 ttimeoutlen=0
