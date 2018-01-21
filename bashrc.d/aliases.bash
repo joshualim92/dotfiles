@@ -86,6 +86,7 @@ alias td='tmux detach'
 alias tks='tmux kill-session -t'
 alias tl='tmux ls'
 alias tn='tmux new -s'
+alias tnt='tmux new -t'
 alias ts='tmux switchc -t'
 alias tsl='tmux switchc -l'
 
