@@ -73,6 +73,10 @@ ln -s ~/dotfiles/ctags.d ~/.ctags.d
 mv ~/.tern-config ~/.tern-config.bak
 ln -s ~/dotfiles/tern-config ~/.tern-config
 
+# slate
+mv ~/.slate.js ~/.slate.js.bak
+ln -s ~/dotfiles/slate.js ~/.slate.js
+
 # gitconfig
 echo "[include]
     path = ~/dotfiles/gitconfig"  >> ~/.gitconfig
