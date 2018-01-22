@@ -124,11 +124,27 @@ S.bind('.:ctrl,cmd', bottomRight);
 S.bind(';:ctrl,cmd', full);
 
 // Throw bindings
-S.bind("j:ctrl;alt;cmd", S.op("throw", { screen: "left"  }));
-S.bind("i:ctrl;alt;cmd", S.op("throw", { screen: "up"    }));
-S.bind("l:ctrl;alt;cmd", S.op("throw", { screen: "right" }));
-S.bind("k:ctrl;alt;cmd", S.op("throw", { screen: "below" }));
-S.bind(";:ctrl;alt;cmd", full);
+S.bind('j:ctrl;alt;cmd', S.op('throw', {
+	'screen': 'left',
+	'width' : 'screenSizeX',
+	'height' : 'screenSizeY',
+}));
+S.bind('i:ctrl;alt;cmd', S.op('throw', {
+	'screen': 'up',
+	'width' : 'screenSizeX',
+	'height' : 'screenSizeY',
+}));
+S.bind('l:ctrl;alt;cmd', S.op('throw', {
+	'screen': 'right',
+	'width' : 'screenSizeX',
+	'height' : 'screenSizeY',
+}));
+S.bind('k:ctrl;alt;cmd', S.op('throw', {
+	'screen': 'below',
+	'width' : 'screenSizeX',
+	'height' : 'screenSizeY',
+}));
+S.bind(';:ctrl;alt;cmd', full);
 
 // Focus bindings
 S.bind("j:ctrl;alt", S.op("focus", { direction: "left"  }));
