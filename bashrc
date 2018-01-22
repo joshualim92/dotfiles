@@ -65,6 +65,8 @@ HISTSIZE=1000000
 export PATH=$HOME/dotfiles/bin:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/opt/findutils/libexec/gnubin:/usr/local/bin:$(go env GOPATH)/bin:$PATH
 export MANPATH=/usr/local/opt/coreutils/libexec/gnuman:/usr/local/opt/findutils/libexec/gnuman:$MANPATH
 
+export GOPATH=$(go env GOPATH)
+
 BASE16_SHELL=$HOME/.base16-manager/chriskempson/base16-shell
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
 
