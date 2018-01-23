@@ -42,6 +42,10 @@ alias gr='grep'
 # history
 alias h='history'
 
+# kubectl
+alias ku='kubectl'
+alias kugp='kubectl get pods'
+
 # itunes
 alias it='itunes'
 alias iti='itunes info'
