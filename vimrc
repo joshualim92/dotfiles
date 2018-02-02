@@ -15,7 +15,7 @@ Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets' " {{{
 Plug 'Valloric/YouCompleteMe', {
 			\ 'do': './install.py --go-completer --js-completer'
 			\} " {{{
-
+	let g:ycm_autoclose_preview_window_after_insertion=1
 	let g:ycm_key_list_select_completion=['<C-N>']
 	let g:ycm_key_list_previous_completion=['<C-P>']
 " }}}
