@@ -127,7 +127,6 @@ endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                               START MAPPINGS                               "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 " Set nohlsearch before starting next search
 cnoremap <C-N> <Down>
 cnoremap <C-P> <Up>
@@ -149,16 +148,6 @@ else
 	let &t_EI="\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
 	let &t_SR="\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=2\x7\<Esc>\\"
 endif
-
-" CursorLine
-augroup CursorLine
-	au!
-	nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
-	let s:ftToIgnore = ["ruby"]
-	au VimEnter,WinEnter,BufWinEnter * if index(s:ftToIgnore, &ft) < 0
-				\ | setlocal cursorline cursorcolumn
-	au WinLeave * setlocal nocursorline nocursorcolumn
-augroup END
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                              END CURSOR SHAPE                              "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
