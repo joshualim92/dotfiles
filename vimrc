@@ -61,6 +61,9 @@ Plug 'mbbill/undotree' " {{{
 	nnoremap <Leader>u :UndotreeToggle<CR>
 " }}}
 Plug 'octref/RootIgnore'
+Plug 'othree/javascript-libraries-syntax.vim' " {{{
+	let g:used_javascript_libs='underscore,react,vue'
+" }}}
 Plug 'posva/vim-vue' " {{{
 	let g:vue_disable_pre_processors=1
 " }}}
