@@ -68,6 +68,25 @@ Plug 'posva/vim-vue' " {{{
 	let g:vue_disable_pre_processors=1
 " }}}
 Plug 'roxma/vim-window-resize-easy'
+Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] } " {{{
+	let NERDTreeAutoDeleteBuffer=1
+	let NERDTreeMapHelp='<LocalLeader>?'
+	let NERDTreeQuitOnOpen=1
+	let NERDTreeWinSize=33
+
+	nnoremap <Leader>nt :NERDTreeToggle<CR>
+	nnoremap <Leader>nf :NERDTreeFind<CR>
+
+	augroup nerd_loader
+	       autocmd!
+	       autocmd VimEnter * silent! autocmd! FileExplorer
+	       autocmd BufEnter,BufNew *
+				       \ if isdirectory(expand('<amatch>'))
+				       \|   call plug#load('nerdtree')
+				       \|   execute 'autocmd! nerd_loader'
+				       \| endif
+       augroup END
+" }}}
 Plug 'sheerun/vim-polyglot'
 Plug 'shime/vim-livedown', {
 			\ 'for': 'markdown',
