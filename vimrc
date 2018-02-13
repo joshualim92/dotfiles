@@ -9,6 +9,7 @@ Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets' " {{{
 	let g:UltiSnipsJumpForwardTrigger='<tab>'
 	let g:UltiSnipsJumpBackwardTrigger='<S-tab>'
 	let g:UltiSnipsEditSplit='vertical' " :UltiSnipsEditSplit vertically
+	let g:UltiSnipsSnippetsDir='~/.vim/UltiSnips'
 
 	command! UltiSnipsList call UltiSnips#ListSnippets()
 " }}}
