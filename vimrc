@@ -20,7 +20,10 @@ Plug 'Valloric/YouCompleteMe', {
 	let g:ycm_key_list_select_completion=['<C-N>']
 	let g:ycm_key_list_previous_completion=['<C-P>']
 " }}}
-Plug 'airblade/vim-gitgutter' " {{{
+Plug 'airblade/vim-gitgutter'
+Plug 'alvan/vim-closetag' " {{{
+	let g:closetag_filenames='*.html,*.xhtml,*.phtml,*.vue'
+	let g:closetag_xhtml_filenames='*.xhtml,*.jsx,*.vue'
 " }}}
 Plug 'benmills/vimux' "{{{
 	nnoremap <Leader>vp :VimuxPromptCommand<CR>
