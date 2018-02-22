@@ -114,6 +114,7 @@ Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
+Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'w0rp/ale' " {{{
 	let g:ale_fixers={
 				\ 'javascript': ['prettier', 'eslint'],
