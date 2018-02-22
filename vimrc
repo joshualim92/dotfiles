@@ -34,6 +34,12 @@ Plug 'benmills/vimux' "{{{
 	nnoremap <Leader>vz :call VimuxZoomRunner()<CR>
 " }}}
 Plug 'chriskempson/base16-vim'
+Plug 'christoomey/vim-titlecase' " {{{
+	let g:titlecase_map_keys=0
+	nmap <Leader>gt  <Plug>Titlecase
+	vmap <Leader>gt  <Plug>Titlecase
+	nmap <Leader>gtt <Plug>TitlecaseLine
+" }}}
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'ciaranm/detectindent' " {{{
 	autocmd BufReadPost * :DetectIndent
