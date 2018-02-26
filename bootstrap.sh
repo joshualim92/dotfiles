@@ -46,7 +46,6 @@ mkdir ~/.config
 git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
 base16-manager install chriskempson/base16-shell
 base16-manager install chriskempson/base16-vim
-base16-manager install nicodebo/base16-fzf
 
 # TPM
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm

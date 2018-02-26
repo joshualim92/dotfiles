@@ -11,7 +11,6 @@ ZSH_THEME=""
 # `git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell`
 # base16-manager (https://github.com/AuditeMarlow/base16-manager)
 # base16-manager install chriskempson/base16-shell
-# base16-manager install nicodebo/base16-fzf
 # base16-manager set default-dark
 BASE16_SHELL=$HOME/.base16-manager/chriskempson/base16-shell
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
