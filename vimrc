@@ -136,7 +136,6 @@ set autoread autowriteall
 set backspace=indent,eol,start
 set encoding=utf-8
 set foldcolumn=1 nofoldenable
-set macligatures
 set guifont=Fira\ Code\ Retina:h12
 set hidden
 set history=1000
