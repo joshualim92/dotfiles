@@ -75,6 +75,7 @@ BASE16_SHELL=$HOME/.base16-manager/chriskempson/base16-shell
 export FZF_DEFAULT_COMMAND='rg --files --hidden --smart-case \
 --glob "!.git/*" 2> /dev/null'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 eval "$(fasd --init auto)"
 
