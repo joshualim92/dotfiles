@@ -1,3 +1,5 @@
+--map-javascript=+.ts
+--map-javascript=+.tsx
 # Named imports
 --regex-javascript=/^[ \t]*import[ \t]?([A-Za-z0-9_$]+)[ \t]*from/\1/I,Import,Imports/
 --regex-javascript=/^[ \t]*import[ \t]?({[ \t]*)*([A-Za-z0-9_\*]*[ \t]as[ \t])([A-Za-z0-9_]+)/\3/I,Import,Imports/
