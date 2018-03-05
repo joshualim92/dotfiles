@@ -4,6 +4,9 @@ let mapleader=' ' " Map leader key to be space
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin('~/.vim/plugged')
 
+Plug 'takac/vim-hardtime' " {{{
+	let g:hardtime_default_on=1
+" }}}
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets' " {{{
 	let g:UltiSnipsExpandTrigger='<tab>'
 	let g:UltiSnipsJumpForwardTrigger='<tab>'
