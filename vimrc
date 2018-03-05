@@ -25,8 +25,8 @@ Plug 'Valloric/YouCompleteMe', {
 " }}}
 Plug 'airblade/vim-gitgutter'
 Plug 'alvan/vim-closetag' " {{{
-	let g:closetag_filenames='*.html,*.xhtml,*.phtml,*.vue,*.js'
-	let g:closetag_xhtml_filenames='*.xhtml,*.jsx,*.vue,*.js'
+	let g:closetag_filenames='*'
+	let g:closetag_xhtml_filenames='*'
 " }}}
 Plug 'benmills/vimux' "{{{
 	nnoremap <Leader>vp :VimuxPromptCommand<CR>
