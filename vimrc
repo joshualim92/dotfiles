@@ -7,6 +7,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'takac/vim-hardtime' " {{{
 	let g:hardtime_default_on=1
 	let g:hardtime_ignore_buffer_patterns=['NERD*']
+	let g:hardtime_ignore_quickfix=1
 " }}}
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets' " {{{
 	let g:UltiSnipsExpandTrigger='<tab>'
