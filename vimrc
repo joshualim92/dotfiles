@@ -145,11 +145,6 @@ set textwidth=78 colorcolumn=+1
 set timeoutlen=1000 ttimeoutlen=0
 set wildignore+=*node_modules/*
 set wildmenu wildmode=list:longest
-
-if filereadable(expand("~/dotfiles/vim/colorscheme.vim"))
-	let base16colorspace=256 " Access colors present in 256 colorspace
-	source ~/dotfiles/vim/colorscheme.vim
-endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                END SETTINGS                                "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
