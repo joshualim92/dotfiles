@@ -41,11 +41,11 @@ git clone --depth=1 https://github.com/Bash-it/bash-it.git ~/.bash_it
 ~/.bash_it/install.sh --interactive
 
 # Install base16-manager dependencies
-mv ~/.config ~/.config.bak
-mkdir ~/.config
-git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
-base16-manager install chriskempson/base16-shell
-base16-manager install chriskempson/base16-vim
+# mv ~/.config ~/.config.bak
+# mkdir ~/.config
+# git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
+# base16-manager install chriskempson/base16-shell
+# base16-manager install chriskempson/base16-vim
 
 # TPM
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
@@ -88,11 +88,11 @@ echo "source ~/dotfiles/bashrc" >> ~/.bash_profile
 echo "source ~/dotfiles/bashrc" >> ~/.bashrc
 
 # Write out current crontab
-crontab -l > mycron
+# crontab -l > mycron
 # Echo new cron into cron file
-echo "* * * * * ~/dotfiles/setbase16theme.sh >/dev/null 2>&1" >> mycron
+# echo "* * * * * ~/dotfiles/setbase16theme.sh >/dev/null 2>&1" >> mycron
 # Install new cron file
-crontab mycron
-rm mycron
+# crontab mycron
+# rm mycron
 
 source ~/.bash_profile
