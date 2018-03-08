@@ -28,10 +28,6 @@ Plug 'Valloric/YouCompleteMe', {
 	let g:ycm_key_list_previous_completion=['<C-P>']
 " }}}
 Plug 'airblade/vim-gitgutter'
-Plug 'alvan/vim-closetag' " {{{
-	let g:closetag_filenames='*'
-	let g:closetag_xhtml_filenames='*'
-" }}}
 Plug 'benmills/vimux' "{{{
 	nnoremap <Leader>vp :VimuxPromptCommand<CR>
 	nnoremap <Leader>vl :VimuxRunLastCommand<CR>
@@ -111,6 +107,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
 Plug 'vim-scripts/ReplaceWithRegister'
+Plug 'vim-scripts/closetag.vim'
 Plug 'w0rp/ale' " {{{
 	let g:ale_fixers={
 				\ 'javascript': ['prettier', 'eslint'],
