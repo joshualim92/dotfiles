@@ -126,7 +126,6 @@ call plug#end()
 set nocompatible
 filetype plugin indent on
 syntax enable
-colorscheme delek
 set autoread autowriteall
 set backspace=indent,eol,start
 set encoding=utf-8
