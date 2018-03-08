@@ -153,12 +153,15 @@ set wildmenu wildmode=list:longest
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                               START MAPPINGS                               "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Set nohlsearch before starting next search
 cnoremap <C-N> <Down>
 cnoremap <C-P> <Up>
 inoremap <C-U> <C-G>u<C-U>
-nnoremap / :set nohlsearch<CR>/
-nnoremap <Leader><Space> :set hls!<CR>
+" Set dynamic hlsearch
+nnoremap <silent> <Leader><Space> :set hls!<CR>
+nnoremap <silent> # :set hls<CR>#
+nnoremap <silent> * :set hls<CR>*
+nnoremap / :set hls<CR>/
+nnoremap ? :set hls<CR>?
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                END MAPPINGS                                "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
