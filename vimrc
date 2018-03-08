@@ -96,7 +96,9 @@ Plug 'shime/vim-livedown', {
 			\}
 Plug 'ternjs/tern_for_vim', { 'for': 'javascript', 'do': 'npm install' }
 Plug 'terryma/vim-multiple-cursors'
-Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-commentary' " {{{
+	command! -range C <line1>,<line2>Commentary
+" }}}
 Plug 'tpope/vim-fugitive' " {{{
 	nnoremap <silent> <Leader>gs :Gstatus<CR>
 " }}}
