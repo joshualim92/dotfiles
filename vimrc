@@ -129,7 +129,7 @@ set guifont=Fira\ Code\ Retina:h12
 set hidden
 set history=1000
 set ignorecase smartcase incsearch
-set list listchars=tab:→\ ,extends:›,precedes:‹,nbsp:·,trail:␣ showbreak=↪\
+set list listchars=tab:▸\ ,extends:›,precedes:‹,nbsp:·,trail:␣ showbreak=↪\
 set mouse=a ttymouse=xterm2 " Allows for mouse mode inside tmux
 set number relativenumber
 set path+=**
