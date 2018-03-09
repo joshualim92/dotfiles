@@ -73,33 +73,33 @@ BASE16_SHELL=$HOME/.base16-manager/chriskempson/base16-shell
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
 
 export FZF_DEFAULT_COMMAND='rg --files --hidden --smart-case \
---glob "!.git/*" 2> /dev/null'
+	--glob "!.git/*" 2> /dev/null'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 eval "$(fasd --init auto)"
 
 for config in "$HOME"/dotfiles/bashrc.d/*.bash ; do
-    source "$config"
+	source "$config"
 done
 unset -v config
 
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
-    . $(brew --prefix)/etc/bash_completion
+	. $(brew --prefix)/etc/bash_completion
 fi
 
 generateSshKey() {
-    ssh-keygen -t rsa -b 4096 -C "joshua.lim@dominionmarinemedia.com"
-    eval "$(ssh-agent -s)"
-    ssh-add ~/.ssh/id_rsa
+	ssh-keygen -t rsa -b 4096 -C "joshua.lim@dominionmarinemedia.com"
+	eval "$(ssh-agent -s)"
+	ssh-add ~/.ssh/id_rsa
 }
 
 setbase16theme() {
-    if [[ $1 ]]; then
-        base16-manager set $1
-    else
-        base16-manager set-random
-    fi
+	if [[ $1 ]]; then
+		base16-manager set $1
+	else
+		base16-manager set-random
+	fi
 
-    source ~/.bash_profile
+	source ~/.bash_profile
 }
