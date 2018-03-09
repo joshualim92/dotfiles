@@ -9,6 +9,6 @@
 --regex-javascript=/^[ \t]*this\.([A-Za-z0-9_$]+)[ \t]*=.*{$/\1/M,Method,Methods/
 --regex-javascript=/^[ \t]*([A-Za-z0-9_$]+)[ \t]*[:=][ \t]*[\(]*function[ \t]*\(/\1/M,Method,Methods/
 --regex-javascript=/^[ \t]*static[ \t]+([A-Za-z0-9_$]+)[ \t]*\(/\1/M,Method,Methods/
---regex-javascript=/^[ \t]*([A-Za-z0-9_$]+)[ \t]*\(.*\)[ \t]*{/\1/M,Method,Methods/
+--regex-javascript=/^[ \t]*(private|public)?[ \t]*([A-Za-z0-9_$]+)[ \t]*\(.*\)[ \t]*{/\2/M,Method,Methods/
 # exports.
 --regex-javascript=/^[ \t]*exports\.([A-Za-z0-9_$]+)[ \t]*=.*$/\1/E,Export,Exports/
