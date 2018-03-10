@@ -123,6 +123,7 @@ filetype plugin indent on
 syntax enable
 set autoread autowriteall
 set backspace=indent,eol,start
+set cursorline
 set encoding=utf-8
 set foldcolumn=1 nofoldenable
 set guifont=Fira\ Code\ Retina:h12
