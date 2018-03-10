@@ -9,9 +9,6 @@ alias -- -='cd -'        # Go back
 alias bm='base16-manager'
 alias bms='setbase16theme'
 
-# cat
-alias cat='ccat'
-
 # clear
 alias c='clear'
 
