@@ -59,10 +59,6 @@ Plug 'junegunn/fzf.vim' " {{{
 	xnoremap <silent> <Leader>ag    y:Ag <C-R>"<CR>
 	nnoremap <silent> <Leader>`     :Marks<CR>
 " }}}
-Plug 'luochen1990/rainbow' " {{{
-	let g:rainbow_active=0
-	nnoremap <Leader>rt :RainbowToggle<CR>
-" }}}
 Plug 'mbbill/undotree' " {{{
 	nnoremap <Leader>u :UndotreeToggle<CR>
 " }}}
