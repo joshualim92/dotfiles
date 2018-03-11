@@ -43,6 +43,7 @@ Plug 'heavenshell/vim-jsdoc', { 'for': 'javascript' }
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'jelera/vim-javascript-syntax', { 'for': 'javascript' }
 Plug 'jiangmiao/auto-pairs'
+Plug 'joshualim92/vim-colors-off'
 Plug 'jremmen/vim-ripgrep' " {{{
 	let g:rg_highlight=1
 	nnoremap <Leader>rg :Rg<Space>
