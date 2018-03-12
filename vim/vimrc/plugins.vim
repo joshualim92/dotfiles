@@ -1,6 +1,7 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets' " {{{
+	let g:snips_author='joshualim'
 	let g:UltiSnipsExpandTrigger='<TAB>'
 	let g:UltiSnipsJumpForwardTrigger='<TAB>'
 	let g:UltiSnipsJumpBackwardTrigger='<S-TAB>'
