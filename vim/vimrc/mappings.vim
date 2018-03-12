@@ -10,3 +10,5 @@ cnoremap <C-P> <Up>
 nnoremap <silent> <Leader><Space> :set hls!<CR>
 nnoremap <silent> # :set hls<CR>#
 nnoremap <silent> * :set hls<CR>*
+nnoremap <silent> ? :set hls<CR>?
+nnoremap <silent> / :set hls<CR>/
