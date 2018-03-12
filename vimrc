@@ -1,7 +1,10 @@
+let mapleader=' ' " Map leader key to be space
+source ~/dotfiles/vim/vimrc/plugins.vim
+
 set nocompatible
 filetype plugin indent on
 syntax enable
-let mapleader=' ' " Map leader key to be space
+colorscheme off
 set autoread autowriteall
 set backspace=indent,eol,start
 set encoding=utf-8
@@ -21,5 +24,5 @@ set wildignore+=*node_modules/*
 set wildmenu wildmode=list:longest
 
 source ~/dotfiles/vim/vimrc/cursors.vim
+source ~/dotfiles/vim/vimrc/mappings.vim
 source ~/dotfiles/vim/vimrc/functions.vim
-source ~/dotfiles/vim/vimrc/plugins.vim
