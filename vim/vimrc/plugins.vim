@@ -105,3 +105,5 @@ Plug 'w0rp/ale' " {{{
 " }}}
 
 call plug#end()
+
+colorscheme off
