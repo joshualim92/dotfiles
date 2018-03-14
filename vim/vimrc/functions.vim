@@ -3,6 +3,11 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd BufWritePre * :%s/\s\+$//e " Delete whitespace
 
+augroup MakeLoadView
+	au!
+	autocmd BufWinLeave *.* mkview
+	autocmd BufWinEnter *.* silent loadview
+augroup END
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                   Width                                    "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
