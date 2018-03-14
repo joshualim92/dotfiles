@@ -1,4 +1,4 @@
-snippet log "console.log('');"
+snippet log "console.log();"
 console.log(${VISUAL}$0);
 endsnippet
 
@@ -13,22 +13,22 @@ snippet arw "ES6 arrow function inline"
 endsnippet
 
 snippet imp "ES6 import"
-import $1 from '$3${2:$1}';$0
+import $1 from $3${2:$1};
 endsnippet
 
 snippet creq "const require()" b
-const $1 = require('$3${2:$1}');$0
+const $1 = require($3${2:$1});
 endsnippet
 
 # Mocha
-snippet des "describe('thing', () => { ... })" b
-describe('${1:}', () => {
+snippet des "describe(thing, () => { ... })" b
+describe(${1:}, () => {
 	${0:${VISUAL}}
 });
 endsnippet
 
-snippet it "it('should do', () => { ... })" b
-it('${1:}', (${2:done}) => {
+snippet it "it(should do, () => { ... })" b
+it(${1:}, (${2:done}) => {
 	${0:${VISUAL}}
 });
 endsnippet
@@ -66,7 +66,7 @@ underTest$1($0);
 endsnippet
 
 snippet st "sinon stub" b
-sinon.stub($1, '$2');$0
+sinon.stub($1, $2);$0
 endsnippet
 
 snippet re "sinon .restore()" b
