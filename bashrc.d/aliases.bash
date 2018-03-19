@@ -95,3 +95,4 @@ alias tsl='tmux switchc -l'
 
 # Vim
 alias v='vim'
+alias dvv='rm ~/.vim/view/*'
