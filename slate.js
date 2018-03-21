@@ -161,4 +161,4 @@ S.bind('l:ctrl;alt', S.op('focus', { direction: 'right' }));
 S.bind(',:ctrl;alt', S.op('focus', { direction: 'down'  }));
 
 // Hint binding
-S.bind('space:ctrl;alt', S.op('hint', { characters: 'JKLASDFGH' }));
+S.bind('space:ctrl;cmd', S.op('hint', { characters: 'JKLASDFGH' }));
