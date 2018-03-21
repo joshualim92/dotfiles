@@ -16,6 +16,12 @@ var full = S.op('move', {
 	'width' : 'screenSizeX',
 	'height' : 'screenSizeY',
 });
+var center = S.op('move', {
+	'x' : 'screenOriginX+((screenSizeX-windowSizeX)/2)',
+	'y' : 'screenOriginY+((screenSizeY-windowSizeY)/2)',
+	'width' : 'windowSizeX',
+	'height' : 'windowSizeY',
+});
 var topLeft = S.op('corner', {
 	'direction': 'top-left',
 	'width': 'screenSizeX/2',
@@ -116,11 +122,12 @@ var bottomCycleOp = getCycleStates(['bottomBarHalf', 'bottomBarTwoThirds', 'bott
 S.bind('j:ctrl,cmd', leftCycleOp);
 S.bind('l:ctrl,cmd', rightCycleOp);
 S.bind('i:ctrl,cmd', topCycleOp);
-S.bind('k:ctrl,cmd', bottomCycleOp);
+S.bind(',:ctrl,cmd', bottomCycleOp);
 S.bind('u:ctrl,cmd', topLeft);
 S.bind('o:ctrl,cmd', topRight);
 S.bind('m:ctrl,cmd', bottomLeft);
 S.bind('.:ctrl,cmd', bottomRight);
+S.bind('k:ctrl,cmd', center);
 S.bind(';:ctrl,cmd', full);
 
 // Throw bindings
@@ -139,18 +146,19 @@ S.bind('l:ctrl;alt;cmd', S.op('throw', {
 	'width' : 'screenSizeX',
 	'height' : 'screenSizeY',
 }));
-S.bind('k:ctrl;alt;cmd', S.op('throw', {
+S.bind(',:ctrl;alt;cmd', S.op('throw', {
 	'screen': 'below',
 	'width' : 'screenSizeX',
 	'height' : 'screenSizeY',
 }));
+S.bind('k:ctrl;alt;cmd', full);
 S.bind(';:ctrl;alt;cmd', full);
 
 // Focus bindings
 S.bind('j:ctrl;alt', S.op('focus', { direction: 'left'  }));
 S.bind('i:ctrl;alt', S.op('focus', { direction: 'up'    }));
 S.bind('l:ctrl;alt', S.op('focus', { direction: 'right' }));
-S.bind('k:ctrl;alt', S.op('focus', { direction: 'down'  }));
+S.bind(',:ctrl;alt', S.op('focus', { direction: 'down'  }));
 
 // Hint binding
 S.bind('space:ctrl;alt', S.op('hint', { characters: 'JKLASDFGH' }));
