@@ -22,25 +22,77 @@ var center = S.op('move', {
 	'width' : 'windowSizeX',
 	'height' : 'windowSizeY',
 });
-var topLeft = S.op('corner', {
+// Top Left
+var topLeftFull = S.op('corner', {
 	'direction': 'top-left',
 	'width': 'screenSizeX/2',
 	'height': 'screenSizeY/2',
 });
-var topRight = S.op('corner', {
+var topLeftSubLeft = S.op('move', {
+	'x' : 'screenOriginX',
+	'y' : 'screenOriginY',
+	'width' : 'screenSizeX/4',
+	'height' : 'screenSizeY/2',
+});
+var topLeftSubRight = S.op('move', {
+	'x' : 'screenOriginX+screenSizeX/4',
+	'y' : 'screenOriginY',
+	'width' : 'screenSizeX/4',
+	'height' : 'screenSizeY/2',
+});
+// Top Right
+var topRightFull = S.op('corner', {
 	'direction': 'top-right',
 	'width': 'screenSizeX/2',
 	'height': 'screenSizeY/2',
 });
-var bottomLeft = S.op('corner', {
+var topRightSubLeft = S.op('move', {
+	'x' : 'screenOriginX+screenSizeX/2',
+	'y' : 'screenOriginY',
+	'width' : 'screenSizeX/4',
+	'height' : 'screenSizeY/2',
+});
+var topRightSubRight = S.op('move', {
+	'x' : 'screenOriginX+screenSizeX/4*3',
+	'y' : 'screenOriginY',
+	'width' : 'screenSizeX/4',
+	'height' : 'screenSizeY/2',
+});
+// Bottom Left
+var bottomLeftFull = S.op('corner', {
 	'direction': 'bottom-left',
 	'width': 'screenSizeX/2',
 	'height': 'screenSizeY/2',
 });
-var bottomRight = S.op('corner', {
+var bottomLeftSubLeft = S.op('move', {
+	'x' : 'screenOriginX',
+	'y' : 'screenOriginY+screenSizeY/2',
+	'width' : 'screenSizeX/4',
+	'height' : 'screenSizeY/2',
+});
+var bottomLeftSubRight = S.op('move', {
+	'x' : 'screenOriginX+screenSizeX/4',
+	'y' : 'screenOriginY+screenSizeY/2',
+	'width' : 'screenSizeX/4',
+	'height' : 'screenSizeY/2',
+});
+// Bottom Right
+var bottomRightFull = S.op('corner', {
 	'direction': 'bottom-right',
 	'width': 'screenSizeX/2',
 	'height': 'screenSizeY/2',
+});
+var bottomRightSubLeft = S.op('move', {
+	'x' : 'screenOriginX+screenSizeX/2',
+	'y' : 'screenOriginY+screenSizeY/2',
+	'width' : 'screenSizeX/4',
+	'height' : 'screenSizeY/2',
+});
+var bottomRightSubRight = S.op('move', {
+	'x' : 'screenOriginX+screenSizeX/4 * 3',
+	'y' : 'screenOriginY+screenSizeY/2',
+	'width' : 'screenSizeX/4',
+	'height' : 'screenSizeY/2',
 });
 // Left
 var leftBarThird = S.op('push', {
@@ -117,16 +169,20 @@ var leftCycleOp = getCycleStates(['leftBarHalf', 'leftBarTwoThirds', 'leftBarThi
 var rightCycleOp = getCycleStates(['rightBarHalf', 'rightBarTwoThirds', 'rightBarThird']);
 var topCycleOp = getCycleStates(['topBarHalf', 'topBarTwoThirds', 'topBarThird']);
 var bottomCycleOp = getCycleStates(['bottomBarHalf', 'bottomBarTwoThirds', 'bottomBarThird']);
+var topLeftCycleOp = getCycleStates(['topLeftFull', 'topLeftSubLeft', 'topLeftSubRight']);
+var topRightCycleOp = getCycleStates(['topRightFull', 'topRightSubLeft', 'topRightSubRight']);
+var bottomLeftCycleOp = getCycleStates(['bottomLeftFull', 'bottomLeftSubLeft', 'bottomLeftSubRight']);
+var bottomRightCycleOp = getCycleStates(['bottomRightFull', 'bottomRightSubLeft', 'bottomRightSubRight']);
 
 // Push bindings
 S.bind('j:ctrl,cmd', leftCycleOp);
 S.bind('l:ctrl,cmd', rightCycleOp);
 S.bind('i:ctrl,cmd', topCycleOp);
 S.bind(',:ctrl,cmd', bottomCycleOp);
-S.bind('u:ctrl,cmd', topLeft);
-S.bind('o:ctrl,cmd', topRight);
-S.bind('m:ctrl,cmd', bottomLeft);
-S.bind('.:ctrl,cmd', bottomRight);
+S.bind('u:ctrl,cmd', topLeftCycleOp);
+S.bind('o:ctrl,cmd', topRightCycleOp);
+S.bind('m:ctrl,cmd', bottomLeftCycleOp);
+S.bind('.:ctrl,cmd', bottomRightCycleOp);
 S.bind('k:ctrl,cmd', center);
 S.bind(';:ctrl,cmd', full);
 
