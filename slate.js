@@ -22,78 +22,6 @@ var center = S.op('move', {
 	'width' : 'windowSizeX',
 	'height' : 'windowSizeY',
 });
-// Top Left
-var topLeftFull = S.op('corner', {
-	'direction': 'top-left',
-	'width': 'screenSizeX/2',
-	'height': 'screenSizeY/2',
-});
-var topLeftSubLeft = S.op('move', {
-	'x' : 'screenOriginX',
-	'y' : 'screenOriginY',
-	'width' : 'screenSizeX/4',
-	'height' : 'screenSizeY/2',
-});
-var topLeftSubRight = S.op('move', {
-	'x' : 'screenOriginX+screenSizeX/4',
-	'y' : 'screenOriginY',
-	'width' : 'screenSizeX/4',
-	'height' : 'screenSizeY/2',
-});
-// Top Right
-var topRightFull = S.op('corner', {
-	'direction': 'top-right',
-	'width': 'screenSizeX/2',
-	'height': 'screenSizeY/2',
-});
-var topRightSubLeft = S.op('move', {
-	'x' : 'screenOriginX+screenSizeX/2',
-	'y' : 'screenOriginY',
-	'width' : 'screenSizeX/4',
-	'height' : 'screenSizeY/2',
-});
-var topRightSubRight = S.op('move', {
-	'x' : 'screenOriginX+screenSizeX/4*3',
-	'y' : 'screenOriginY',
-	'width' : 'screenSizeX/4',
-	'height' : 'screenSizeY/2',
-});
-// Bottom Left
-var bottomLeftFull = S.op('corner', {
-	'direction': 'bottom-left',
-	'width': 'screenSizeX/2',
-	'height': 'screenSizeY/2',
-});
-var bottomLeftSubLeft = S.op('move', {
-	'x' : 'screenOriginX',
-	'y' : 'screenOriginY+screenSizeY/2',
-	'width' : 'screenSizeX/4',
-	'height' : 'screenSizeY/2',
-});
-var bottomLeftSubRight = S.op('move', {
-	'x' : 'screenOriginX+screenSizeX/4',
-	'y' : 'screenOriginY+screenSizeY/2',
-	'width' : 'screenSizeX/4',
-	'height' : 'screenSizeY/2',
-});
-// Bottom Right
-var bottomRightFull = S.op('corner', {
-	'direction': 'bottom-right',
-	'width': 'screenSizeX/2',
-	'height': 'screenSizeY/2',
-});
-var bottomRightSubLeft = S.op('move', {
-	'x' : 'screenOriginX+screenSizeX/2',
-	'y' : 'screenOriginY+screenSizeY/2',
-	'width' : 'screenSizeX/4',
-	'height' : 'screenSizeY/2',
-});
-var bottomRightSubRight = S.op('move', {
-	'x' : 'screenOriginX+screenSizeX/4 * 3',
-	'y' : 'screenOriginY+screenSizeY/2',
-	'width' : 'screenSizeX/4',
-	'height' : 'screenSizeY/2',
-});
 // Left
 var leftBarThird = S.op('push', {
 	'direction': 'left',
@@ -146,6 +74,70 @@ var bottomBarTwoThirds = S.op('push', {
 	'direction': 'bottom',
 	'style': 'bar-resize:screenSizeY/3*2',
 });
+// Top Left
+var topLeftCorner = S.op('corner', {
+	'direction': 'top-left',
+	'width': 'screenSizeX/2',
+	'height': 'screenSizeY/2',
+});
+var topLeftTwoThird = S.op('corner', {
+	'direction': 'top-left',
+	'width': 'screenSizeX/3*2',
+	'height': 'screenSizeY/3*2',
+});
+var topLeftThird = S.op('corner', {
+	'direction': 'top-left',
+	'width': 'screenSizeX/3',
+	'height': 'screenSizeY/3',
+});
+// Top Right
+var topRightCorner = S.op('corner', {
+	'direction': 'top-right',
+	'width': 'screenSizeX/2',
+	'height': 'screenSizeY/2',
+});
+var topRightTwoThird = S.op('corner', {
+	'direction': 'top-right',
+	'width': 'screenSizeX/3*2',
+	'height': 'screenSizeY/3*2',
+});
+var topRightThird = S.op('corner', {
+	'direction': 'top-right',
+	'width': 'screenSizeX/3',
+	'height': 'screenSizeY/3',
+});
+// Bottom Left
+var bottomLeftCorner = S.op('corner', {
+	'direction': 'bottom-left',
+	'width': 'screenSizeX/2',
+	'height': 'screenSizeY/2',
+});
+var bottomLeftTwoThird = S.op('corner', {
+	'direction': 'bottom-left',
+	'width': 'screenSizeX/3*2',
+	'height': 'screenSizeY/3*2',
+});
+var bottomLeftThird = S.op('corner', {
+	'direction': 'bottom-left',
+	'width': 'screenSizeX/3',
+	'height': 'screenSizeY/3',
+});
+// Bottom Right
+var bottomRightCorner = S.op('corner', {
+	'direction': 'bottom-right',
+	'width': 'screenSizeX/2',
+	'height': 'screenSizeY/2',
+});
+var bottomRightTwoThird = S.op('corner', {
+	'direction': 'bottom-right',
+	'width': 'screenSizeX/3*2',
+	'height': 'screenSizeY/3*2',
+});
+var bottomRightThird = S.op('corner', {
+	'direction': 'bottom-right',
+	'width': 'screenSizeX/3',
+	'height': 'screenSizeY/3',
+});
 
 function getCycleStates(states) {
 	return function(win) {
@@ -153,9 +145,9 @@ function getCycleStates(states) {
 			windowStates[win.pid] !== undefined &&
 			states.indexOf(windowStates[win.pid]) !== -1
 		) {
-			var nextIndex = (states.indexOf(windowStates[win.pid]) + 1) % 3;
-			var nextState = states[nextIndex];
-			windowStates[win.pid] = nextState;
+			var potentialNextIndex = states.indexOf(windowStates[win.pid]) + 1;
+			var nextIndex = potentialNextIndex >= states.length ? 0 : potentialNextIndex;
+			windowStates[win.pid] = states[nextIndex];
 		} else {
 			windowStates[win.pid] = states[0];
 		}
@@ -169,20 +161,79 @@ var leftCycleOp = getCycleStates(['leftBarHalf', 'leftBarTwoThirds', 'leftBarThi
 var rightCycleOp = getCycleStates(['rightBarHalf', 'rightBarTwoThirds', 'rightBarThird']);
 var topCycleOp = getCycleStates(['topBarHalf', 'topBarTwoThirds', 'topBarThird']);
 var bottomCycleOp = getCycleStates(['bottomBarHalf', 'bottomBarTwoThirds', 'bottomBarThird']);
-var topLeftCycleOp = getCycleStates(['topLeftFull', 'topLeftSubLeft', 'topLeftSubRight']);
-var topRightCycleOp = getCycleStates(['topRightFull', 'topRightSubLeft', 'topRightSubRight']);
-var bottomLeftCycleOp = getCycleStates(['bottomLeftFull', 'bottomLeftSubLeft', 'bottomLeftSubRight']);
-var bottomRightCycleOp = getCycleStates(['bottomRightFull', 'bottomRightSubLeft', 'bottomRightSubRight']);
+var topLeftCornerCycleOp = getCycleStates(['topLeftCorner', 'topLeftTwoThird', 'topLeftThird']);
+var topRightCornerCycleOp = getCycleStates(['topRightCorner', 'topRightTwoThird', 'topRightThird']);
+var bottomLeftCornerCycleOp = getCycleStates(['bottomLeftCorner', 'bottomLeftTwoThird', 'bottomLeftThird']);
+var bottomRightCornerCycleOp = getCycleStates(['bottomRightCorner', 'bottomRightTwoThird', 'bottomRightThird']);
+
+// 1/8th grids
+var topLeftSubLeft = S.op('move', {
+	'x' : 'screenOriginX',
+	'y' : 'screenOriginY',
+	'width' : 'windowSizeX',
+	'height' : 'windowSizeY',
+});
+var topLeftSubRight = S.op('move', {
+	'x' : 'screenOriginX+screenSizeX/4',
+	'y' : 'screenOriginY',
+	'width' : 'screenSizeX/4',
+	'height' : 'windowSizeY',
+});
+var topRightSubLeft = S.op('move', {
+	'x' : 'screenOriginX+screenSizeX/2',
+	'y' : 'screenOriginY',
+	'width' : 'screenSizeX/4',
+	'height' : 'windowSizeY',
+});
+var topRightSubRight = S.op('move', {
+	'x' : 'screenOriginX+screenSizeX/4*3',
+	'y' : 'screenOriginY',
+	'width' : 'screenSizeX/4',
+	'height' : 'windowSizeY',
+});
+var bottomLeftSubLeft = S.op('move', {
+	'x' : 'screenOriginX',
+	'y' : 'screenOriginY+screenSizeY-windowSizeY',
+	'width' : 'screenSizeX/4',
+	'height' : 'windowSizeY',
+});
+var bottomLeftSubRight = S.op('move', {
+	'x' : 'screenOriginX+screenSizeX/4',
+	'y' : 'screenOriginY+screenSizeY-windowSizeY',
+	'width' : 'screenSizeX/4',
+	'height' : 'windowSizeY',
+});
+var bottomRightSubLeft = S.op('move', {
+	'x' : 'screenOriginX+screenSizeX/2',
+	'y' : 'screenOriginY+screenSizeY-windowSizeY',
+	'width' : 'screenSizeX/4',
+	'height' : 'windowSizeY',
+});
+var bottomRightSubRight = S.op('move', {
+	'x' : 'screenOriginX+screenSizeX/4 * 3',
+	'y' : 'screenOriginY+screenSizeY-windowSizeY',
+	'width' : 'screenSizeX/4',
+	'height' : 'windowSizeY',
+});
+
+var topLeftCycleOp = getCycleStates(['topLeftSubLeft', 'topLeftSubRight']);
+var topRightCycleOp = getCycleStates(['topRightSubLeft', 'topRightSubRight']);
+var bottomLeftCycleOp = getCycleStates(['bottomLeftSubLeft', 'bottomLeftSubRight']);
+var bottomRightCycleOp = getCycleStates(['bottomRightSubLeft', 'bottomRightSubRight']);
 
 // Push bindings
 S.bind('j:ctrl,cmd', leftCycleOp);
 S.bind('l:ctrl,cmd', rightCycleOp);
 S.bind('i:ctrl,cmd', topCycleOp);
 S.bind(',:ctrl,cmd', bottomCycleOp);
-S.bind('u:ctrl,cmd', topLeftCycleOp);
-S.bind('o:ctrl,cmd', topRightCycleOp);
-S.bind('m:ctrl,cmd', bottomLeftCycleOp);
-S.bind('.:ctrl,cmd', bottomRightCycleOp);
+S.bind('u:ctrl,cmd', topLeftCornerCycleOp);
+S.bind('o:ctrl,cmd', topRightCornerCycleOp);
+S.bind('m:ctrl,cmd', bottomLeftCornerCycleOp);
+S.bind('.:ctrl,cmd', bottomRightCornerCycleOp);
+S.bind('y:ctrl,cmd', topLeftCycleOp);
+S.bind('p:ctrl,cmd', topRightCycleOp);
+S.bind('n:ctrl,cmd', bottomLeftCycleOp);
+S.bind('/:ctrl,cmd', bottomRightCycleOp);
 S.bind('k:ctrl,cmd', center);
 S.bind(';:ctrl,cmd', full);
 
