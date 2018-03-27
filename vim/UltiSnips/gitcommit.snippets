@@ -1,0 +1,3 @@
+snippet jira "Get JIRA ticket number" b
+`!v substitute(system('git rev-parse --abbrev-ref HEAD'), '\(\a\+-\d\+\)-.*', '\U\1', '')`: $0
+endsnippet
