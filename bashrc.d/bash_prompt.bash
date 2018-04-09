@@ -1,41 +1,38 @@
 #!/usr/bin/env bash
-SCM_THEME_PROMPT_DIRTY=" ${red}✗"
-SCM_THEME_PROMPT_CLEAN=" ${bold_green}✓"
-SCM_THEME_PROMPT_PREFIX=" |"
-SCM_THEME_PROMPT_SUFFIX="${green}|"
 
-GIT_THEME_PROMPT_DIRTY=" ${red}✗"
-GIT_THEME_PROMPT_CLEAN=" ${bold_green}✓"
-GIT_THEME_PROMPT_PREFIX=" ${green}|"
-GIT_THEME_PROMPT_SUFFIX="${green}|"
+branch_dirty_info() {
+	local scminfo=`git branch 2> /dev/null \
+		| sed -n "s/* \(.*$\)/\1/p"`
 
-RVM_THEME_PROMPT_PREFIX="|"
-RVM_THEME_PROMPT_SUFFIX="|"
+	[[ ! -z `git status --porcelain --ignore-submodules -unormal \
+		2> /dev/null` ]] && scminfo+="*"
+	echo "$scminfo"
+}
 
-git_behind_ahead() {
-	local behind_ahead=" "
-	IFS=$'\t' read -r commits_behind commits_ahead <<< "$(_git-upstream-behind-ahead)"
-	[[ "${commits_ahead}" -gt 0 ]] && behind_ahead+=" ${SCM_GIT_AHEAD_CHAR}${commits_ahead}"
-	[[ "${commits_behind}" -gt 0 ]] && behind_ahead+=" ${SCM_GIT_BEHIND_CHAR}${commits_behind}"
-	echo $behind_ahead
+branch_ahead_behind_info() {
+	local branch_status=`git status --porcelain --branch 2> /dev/null`
+	local ahead=`echo "$branch_status" \
+		| sed -n "s/^.*\[.*ahead \([[:digit:]]\+\).*\]/\1/p"`
+	local behind=`echo "$branch_status" \
+		| sed -n "s/^.*\[.*behind \([[:digit:]]\+\).*\]/\1/p"`
+
+	local ahead_behind=""
+	[[ ! -z "$ahead" ]] && ahead_behind+=" ⇡$ahead"
+	[[ ! -z "$behind" ]] && ahead_behind+=" ⇣$behind"
+	echo $ahead_behind
 }
 
 suspended_jobs() {
-	local sj
-	sj=$(jobs 2>/dev/null | tail -n 1)
-	if [[ $sj == "" ]]; then
+	local sj=$(jobs 2> /dev/null | grep "^\[.*\].*Stopped\|Running")
+
+	if [[ -z "$sj" ]]; then
 		echo ""
 	else
-		echo "✱ "
+		echo " ✱"
 	fi
 }
 
-prompt_command() {
-	PS1="\n${blue}\h:$(virtualenv_prompt) ${reset_color} \
-${yellow}\w \
-${green}$(scm_prompt_info)${reset_color} \
-${cyan}$(git_behind_ahead)${reset_color}\n\
-${red}❯${reset_color} ${orange}$(suspended_jobs)${reset_color}"
-}
+PS1='\n\[\e[0;34m\]\w \[\e[2;39m\]$(branch_dirty_info) \
+\[\e[0;36m\]$(branch_ahead_behind_info)\
 
-safe_append_prompt_command prompt_command
+\[\e[0;91m\]❯\[\e[0;33m\]$(suspended_jobs)\[\e[0m\] '
