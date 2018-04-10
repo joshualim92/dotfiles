@@ -12,7 +12,6 @@ brew install \
     bash-completion \
     cmake \
     coreutils \
-    fasd \
     fd
     findutils \
     fpp \
@@ -25,7 +24,9 @@ brew install \
     the_silver_searcher \
     tmux \
     trash \
-    tree
+    tree \
+    v \
+    z
 
  # Add the brew bash shell to the list of allowed shells
 sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'

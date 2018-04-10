@@ -89,6 +89,11 @@ alias tnt='tmux new -t'
 alias ts='tmux switchc -t'
 alias tsl='tmux switchc -l'
 
-# Vim
-alias v='vim'
-alias dvv='rm ~/.vim/view/*'
+# v
+alias vi='vim'
+alias vc='v -c'
+alias vl='v -l'
+
+# z
+alias zc='z -c'
+alias zl='z -l'

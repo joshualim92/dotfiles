@@ -22,16 +22,13 @@ export FZF_DEFAULT_COMMAND='rg --files --hidden --smart-case \
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
-eval "$(fasd --init auto)"
-
 for config in "$HOME"/dotfiles/bashrc.d/*.bash ; do
 	source "$config"
 done
 unset -v config
 
-if [ -f $(brew --prefix)/etc/bash_completion ]; then
-	. $(brew --prefix)/etc/bash_completion
-fi
+[ -f $(brew --prefix)/etc/profile.d/z.sh ] && source $(brew --prefix)/etc/profile.d/z.sh
+[ -f $(brew --prefix)/etc/bash_completion ] && . $(brew --prefix)/etc/bash_completion
 
 generateSshKey() {
 	ssh-keygen -t rsa -b 4096 -C "joshua.lim@dominionmarinemedia.com"
