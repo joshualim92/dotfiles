@@ -25,6 +25,7 @@ brew install \
     ripgrep \
     the_silver_searcher \
     tmux \
+    trash \
     tree
 
  # Add the brew bash shell to the list of allowed shells
