@@ -7,14 +7,6 @@ export ZSH=~/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME=""
 
-# BASE16
-# `git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell`
-# base16-manager (https://github.com/AuditeMarlow/base16-manager)
-# base16-manager install chriskempson/base16-shell
-# base16-manager set default-dark
-BASE16_SHELL=$HOME/.base16-manager/chriskempson/base16-shell
-[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
-
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -102,17 +94,6 @@ generateSshKey() {
     ssh-keygen -t rsa -b 4096 -C "joshua.lim@dominionmarinemedia.com"
     eval "$(ssh-agent -s)"
     ssh-add ~/.ssh/id_rsa
-}
-
-setbase16theme() {
-   if [[ $1 ]]; then
-      base16-manager set $1
-      # sed -i "s/\(colorscheme base16\)-.*/\1-${1}/g" "$HOME/dotfiles/vimrc"
-   else
-      base16-manager set-random
-   fi
-
-   source ~/.zshrc
 }
 
 export FZF_DEFAULT_COMMAND='rg --files --hidden --smart-case \

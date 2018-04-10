@@ -8,7 +8,6 @@ brew install gnu-sed --with-default-names
 brew install macvim --with-override-system-vim
 
 brew install \
-    base16-manager \
     bash \
     bash-completion \
     cmake \
@@ -31,13 +30,6 @@ brew install \
  # Add the brew bash shell to the list of allowed shells
 sudo bash -c 'echo /usr/local/bin/bash >> /etc/shells'
 chsh -s /usr/local/bin/bash
-
-# Install base16-manager dependencies
-# mv ~/.config ~/.config.bak
-# mkdir ~/.config
-# git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
-# base16-manager install chriskempson/base16-shell
-# base16-manager install chriskempson/base16-vim
 
 # TPM
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
@@ -78,13 +70,5 @@ echo "so ~/dotfiles/vimrc" >> ~/.vimrc
 # bash_profile
 echo "source ~/dotfiles/bashrc" >> ~/.bash_profile
 echo "source ~/dotfiles/bashrc" >> ~/.bashrc
-
-# Write out current crontab
-# crontab -l > mycron
-# Echo new cron into cron file
-# echo "* * * * * ~/dotfiles/setbase16theme.sh >/dev/null 2>&1" >> mycron
-# Install new cron file
-# crontab mycron
-# rm mycron
 
 source ~/.bash_profile

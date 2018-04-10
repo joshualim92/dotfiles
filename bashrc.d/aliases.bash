@@ -5,10 +5,6 @@ alias ...='cd ../..'     # Go up two directories
 alias ....='cd ../../..' # Go up three directories
 alias -- -='cd -'        # Go back
 
-# base16-manager
-alias bm='base16-manager'
-alias bms='setbase16theme'
-
 # clear
 alias c='clear'
 
