@@ -44,6 +44,7 @@ Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'jelera/vim-javascript-syntax', { 'for': 'javascript' }
 Plug 'joshualim92/vim-colors-off'
 Plug 'jremmen/vim-ripgrep' " {{{
+	let g:rg_command='rg -i --vimgrep'
 	let g:rg_highlight=1
 	nnoremap <Leader>rg :Rg<Space>
 " }}}
