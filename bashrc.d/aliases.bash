@@ -20,6 +20,9 @@ alias es='emacsclient -c'
 complete -o bashdefault -o default -o nospace -F _git g
 alias g='git'
 
+# google
+alias google='open http://google.com'
+
 # grep
 # colored grep
 # Need to check an existing file for a pattern that will be found to ensure
