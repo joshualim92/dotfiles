@@ -18,6 +18,8 @@
 	autosquash = true
 [commit]
 	verbose = true
+[status]
+	showStash = true
 [include]
 	path = ./git/aliases
 [init]
