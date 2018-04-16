@@ -12,6 +12,7 @@ brew install \
     bash-completion \
     cmake \
     coreutils \
+    docker-completion \
     fd
     findutils \
     fpp \
