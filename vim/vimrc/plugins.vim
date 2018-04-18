@@ -1,5 +1,6 @@
 call plug#begin('~/.vim/plugged')
 
+Plug 'AndrewRadev/splitjoin.vim'
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets' " {{{
 	let g:snips_author='joshualim'
 	let g:UltiSnipsExpandTrigger='<TAB>'
