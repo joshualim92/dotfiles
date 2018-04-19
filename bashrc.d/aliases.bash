@@ -39,6 +39,7 @@ alias gr='grep'
 alias h='history'
 
 # kubectl
+complete -o bashdefault -o default -o nospace -F __start_kubectl kc
 alias kc='kubectl'
 
 # itunes

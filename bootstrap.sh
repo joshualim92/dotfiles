@@ -19,6 +19,7 @@ brew install \
     gawk \
     git \
     htop \
+    kubernetes-cli \
     moreutils \
     node \
     ripgrep \
