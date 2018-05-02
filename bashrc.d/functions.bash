@@ -9,3 +9,8 @@ fin() {
 finev() {
 	fd $1 $2 -exec vim {} +
 }
+
+
+newTmuxSessionInPwd() {
+	tmux new -s `printf '%s\n' "${PWD##*/}"`
+}
