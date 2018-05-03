@@ -184,3 +184,5 @@ function! SetWidth (width)
 	let &l:sts = a:width
 	let &l:sw  = a:width
 endfunction
+
+command! BD bn | bd#
