@@ -92,9 +92,6 @@ Plug 'othree/javascript-libraries-syntax.vim' " {{{
 Plug 'posva/vim-vue' " {{{
 	let g:vue_disable_pre_processors=1
 " }}}
-Plug 'qpkorr/vim-bufkill' " {{{
-	let g:BufKillCreateMappings=0
-" }}}
 Plug 'roxma/vim-window-resize-easy'
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] } " {{{
 	let NERDTreeAutoDeleteBuffer=1
