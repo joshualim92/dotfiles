@@ -26,7 +26,10 @@ set wildmenu wildmode=list:longest
 call plug#begin('~/.vim/plugged')
 
 Plug 'AndrewRadev/splitjoin.vim'
-Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets' " {{{
+Plug 'SirVer/ultisnips'
+			\ | Plug 'honza/vim-snippets'
+			\ | Plug 'epilande/vim-react-snippets'
+			\ " {{{
 	let g:snips_author='joshualim'
 	let g:UltiSnipsExpandTrigger='<TAB>'
 	let g:UltiSnipsJumpForwardTrigger='<TAB>'
