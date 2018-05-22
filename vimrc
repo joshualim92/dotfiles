@@ -70,7 +70,9 @@ Plug 'ervandew/supertab' " {{{
 	let g:SuperTabDefaultCompletionType='<C-N>'
 " }}}
 Plug 'heavenshell/vim-jsdoc', { 'for': 'javascript' }
-Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
+Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' } " {{{
+	let g:go_fmt_command='goimports'
+" }}}
 Plug 'jelera/vim-javascript-syntax', { 'for': 'javascript' }
 Plug 'joshualim92/vim-colors-off'
 Plug 'jremmen/vim-ripgrep' " {{{
