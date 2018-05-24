@@ -177,8 +177,9 @@ nnoremap <silent> / :set hls<CR>/
 autocmd BufWritePre * :%s/\s\+$//e " Delete whitespace
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"                                   Width                                    "
+"                              Whitespace Width                              "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
 command! GetWidth call GetWidth()
 function! GetWidth ()
 	echo 'ts:' &ts 'sts:' &sts 'sw:' &sw 'expandtab:' &et
