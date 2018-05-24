@@ -193,3 +193,12 @@ function! SetWidth (width)
 endfunction
 
 command! BD bn | bd#
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"                                  Scripts                                   "
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+command! UpdatePlugins call UpdatePlugins()
+function! UpdatePlugins ()
+	PlugUpgrade
+	PlugClean
+	PlugUpdate
+endfunction
