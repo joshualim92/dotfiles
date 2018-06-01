@@ -92,3 +92,16 @@ endsnippet
 snippet rifm "react-intl <FormattedMessage />" i
 <FormattedMessage {$1} ${2:values={{ $3 }}} />
 endsnippet
+
+snippet act "React Redux Action Creator" b
+${2:export }const $1 = ($4) => ({
+    ${3:payload: $4,}
+	type: $5,
+});
+endsnippet
+
+snippet thu "React Redux Thunk Action Creator" b
+${2:export }const $1 = () => ${3:async }(dispatch, getState, { $4 }) => {
+	$0
+};
+endsnippet
