@@ -72,6 +72,9 @@ alias addUpNext='osascript ~/Library/Mobile\ Documents/com~apple~ScriptEditor2/D
 # jobs
 alias jb='jobs'
 
+# skaffold
+alias ska='skaffold'
+
 # source
 alias so='source'
 alias bp='source ~/.bash_profile'
