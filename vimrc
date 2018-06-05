@@ -197,9 +197,10 @@ command! BD bn | bd#
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                  Scripts                                   "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-command! UpdatePlugins call UpdatePlugins()
+command! UpPlug call UpdatePlugins()
 function! UpdatePlugins ()
 	PlugUpgrade
 	PlugClean
+	PlugInstall
 	PlugUpdate
 endfunction
