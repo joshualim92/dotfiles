@@ -12,6 +12,11 @@ alias c='clear'
 alias dir='dir --color=auto'
 alias vdir='vdir --color=auto'
 
+# docker
+alias doc='docker'
+alias docb='docker build'
+alias docr='docker run -it --rm'
+
 # Emacs
 alias emac='emacsclient'
 alias es='emacsclient -c'
