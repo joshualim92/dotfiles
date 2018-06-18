@@ -2,11 +2,6 @@
 let g:tern_map_keys=1 "enable keyboard shortcuts
 let g:tern_show_argument_hints='on_hold' "show argument hints
 
-" vim-jsdoc
-let g:jsdoc_allow_input_prompt=1
-let g:jsdoc_input_description=1
-let g:jsdoc_enable_es6=1
-
 " Cleanup mocha test file of .only
 command! -buffer CleanUpTest %s/.only(/(/g
 " Remove \" in JSON keys and convert \" to \' in values

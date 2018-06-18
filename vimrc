@@ -70,11 +70,9 @@ Plug 'ciaranm/detectindent' " {{{
 Plug 'ervandew/supertab' " {{{
 	let g:SuperTabDefaultCompletionType='<C-N>'
 " }}}
-Plug 'heavenshell/vim-jsdoc', { 'for': 'javascript' }
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' } " {{{
 	let g:go_fmt_command='goimports'
 " }}}
-Plug 'jelera/vim-javascript-syntax', { 'for': 'javascript' }
 Plug 'joshualim92/vim-colors-off'
 Plug 'jremmen/vim-ripgrep' " {{{
 	let g:rg_command='rg -i --vimgrep'
@@ -93,9 +91,6 @@ Plug 'mbbill/undotree' " {{{
 	nnoremap <Leader>u :UndotreeToggle<CR>
 " }}}
 Plug 'octref/RootIgnore'
-Plug 'othree/javascript-libraries-syntax.vim' " {{{
-	let g:used_javascript_libs='underscore,react,vue'
-" }}}
 Plug 'posva/vim-vue' " {{{
 	let g:vue_disable_pre_processors=1
 " }}}
