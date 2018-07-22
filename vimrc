@@ -176,7 +176,6 @@ autocmd BufWritePre * :%s/\s\+$//e " Delete whitespace
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                              Whitespace Width                              "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 command! GetWidth call GetWidth()
 function! GetWidth ()
 	echo 'ts:' &ts 'sts:' &sts 'sw:' &sw 'expandtab:' &et
@@ -200,3 +199,7 @@ function! UpdatePlugins ()
 	PlugInstall
 	PlugUpdate
 endfunction
+
+" Map open command
+nnoremap <Leader>os :!open -a Safari<CR><CR>
+nnoremap <Leader>og :!open https://google.com<CR><CR>
