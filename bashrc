@@ -12,7 +12,7 @@ HISTSIZE=1000000
 
 export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
 
-export PATH=$HOME/dotfiles/bin:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/opt/findutils/libexec/gnubin:/usr/local/bin:/usr/local/opt/go/libexec/bin:$(go env GOPATH)/bin:$PATH
+export PATH=$HOME/dotfiles/bin:/usr/local/bin:/usr/local/sbin:/usr/local/opt/python/libexec/bin:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/opt/findutils/libexec/gnubin:/usr/local/opt/go/libexec/bin:$(go env GOPATH)/bin:$PATH
 export MANPATH=/usr/local/opt/coreutils/libexec/gnuman:/usr/local/opt/findutils/libexec/gnuman:$MANPATH
 
 export GOPATH=$(go env GOPATH)
