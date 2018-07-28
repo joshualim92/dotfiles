@@ -5,7 +5,6 @@
 brew tap chrokh/tap
 brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 brew install gnu-sed --with-default-names
-brew install macvim --with-override-system-vim
 
 brew install \
     bash \
