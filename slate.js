@@ -157,8 +157,8 @@ function getCycleStates(states) {
 }
 
 // Window cycling functions
-var leftCycleOp = getCycleStates(['leftBarHalf', 'leftBarTwoThirds', 'leftBarThird']);
-var rightCycleOp = getCycleStates(['rightBarHalf', 'rightBarTwoThirds', 'rightBarThird']);
+var leftCycleOp = getCycleStates(['leftBarHalf']);
+var rightCycleOp = getCycleStates(['rightBarHalf']);
 var topCycleOp = getCycleStates(['topBarHalf', 'topBarTwoThirds', 'topBarThird']);
 var bottomCycleOp = getCycleStates(['bottomBarHalf', 'bottomBarTwoThirds', 'bottomBarThird']);
 var topLeftCornerCycleOp = getCycleStates(['topLeftCorner', 'topLeftTwoThird', 'topLeftThird']);
