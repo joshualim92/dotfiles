@@ -157,8 +157,10 @@ function getCycleStates(states) {
 }
 
 // Window cycling functions
-var leftCycleOp = getCycleStates(['leftBarHalf']);
-var rightCycleOp = getCycleStates(['rightBarHalf']);
+var fullCycleOp = getCycleStates(['full']);
+var centerCycleOp = getCycleStates(['center']);
+var leftCycleOp = getCycleStates(['leftBarHalf', 'leftBarTwoThirds', 'leftBarThird']);
+var rightCycleOp = getCycleStates(['rightBarHalf', 'rightBarTwoThirds', 'rightBarThird']);
 var topCycleOp = getCycleStates(['topBarHalf', 'topBarTwoThirds', 'topBarThird']);
 var bottomCycleOp = getCycleStates(['bottomBarHalf', 'bottomBarTwoThirds', 'bottomBarThird']);
 var topLeftCornerCycleOp = getCycleStates(['topLeftCorner', 'topLeftTwoThird', 'topLeftThird']);
@@ -234,8 +236,8 @@ S.bind('y:ctrl,cmd', topLeftCycleOp);
 S.bind('p:ctrl,cmd', topRightCycleOp);
 S.bind('n:ctrl,cmd', bottomLeftCycleOp);
 S.bind('/:ctrl,cmd', bottomRightCycleOp);
-S.bind('k:ctrl,cmd', center);
-S.bind(';:ctrl,cmd', full);
+S.bind('k:ctrl,cmd', centerCycleOp);
+S.bind(';:ctrl,cmd', fullCycleOp);
 
 // Throw bindings
 S.bind('j:ctrl;alt;cmd', S.op('throw', {
