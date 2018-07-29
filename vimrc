@@ -135,6 +135,7 @@ Plug 'w0rp/ale' " {{{
 call plug#end()
 
 colorscheme off
+nnoremap <Leader>tcs :colorscheme <C-R>=colors_name == "off" ? "default" : "off"<CR><CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                Cursorshape                                 "
