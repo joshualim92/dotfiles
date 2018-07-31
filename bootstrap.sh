@@ -27,6 +27,7 @@ brew install \
     trash \
     tree \
     v \
+    vim \
     z
 
  # Add the brew bash shell to the list of allowed shells
