@@ -1,14 +1,7 @@
 {
   "BTTPresetName" : "Default",
-  "BTTPresetUUID" : "6EDE3E68-B767-4A00-B69B-D155781C4C67",
+  "BTTPresetUUID" : "1931EA9A-FE85-42FD-B97C-6E5B8BA6E666",
   "BTTPresetContent" : [
-    {
-      "BTTAppBundleIdentifier" : "com.apple.finder",
-      "BTTAppName" : "Finder",
-      "BTTTriggers" : [
-
-      ]
-    },
     {
       "BTTAppBundleIdentifier" : "BT.G",
       "BTTAppName" : "Global",
@@ -17,19 +10,7 @@
       },
       "BTTTriggers" : [
         {
-          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
-          "BTTPredefinedActionType" : 97,
-          "BTTPredefinedActionName" : "Center Window",
-          "BTTAdditionalConfiguration" : "1310720",
-          "BTTEnabled2" : 1,
-          "BTTUUID" : "5A6009CE-42E8-4FB4-8B74-232778D364B5",
-          "BTTTriggerOnDown" : 1,
-          "BTTEnabled" : 1,
-          "BTTShortcutKeyCode" : 40,
-          "BTTShortcutModifierKeys" : 1310720,
-          "BTTOrder" : 4
-        },
-        {
+          "BTTTriggerType" : -1,
           "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
           "BTTPredefinedActionType" : 151,
           "BTTPredefinedActionName" : "Move Window One Space\/Desktop Left",
@@ -40,22 +21,24 @@
           "BTTEnabled" : 1,
           "BTTShortcutKeyCode" : 38,
           "BTTShortcutModifierKeys" : 1835008,
-          "BTTOrder" : 0
+          "BTTOrder" : 1
         },
         {
+          "BTTTriggerType" : -1,
           "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
-          "BTTPredefinedActionType" : 21,
-          "BTTPredefinedActionName" : "Maximize Window",
-          "BTTAdditionalConfiguration" : "1310720",
+          "BTTPredefinedActionType" : 217,
+          "BTTPredefinedActionName" : "Move Window To Desktop 2",
+          "BTTAdditionalConfiguration" : "1835049",
           "BTTEnabled2" : 1,
-          "BTTUUID" : "DB2FE065-F239-48E5-8747-15E1E2059A39",
+          "BTTUUID" : "F8FFC865-093F-4FDF-8BAE-563F53A8C014",
           "BTTTriggerOnDown" : 1,
           "BTTEnabled" : 1,
-          "BTTShortcutKeyCode" : 41,
-          "BTTShortcutModifierKeys" : 1310720,
-          "BTTOrder" : 2
+          "BTTShortcutKeyCode" : 19,
+          "BTTShortcutModifierKeys" : 1835008,
+          "BTTOrder" : 4
         },
         {
+          "BTTTriggerType" : -1,
           "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
           "BTTPredefinedActionType" : 152,
           "BTTPredefinedActionName" : "Move Window One Space\/Desktop Right",
@@ -66,21 +49,99 @@
           "BTTEnabled" : 1,
           "BTTShortcutKeyCode" : 37,
           "BTTShortcutModifierKeys" : 1835008,
-          "BTTOrder" : 1
+          "BTTOrder" : 2
         },
         {
+          "BTTTriggerType" : -1,
           "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
-          "BTTPredefinedActionType" : 107,
-          "BTTPredefinedActionName" : "Zoom Window Below Cursor",
-          "BTTAdditionalConfiguration" : "1310729",
+          "BTTPredefinedActionType" : 47,
+          "BTTPredefinedActionName" : "Move Window to Next Monitor",
+          "BTTAdditionalConfiguration" : "1835008",
           "BTTEnabled2" : 1,
-          "BTTUUID" : "D7ED2403-3859-41EB-B8BE-37A6809B4126",
+          "BTTUUID" : "62C5F87B-EC84-4F56-9C27-59E32DC845DA",
           "BTTTriggerOnDown" : 1,
           "BTTEnabled" : 1,
           "BTTShortcutKeyCode" : 34,
-          "BTTShortcutModifierKeys" : 1310720,
+          "BTTShortcutModifierKeys" : 1835008,
+          "BTTOrder" : 0
+        },
+        {
+          "BTTTriggerType" : -1,
+          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+          "BTTPredefinedActionType" : 216,
+          "BTTPredefinedActionName" : "Move Window To Desktop 1",
+          "BTTAdditionalConfiguration" : "1835008",
+          "BTTEnabled2" : 1,
+          "BTTUUID" : "FB9D5EFC-07EF-4E0B-BF6D-003DCBFA0934",
+          "BTTTriggerOnDown" : 1,
+          "BTTEnabled" : 1,
+          "BTTShortcutKeyCode" : 18,
+          "BTTShortcutModifierKeys" : 1835008,
           "BTTOrder" : 3
+        },
+        {
+          "BTTTriggerType" : -1,
+          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+          "BTTPredefinedActionType" : 218,
+          "BTTPredefinedActionName" : "Move Window To Desktop 3",
+          "BTTAdditionalConfiguration" : "1835049",
+          "BTTEnabled2" : 1,
+          "BTTUUID" : "5D12C686-4267-4B29-8825-50E4105A59FF",
+          "BTTTriggerOnDown" : 1,
+          "BTTEnabled" : 1,
+          "BTTShortcutKeyCode" : 20,
+          "BTTShortcutModifierKeys" : 1835008,
+          "BTTOrder" : 5
+        },
+        {
+          "BTTTriggerType" : -1,
+          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+          "BTTPredefinedActionType" : 220,
+          "BTTPredefinedActionName" : "Move Window To Desktop 5",
+          "BTTAdditionalConfiguration" : "1835008",
+          "BTTEnabled2" : 1,
+          "BTTUUID" : "F8263BA4-3098-4881-BD31-50DA96D2E89F",
+          "BTTTriggerOnDown" : 1,
+          "BTTEnabled" : 1,
+          "BTTShortcutKeyCode" : 23,
+          "BTTShortcutModifierKeys" : 1835008,
+          "BTTOrder" : 7
+        },
+        {
+          "BTTTriggerType" : -1,
+          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+          "BTTPredefinedActionType" : 219,
+          "BTTPredefinedActionName" : "Move Window To Desktop 4",
+          "BTTAdditionalConfiguration" : "1835049",
+          "BTTEnabled2" : 1,
+          "BTTUUID" : "648C1865-5DCE-4739-A444-49B69FC6461D",
+          "BTTTriggerOnDown" : 1,
+          "BTTEnabled" : 1,
+          "BTTShortcutKeyCode" : 21,
+          "BTTShortcutModifierKeys" : 1835008,
+          "BTTOrder" : 6
+        },
+        {
+          "BTTTriggerType" : -1,
+          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+          "BTTPredefinedActionType" : 194,
+          "BTTPredefinedActionName" : "Toggle Caps Lock On\/Off",
+          "BTTAdditionalConfiguration" : "1179658",
+          "BTTEnabled2" : 1,
+          "BTTUUID" : "B4837FCE-1483-4D5F-B622-45EF5AE00477",
+          "BTTTriggerOnDown" : 1,
+          "BTTEnabled" : 1,
+          "BTTShortcutKeyCode" : 37,
+          "BTTShortcutModifierKeys" : 1179648,
+          "BTTOrder" : 8
         }
+      ]
+    },
+    {
+      "BTTAppBundleIdentifier" : "com.apple.finder",
+      "BTTAppName" : "Finder",
+      "BTTTriggers" : [
+
       ]
     }
   ],
