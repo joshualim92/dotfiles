@@ -200,7 +200,7 @@ elif [ "$disliked" = "true" ]; then
 fi
 
 if [ "$track" != "no track selected" ]; then
-    echo "$state_icon $loved_icon $track - $artist | color=$COLOR0 size=12"
+    echo "$state_icon $loved_icon $track - $artist | color=$COLOR1 size=12"
 else
     echo "◼︎ | color=$COLOR0 size=12"
 fi
