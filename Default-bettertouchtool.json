@@ -1,7 +1,14 @@
 {
   "BTTPresetName" : "Default",
-  "BTTPresetUUID" : "1931EA9A-FE85-42FD-B97C-6E5B8BA6E666",
+  "BTTPresetUUID" : "A01C7D2E-CADE-4B19-BB07-4572839A1930",
   "BTTPresetContent" : [
+    {
+      "BTTAppBundleIdentifier" : "com.apple.finder",
+      "BTTAppName" : "Finder",
+      "BTTTriggers" : [
+
+      ]
+    },
     {
       "BTTAppBundleIdentifier" : "BT.G",
       "BTTAppName" : "Global",
@@ -9,6 +16,20 @@
 
       },
       "BTTTriggers" : [
+        {
+          "BTTTriggerType" : -1,
+          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+          "BTTPredefinedActionType" : 220,
+          "BTTPredefinedActionName" : "Move Window To Desktop 5",
+          "BTTAdditionalConfiguration" : "1835008",
+          "BTTEnabled2" : 1,
+          "BTTUUID" : "F8263BA4-3098-4881-BD31-50DA96D2E89F",
+          "BTTTriggerOnDown" : 1,
+          "BTTEnabled" : 1,
+          "BTTShortcutKeyCode" : 23,
+          "BTTShortcutModifierKeys" : 1835008,
+          "BTTOrder" : 7
+        },
         {
           "BTTTriggerType" : -1,
           "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
@@ -22,34 +43,6 @@
           "BTTShortcutKeyCode" : 38,
           "BTTShortcutModifierKeys" : 1835008,
           "BTTOrder" : 1
-        },
-        {
-          "BTTTriggerType" : -1,
-          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
-          "BTTPredefinedActionType" : 217,
-          "BTTPredefinedActionName" : "Move Window To Desktop 2",
-          "BTTAdditionalConfiguration" : "1835049",
-          "BTTEnabled2" : 1,
-          "BTTUUID" : "F8FFC865-093F-4FDF-8BAE-563F53A8C014",
-          "BTTTriggerOnDown" : 1,
-          "BTTEnabled" : 1,
-          "BTTShortcutKeyCode" : 19,
-          "BTTShortcutModifierKeys" : 1835008,
-          "BTTOrder" : 4
-        },
-        {
-          "BTTTriggerType" : -1,
-          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
-          "BTTPredefinedActionType" : 152,
-          "BTTPredefinedActionName" : "Move Window One Space\/Desktop Right",
-          "BTTAdditionalConfiguration" : "1835008",
-          "BTTEnabled2" : 1,
-          "BTTUUID" : "91ECBB66-4BD4-4590-97A6-BBED01451CE7",
-          "BTTTriggerOnDown" : 1,
-          "BTTEnabled" : 1,
-          "BTTShortcutKeyCode" : 37,
-          "BTTShortcutModifierKeys" : 1835008,
-          "BTTOrder" : 2
         },
         {
           "BTTTriggerType" : -1,
@@ -68,6 +61,33 @@
         {
           "BTTTriggerType" : -1,
           "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+          "BTTPredefinedActionType" : 152,
+          "BTTPredefinedActionName" : "Move Window One Space\/Desktop Right",
+          "BTTAdditionalConfiguration" : "1835008",
+          "BTTEnabled2" : 1,
+          "BTTUUID" : "91ECBB66-4BD4-4590-97A6-BBED01451CE7",
+          "BTTTriggerOnDown" : 1,
+          "BTTEnabled" : 1,
+          "BTTShortcutKeyCode" : 37,
+          "BTTShortcutModifierKeys" : 1835008,
+          "BTTOrder" : 2
+        },
+        {
+          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+          "BTTPredefinedActionType" : 194,
+          "BTTPredefinedActionName" : "Toggle Caps Lock On\/Off",
+          "BTTAdditionalConfiguration" : "917539",
+          "BTTEnabled2" : 1,
+          "BTTUUID" : "B4837FCE-1483-4D5F-B622-45EF5AE00477",
+          "BTTTriggerOnDown" : 1,
+          "BTTEnabled" : 1,
+          "BTTShortcutKeyCode" : 37,
+          "BTTShortcutModifierKeys" : 917504,
+          "BTTOrder" : 8
+        },
+        {
+          "BTTTriggerType" : -1,
+          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
           "BTTPredefinedActionType" : 216,
           "BTTPredefinedActionName" : "Move Window To Desktop 1",
           "BTTAdditionalConfiguration" : "1835008",
@@ -78,6 +98,20 @@
           "BTTShortcutKeyCode" : 18,
           "BTTShortcutModifierKeys" : 1835008,
           "BTTOrder" : 3
+        },
+        {
+          "BTTTriggerType" : -1,
+          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
+          "BTTPredefinedActionType" : 217,
+          "BTTPredefinedActionName" : "Move Window To Desktop 2",
+          "BTTAdditionalConfiguration" : "1835049",
+          "BTTEnabled2" : 1,
+          "BTTUUID" : "F8FFC865-093F-4FDF-8BAE-563F53A8C014",
+          "BTTTriggerOnDown" : 1,
+          "BTTEnabled" : 1,
+          "BTTShortcutKeyCode" : 19,
+          "BTTShortcutModifierKeys" : 1835008,
+          "BTTOrder" : 4
         },
         {
           "BTTTriggerType" : -1,
@@ -96,20 +130,6 @@
         {
           "BTTTriggerType" : -1,
           "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
-          "BTTPredefinedActionType" : 220,
-          "BTTPredefinedActionName" : "Move Window To Desktop 5",
-          "BTTAdditionalConfiguration" : "1835008",
-          "BTTEnabled2" : 1,
-          "BTTUUID" : "F8263BA4-3098-4881-BD31-50DA96D2E89F",
-          "BTTTriggerOnDown" : 1,
-          "BTTEnabled" : 1,
-          "BTTShortcutKeyCode" : 23,
-          "BTTShortcutModifierKeys" : 1835008,
-          "BTTOrder" : 7
-        },
-        {
-          "BTTTriggerType" : -1,
-          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
           "BTTPredefinedActionType" : 219,
           "BTTPredefinedActionName" : "Move Window To Desktop 4",
           "BTTAdditionalConfiguration" : "1835049",
@@ -120,28 +140,7 @@
           "BTTShortcutKeyCode" : 21,
           "BTTShortcutModifierKeys" : 1835008,
           "BTTOrder" : 6
-        },
-        {
-          "BTTTriggerType" : -1,
-          "BTTTriggerClass" : "BTTTriggerTypeKeyboardShortcut",
-          "BTTPredefinedActionType" : 194,
-          "BTTPredefinedActionName" : "Toggle Caps Lock On\/Off",
-          "BTTAdditionalConfiguration" : "1179658",
-          "BTTEnabled2" : 1,
-          "BTTUUID" : "B4837FCE-1483-4D5F-B622-45EF5AE00477",
-          "BTTTriggerOnDown" : 1,
-          "BTTEnabled" : 1,
-          "BTTShortcutKeyCode" : 37,
-          "BTTShortcutModifierKeys" : 1179648,
-          "BTTOrder" : 8
         }
-      ]
-    },
-    {
-      "BTTAppBundleIdentifier" : "com.apple.finder",
-      "BTTAppName" : "Finder",
-      "BTTTriggers" : [
-
       ]
     }
   ],
