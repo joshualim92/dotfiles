@@ -51,9 +51,9 @@ if [ "$1" = 'next' ]; then
   exit
 fi
 
-BitBarDarkMode=${BitBarDarkMode}
-if [ "$BitBarDarkMode" ]; then
-  COLOR0="#666666"
+BitBarDarkMode=`defaults read -g AppleInterfaceStyle 2> /dev/null`
+if [ "$BitBarDarkMode" = "Dark" ]; then
+  COLOR0="#ffffff"
   COLOR1="#ffffff"
   COLOR2="#666666"
   COLOR3="#333333"
@@ -200,7 +200,7 @@ elif [ "$disliked" = "true" ]; then
 fi
 
 if [ "$track" != "no track selected" ]; then
-    echo "$state_icon $loved_icon $track - $artist | color=$COLOR1 size=12"
+    echo "$state_icon $loved_icon $track - $artist | color=$COLOR0 size=12"
 else
     echo "◼︎ | color=$COLOR0 size=12"
 fi
