@@ -46,6 +46,7 @@ Plug 'Valloric/YouCompleteMe', {
 	let g:ycm_autoclose_preview_window_after_insertion=1
 	let g:ycm_key_list_select_completion=['<C-N>']
 	let g:ycm_key_list_previous_completion=['<C-P>']
+	let g:ycm_filetype_blacklist = { 'gitcommit': 1 }
 " }}}
 Plug 'airblade/vim-gitgutter'
 Plug 'altercation/vim-colors-solarized'
