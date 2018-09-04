@@ -13,7 +13,7 @@ set ignorecase smartcase incsearch
 set list listchars=tab:→\ ,extends:›,precedes:‹,nbsp:·,trail:␣ showbreak=↪\
 set mouse=a ttymouse=xterm2 " Allows for mouse mode inside tmux
 set noswapfile
-set number relativenumber
+set number
 set path+=**
 set showcmd " display incomplete commands
 set textwidth=78 colorcolumn=+1
