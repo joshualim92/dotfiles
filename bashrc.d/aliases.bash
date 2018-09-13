@@ -101,6 +101,11 @@ alias tnt='tmux new -t'
 alias ts='tmux switchc -t'
 alias tsl='tmux switchc -l'
 
+# TPM
+alias tpmclean='~/.tmux/plugins/tpm/bin/clean_plugins'
+alias tpminstall='~/.tmux/plugins/tpm/bin/install_plugins'
+alias tpmupdate='~/.tmux/plugins/tpm/bin/update_plugins all'
+
 # v
 alias vi='vim'
 alias vc='v -c'
