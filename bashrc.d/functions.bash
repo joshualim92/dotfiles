@@ -14,3 +14,10 @@ finev() {
 newTmuxSessionInPwd() {
 	tmux new -s `printf '%s\n' "${PWD##*/}"`
 }
+
+gitDeleteGoneBranches() {
+	git branch -a -vv \
+		| grep ": gone" \
+		| awk '{print $1}' \
+		| xargs git branch -d
+}
