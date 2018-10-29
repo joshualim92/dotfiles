@@ -27,6 +27,7 @@ set wildmenu wildmode=list:longest
 call plug#begin('~/.vim/plugged')
 
 Plug 'AndrewRadev/splitjoin.vim'
+Plug 'Quramy/tsuquyomi'
 Plug 'SirVer/ultisnips'
 			\ | Plug 'honza/vim-snippets'
 			\ | Plug 'epilande/vim-react-snippets'
