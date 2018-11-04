@@ -135,6 +135,11 @@ Plug 'w0rp/ale' " {{{
 				\ 'json': ['prettier', 'eslint']
 				\}
 " }}}
+Plug 'yuttie/comfortable-motion.vim' " {{{
+	let g:comfortable_motion_no_default_key_mappings=1
+	nnoremap <silent> <C-D> :call comfortable_motion#flick(100)<CR>
+	nnoremap <silent> <C-U> :call comfortable_motion#flick(-100)<CR>
+" }}}
 
 call plug#end()
 
