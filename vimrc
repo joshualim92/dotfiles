@@ -91,6 +91,7 @@ Plug 'junegunn/fzf.vim' " {{{
 	xnoremap <silent> <Leader>ag    y:Ag <C-R>"<CR>
 	nnoremap <silent> <Leader>`     :Marks<CR>
 " }}}
+Plug 'markonm/traces.vim'
 Plug 'mbbill/undotree' " {{{
 	nnoremap <Leader>u :UndotreeToggle<CR>
 " }}}
