@@ -1,4 +1,5 @@
-vim/view/
-vim/plugged/
-vim/colorscheme.vim
 vim/.netrwhist
+vim/autoload/plug.vim*
+vim/colorscheme.vim
+vim/plugged/
+vim/view/
