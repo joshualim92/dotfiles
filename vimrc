@@ -121,6 +121,8 @@ Plug 'shime/vim-livedown', {
 Plug 'ternjs/tern_for_vim', { 'for': 'javascript', 'do': 'npm install' }
 Plug 'terryma/vim-multiple-cursors'
 Plug 'terryma/vim-smooth-scroll' " {{{
+	noremap <silent> <C-U> :call smooth_scroll#up(&scroll, 10, 2)<CR>
+	noremap <silent> <C-D> :call smooth_scroll#down(&scroll, 10, 2)<CR>
 	noremap <silent> <C-B> :call smooth_scroll#up(&scroll*2, 10, 4)<CR>
 	noremap <silent> <C-F> :call smooth_scroll#down(&scroll*2, 10, 4)<CR>
 " }}}
@@ -144,11 +146,6 @@ Plug 'w0rp/ale' " {{{
 				\ 'typescript': ['tslint'],
 				\ 'json': ['prettier', 'eslint']
 				\}
-" }}}
-Plug 'yuttie/comfortable-motion.vim' " {{{
-	let g:comfortable_motion_no_default_key_mappings=1
-	nnoremap <silent> <C-D> :call comfortable_motion#flick(100)<CR>
-	nnoremap <silent> <C-U> :call comfortable_motion#flick(-100)<CR>
 " }}}
 
 call plug#end()
