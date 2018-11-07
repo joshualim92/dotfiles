@@ -120,12 +120,6 @@ Plug 'shime/vim-livedown', {
 			\}
 Plug 'ternjs/tern_for_vim', { 'for': 'javascript', 'do': 'npm install' }
 Plug 'terryma/vim-multiple-cursors'
-Plug 'terryma/vim-smooth-scroll' " {{{
-	noremap <silent> <C-U> :call smooth_scroll#up(&scroll, 10, 2)<CR>
-	noremap <silent> <C-D> :call smooth_scroll#down(&scroll, 10, 2)<CR>
-	noremap <silent> <C-B> :call smooth_scroll#up(&scroll*2, 10, 4)<CR>
-	noremap <silent> <C-F> :call smooth_scroll#down(&scroll*2, 10, 4)<CR>
-" }}}
 Plug 'tpope/vim-commentary' " {{{
 	command! -range C <line1>,<line2>Commentary
 " }}}
