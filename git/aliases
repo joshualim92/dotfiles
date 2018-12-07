@@ -88,6 +88,7 @@
 	# Stash
 	sta = stash save
 	staa = stash apply
+	stap = stash save --patch
 	stc = stash clear
 	std = stash drop
 	stl = stash list
