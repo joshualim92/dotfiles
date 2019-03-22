@@ -196,8 +196,6 @@ function! SetWidth (width)
 	let &l:sts = a:width
 	let &l:sw  = a:width
 endfunction
-
-command! BD bn | bd#
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                  Scripts                                   "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -208,6 +206,9 @@ function! UpdatePlugins ()
 	PlugInstall
 	PlugUpdate
 endfunction
+
+" Delete buffer but leave windows
+command! BD bn | bd#
 
 " Map open command
 nnoremap <Leader>os :!open -a Safari<CR><CR>
