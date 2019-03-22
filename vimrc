@@ -86,7 +86,8 @@ Plug 'joshualim92/vim-colors-off'
 Plug 'jremmen/vim-ripgrep' " {{{
 	let g:rg_command='rg -i --vimgrep'
 	let g:rg_highlight=1
-	nnoremap <Leader>rg :Rg<Space>
+	nnoremap <Leader>rgg :Rg<Space>
+	nnoremap <Leader>rgh :Rg<Space><C-R>=expand('<cword>')<CR><Space><C-R>=expand('%')<CR>
 " }}}
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim' " {{{
@@ -167,6 +168,9 @@ endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 cnoremap <C-N> <Down>
 cnoremap <C-P> <Up>
+
+" Quickly expand current file name
+cnoremap <C-R>fn <C-R>=expand('%')<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                   Search                                   "
