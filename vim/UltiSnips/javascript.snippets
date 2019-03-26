@@ -2,6 +2,10 @@ snippet log "console.log();"
 console.log(${VISUAL}$0);
 endsnippet
 
+snippet hmf "console.log(here mf:);"
+console.log(${2:"}here mofo $1$2, ${1:${VISUAL}}$0);
+endsnippet
+
 snippet carw "ES6 arrow function to const"
 const $1 = ($2)${3:: $4} => {
 	${VISUAL}$0
