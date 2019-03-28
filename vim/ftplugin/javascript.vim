@@ -1,3 +1,8 @@
+set expandtab
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+
 " Tern
 let g:tern_map_keys=1 "enable keyboard shortcuts
 let g:tern_show_argument_hints='on_hold' "show argument hints
