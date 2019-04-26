@@ -32,6 +32,7 @@ endif
 call plug#begin('~/.vim/plugged')
 
 Plug 'AndrewRadev/splitjoin.vim'
+Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'Quramy/tsuquyomi' " {{{
 	let g:tsuquyomi_disable_quickfix=1
 " }}}
