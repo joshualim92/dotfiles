@@ -35,6 +35,7 @@ Plug 'AndrewRadev/splitjoin.vim'
 Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'Quramy/tsuquyomi' " {{{
 	let g:tsuquyomi_disable_quickfix=1
+	let g:tsuquyomi_shortest_import_path=1
 " }}}
 Plug 'SirVer/ultisnips'
 			\ | Plug 'honza/vim-snippets'
