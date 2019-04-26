@@ -115,6 +115,7 @@ Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] } " {{{
 	let NERDTreeAutoDeleteBuffer=1
 	let NERDTreeHijackNetrw=0
 	let NERDTreeMapHelp='<LocalLeader>?'
+	let NERDTreeQuitOnOpen=1
 
 	nnoremap <Leader>nt :NERDTreeToggle<CR>
 	nnoremap <Leader>nf :NERDTreeFind<CR>
