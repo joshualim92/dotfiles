@@ -322,6 +322,6 @@ S.bind(";:ctrl,cmd", fullCycleOp);
 // S.bind(",:ctrl;alt", S.op("focus", { direction: "down" }));
 
 // Hint binding
-var hintChars = "JKLASDFGH";
-S.bind("space:ctrl;cmd", S.op("hint", { characters: hintChars }));
-S.bind("space:ctrl;alt", S.op("hint", { characters: hintChars }));
+// var hintChars = "JKLASDFGH";
+// S.bind("space:ctrl;cmd", S.op("hint", { characters: hintChars }));
+// S.bind("space:ctrl;alt", S.op("hint", { characters: hintChars }));
