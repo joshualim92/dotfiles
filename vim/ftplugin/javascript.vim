@@ -1,7 +1,7 @@
 set expandtab
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 
 " Tern
 let g:tern_map_keys=1 "enable keyboard shortcuts
