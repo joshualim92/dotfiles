@@ -12,7 +12,8 @@ brew install \
     cmake \
     coreutils \
     docker-completion \
-    fd
+    elixir \
+    fd \
     findutils \
     fpp \
     gawk \
