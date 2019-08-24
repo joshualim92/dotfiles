@@ -30,6 +30,7 @@ brew install \
     tree \
     v \
     vim \
+    wget \
     z
 
  # Add the brew bash shell to the list of allowed shells
