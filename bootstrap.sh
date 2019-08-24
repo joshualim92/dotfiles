@@ -18,6 +18,7 @@ brew install \
     fpp \
     gawk \
     git \
+    go \
     htop \
     kubernetes-cli \
     moreutils \
