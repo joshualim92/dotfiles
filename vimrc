@@ -39,7 +39,7 @@ Plug 'Quramy/tsuquyomi' " {{{
 " }}}
 Plug 'SirVer/ultisnips'
 			\ | Plug 'honza/vim-snippets'
-			\ | Plug 'epilande/vim-react-snippets'
+			\ | Plug 'mlaursen/vim-react-snippets'
 			\ " {{{
 	let g:snips_author='joshualim'
 	let g:UltiSnipsExpandTrigger='<TAB>'
