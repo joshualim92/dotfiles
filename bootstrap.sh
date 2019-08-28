@@ -4,8 +4,6 @@
 
 brew tap chrokh/tap
 brew install --HEAD universal-ctags/universal-ctags/universal-ctags
-brew install gnu-sed --with-default-names
-
 brew install \
     bash \
     bash-completion \
@@ -18,6 +16,7 @@ brew install \
     fpp \
     gawk \
     git \
+    gnu-sed \
     go \
     htop \
     kubernetes-cli \
