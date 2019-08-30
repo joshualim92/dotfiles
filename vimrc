@@ -143,6 +143,7 @@ Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'w0rp/ale' " {{{
 	let g:ale_fix_on_save=1
 	let g:ale_fixers={
+				\ 'elixir': ['mix_format'],
 				\ 'javascript': ['prettier', 'eslint'],
 				\ 'json': ['prettier', 'eslint'],
 				\ 'typescript': ['tslint'],
