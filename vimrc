@@ -111,9 +111,8 @@ Plug 'posva/vim-vue' " {{{
 	let g:vue_disable_pre_processors=1
 " }}}
 Plug 'roxma/vim-window-resize-easy'
-Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] } " {{{
+Plug 'scrooloose/nerdtree' " {{{
 	let NERDTreeAutoDeleteBuffer=1
-	let NERDTreeHijackNetrw=0
 	let NERDTreeMapHelp='<LocalLeader>?'
 	let NERDTreeQuitOnOpen=1
 
