@@ -20,6 +20,7 @@ set textwidth=78 colorcolumn=+1
 set timeoutlen=1000 ttimeoutlen=0
 set wildignore+=*node_modules/*
 set wildmenu wildmode=list:longest
+set tags^=./.git/tags;
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                  Plugins                                   "
