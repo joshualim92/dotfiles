@@ -15,6 +15,7 @@ alias vdir='vdir --color=auto'
 # docker
 alias doc='docker'
 alias docb='docker build'
+alias docmp='docker-compose'
 alias docr='docker run -it --rm'
 
 # Emacs
