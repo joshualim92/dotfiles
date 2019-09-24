@@ -264,20 +264,20 @@ var bottomRightCycleOp = getCycleStates([
 ]);
 
 // Push bindings
-S.bind("j:ctrl,cmd", leftCycleOp);
-S.bind("l:ctrl,cmd", rightCycleOp);
-S.bind("i:ctrl,cmd", topCycleOp);
-S.bind(",:ctrl,cmd", bottomCycleOp);
-S.bind("u:ctrl,cmd", topLeftCornerCycleOp);
-S.bind("o:ctrl,cmd", topRightCornerCycleOp);
-S.bind("m:ctrl,cmd", bottomLeftCornerCycleOp);
-S.bind(".:ctrl,cmd", bottomRightCornerCycleOp);
-S.bind("y:ctrl,cmd", topLeftCycleOp);
-S.bind("p:ctrl,cmd", topRightCycleOp);
-S.bind("n:ctrl,cmd", bottomLeftCycleOp);
-S.bind("/:ctrl,cmd", bottomRightCycleOp);
-S.bind("k:ctrl,cmd", centerCycleOp);
-S.bind(";:ctrl,cmd", fullCycleOp);
+S.bind("j:ctrl,alt", leftCycleOp);
+S.bind("l:ctrl,alt", rightCycleOp);
+S.bind("i:ctrl,alt", topCycleOp);
+S.bind(",:ctrl,alt", bottomCycleOp);
+S.bind("u:ctrl,alt", topLeftCornerCycleOp);
+S.bind("o:ctrl,alt", topRightCornerCycleOp);
+S.bind("m:ctrl,alt", bottomLeftCornerCycleOp);
+S.bind(".:ctrl,alt", bottomRightCornerCycleOp);
+S.bind("y:ctrl,alt", topLeftCycleOp);
+S.bind("p:ctrl,alt", topRightCycleOp);
+S.bind("n:ctrl,alt", bottomLeftCycleOp);
+S.bind("/:ctrl,alt", bottomRightCycleOp);
+S.bind("k:ctrl,alt", centerCycleOp);
+S.bind(";:ctrl,alt", fullCycleOp);
 
 // Throw bindings
 // S.bind(
