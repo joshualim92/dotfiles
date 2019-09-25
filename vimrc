@@ -107,6 +107,7 @@ Plug 'markonm/traces.vim'
 Plug 'mbbill/undotree' " {{{
 	nnoremap <Leader>u :UndotreeToggle<CR>
 " }}}
+Plug 'morhetz/gruvbox'
 Plug 'octref/RootIgnore'
 Plug 'posva/vim-vue' " {{{
 	let g:vue_disable_pre_processors=1
@@ -154,7 +155,7 @@ Plug 'w0rp/ale' " {{{
 call plug#end()
 
 colorscheme off
-nnoremap <Leader>tcs :colorscheme <C-R>=colors_name == "off" ? "default" : "off"<CR><CR>
+nnoremap <Leader>tcs :colorscheme <C-R>=colors_name == "off" ? "gruvbox" : "off"<CR><CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                Cursorshape                                 "
