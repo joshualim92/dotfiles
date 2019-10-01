@@ -131,6 +131,7 @@ Plug 'ternjs/tern_for_vim', { 'for': 'javascript', 'do': 'npm install' }
 Plug 'tpope/vim-commentary' " {{{
 	command! -range C <line1>,<line2>Commentary
 " }}}
+Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive' " {{{
 	nnoremap <silent> <Leader>gs :Gstatus<CR>
 " }}}
