@@ -147,6 +147,7 @@ Plug 'w0rp/ale' " {{{
 	let g:ale_fixers={
 				\ 'elixir': ['mix_format'],
 				\ 'javascript': ['prettier', 'eslint'],
+				\ 'javascriptreact': ['prettier', 'eslint'],
 				\ 'json': ['prettier', 'eslint'],
 				\ 'typescript': ['tslint'],
 				\ 'vue': ['prettier', 'eslint']
