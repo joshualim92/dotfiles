@@ -157,7 +157,7 @@ Plug 'w0rp/ale' " {{{
 call plug#end()
 
 colorscheme off
-nnoremap <Leader>tcs :colorscheme <C-R>=colors_name == "off" ? "gruvbox" : "off"<CR><CR>
+nnoremap <Leader>tcs :call ToggleColor()<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                Cursorshape                                 "
@@ -226,3 +226,8 @@ command! BD bn | bd#
 " Map open command
 nnoremap <Leader>os :!open -a Safari<CR><CR>
 nnoremap <Leader>og :!open https://google.com<CR><CR>
+
+function! ToggleColor ()
+	let color_name = g:colors_name == "off" ? "default" : "off"
+	execute "colorscheme " . color_name
+endfunction
