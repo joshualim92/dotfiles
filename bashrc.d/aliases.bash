@@ -44,10 +44,6 @@ alias gr='grep'
 # history
 alias h='history'
 
-# kubectl
-complete -o bashdefault -o default -o nospace -F __start_kubectl kc
-alias kc='kubectl'
-
 # itunes
 alias it='itunes'
 alias iti='itunes info'
@@ -56,6 +52,13 @@ alias ito='itunes open'
 alias itpa='itunes pause'
 alias itpl='itunes play'
 alias itpr='itunes previous'
+
+# jobs
+alias jb='jobs'
+
+# kubectl
+complete -o bashdefault -o default -o nospace -F __start_kubectl kc
+alias kc='kubectl'
 
 # ls
 if ls --color -d . &> /dev/null
@@ -74,9 +77,6 @@ alias l1='ls -1'
 
 # MacOS
 alias addUpNext='osascript ~/Library/Mobile\ Documents/com~apple~ScriptEditor2/Documents/add_to_up_next.scpt'
-
-# jobs
-alias jb='jobs'
 
 # skaffold
 alias ska='skaffold'
@@ -108,9 +108,11 @@ alias tpminstall='~/.tmux/plugins/tpm/bin/install_plugins'
 alias tpmupdate='~/.tmux/plugins/tpm/bin/update_plugins all'
 
 # v
-alias vi='vim'
 alias vc='v -c'
 alias vl='v -l'
+
+# vim
+alias vi='vim'
 
 # z
 alias zc='z -c'
