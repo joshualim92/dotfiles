@@ -78,6 +78,9 @@ alias l1='ls -1'
 # MacOS
 alias addUpNext='osascript ~/Library/Mobile\ Documents/com~apple~ScriptEditor2/Documents/add_to_up_next.scpt'
 
+# mix
+alias mip='iex -S mix phx.server'
+
 # skaffold
 alias ska='skaffold'
 
