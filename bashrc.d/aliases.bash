@@ -13,8 +13,9 @@ alias dir='dir --color=auto'
 alias vdir='vdir --color=auto'
 
 # docker
+complete -o bashdefault -o default -o nospace -F _docker doc
+complete -o bashdefault -o default -o nospace -F _docker_compose docmp
 alias doc='docker'
-alias docb='docker build'
 alias docmp='docker-compose'
 alias docr='docker run -it --rm'
 
