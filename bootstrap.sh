@@ -11,6 +11,7 @@ brew install \
     cmake \
     coreutils \
     docker-completion \
+    docker-compose-completion \
     elixir \
     fd \
     findutils \
