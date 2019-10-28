@@ -117,6 +117,10 @@ snippet sn "styleName="
 styleName="$1"
 endsnippet
 
+snippet str "JSON.stringify()" i
+JSON.stringify(${1:${VISUAL}}, null, 2);$0
+endsnippet
+
 global !p
 from vimsnippets import get_comment_format
 endglobal
