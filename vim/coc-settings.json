@@ -1,0 +1,7 @@
+{
+  "coc.preferences.formatOnSaveFiletypes": ["*"],
+
+  "prettier.eslintIntegration": true,
+  "prettier.stylelintIntegration": true,
+  "prettier.tslintIntegration": true
+}

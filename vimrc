@@ -33,31 +33,15 @@ endif
 call plug#begin('~/.vim/plugged')
 
 Plug 'AndrewRadev/splitjoin.vim'
-Plug 'MaxMEllon/vim-jsx-pretty'
-Plug 'Quramy/tsuquyomi' " {{{
-	let g:tsuquyomi_disable_quickfix=1
-	let g:tsuquyomi_shortest_import_path=1
-" }}}
 Plug 'SirVer/ultisnips'
 			\ | Plug 'honza/vim-snippets'
 			\ | Plug 'mlaursen/vim-react-snippets'
 			\ " {{{
 	let g:snips_author='joshualim'
-	let g:UltiSnipsExpandTrigger='<TAB>'
-	let g:UltiSnipsJumpForwardTrigger='<TAB>'
-	let g:UltiSnipsJumpBackwardTrigger='<S-TAB>'
 	let g:UltiSnipsEditSplit='vertical' " :UltiSnipsEditSplit vertically
 	let g:UltiSnipsSnippetsDir='~/.vim/UltiSnips'
 
 	command! UltiSnipsList call UltiSnips#ListSnippets()
-" }}}
-Plug 'Valloric/YouCompleteMe', {
-			\ 'do': './install.py --go-completer --js-completer'
-			\} " {{{
-	let g:ycm_autoclose_preview_window_after_insertion=1
-	let g:ycm_key_list_select_completion=['<C-N>']
-	let g:ycm_key_list_previous_completion=['<C-P>']
-	let g:ycm_filetype_blacklist = { 'gitcommit': 1 }
 " }}}
 Plug 'airblade/vim-gitgutter'
 Plug 'altercation/vim-colors-solarized'
@@ -79,9 +63,6 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'ciaranm/detectindent' " {{{
 	autocmd BufReadPost * :DetectIndent
 " }}}
-Plug 'ervandew/supertab' " {{{
-	let g:SuperTabDefaultCompletionType='<C-N>'
-" }}}
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' } " {{{
 	let g:go_fmt_command='goimports'
 " }}}
@@ -99,19 +80,33 @@ Plug 'junegunn/fzf.vim' " {{{
 	nnoremap <Leader>ag             :Ag<Space>
 	xnoremap <silent> <Leader>ag    y:Ag <C-R>"<CR>
 	nnoremap <silent> <Leader>`     :Marks<CR>
-	nnoremap <silent> <Leader>af    :call fzf#vim#files('.',
-				\ {'options':'--query '
-				\ . split(expand("%:t"), '\.')[0]})<CR>
+	nnoremap <silent> <Leader>af    :call fzf#vim#files( '.', {'options':'--query ' . split(expand("%:t"), '\.')[0]})<CR>
 " }}}
 Plug 'markonm/traces.vim'
 Plug 'mbbill/undotree' " {{{
 	nnoremap <Leader>u :UndotreeToggle<CR>
 " }}}
 Plug 'morhetz/gruvbox'
-Plug 'octref/RootIgnore'
-Plug 'posva/vim-vue' " {{{
-	let g:vue_disable_pre_processors=1
+Plug 'neoclide/coc.nvim', { 'branch': 'release' } " {{{
+	nmap <Leader>rn <Plug>(coc-rename)
+
+	let g:coc_global_extensions = [
+				\ 'coc-css',
+				\ 'coc-elixir',
+				\ 'coc-eslint',
+				\ 'coc-git',
+				\ 'coc-go',
+				\ 'coc-html',
+				\ 'coc-json',
+				\ 'coc-prettier',
+				\ 'coc-snippets',
+				\ 'coc-tslint-plugin',
+				\ 'coc-tsserver',
+				\ 'coc-ultisnips',
+				\ 'coc-vetur'
+				\]
 " }}}
+Plug 'octref/RootIgnore'
 Plug 'roxma/vim-window-resize-easy'
 Plug 'scrooloose/nerdtree' " {{{
 	let NERDTreeAutoDeleteBuffer=1
@@ -126,8 +121,6 @@ Plug 'shime/vim-livedown', {
 			\ 'for': 'markdown',
 			\ 'do': 'npm install -g livedown'
 			\}
-Plug 'slashmili/alchemist.vim'
-Plug 'ternjs/tern_for_vim', { 'for': 'javascript', 'do': 'npm install' }
 Plug 'tpope/vim-commentary' " {{{
 	command! -range C <line1>,<line2>Commentary
 " }}}
@@ -135,24 +128,12 @@ Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive' " {{{
 	nnoremap <silent> <Leader>gs :Gstatus<CR>
 " }}}
-Plug 'tpope/vim-rails'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
 Plug 'vim-scripts/ReplaceWithRegister'
-Plug 'w0rp/ale' " {{{
-	let g:ale_fix_on_save=1
-	let g:ale_fixers={
-				\ 'elixir': ['mix_format'],
-				\ 'javascript': ['prettier', 'eslint'],
-				\ 'javascriptreact': ['prettier', 'eslint'],
-				\ 'json': ['prettier', 'eslint'],
-				\ 'typescript': ['tslint'],
-				\ 'vue': ['prettier', 'eslint']
-				\}
-" }}}
 
 call plug#end()
 
