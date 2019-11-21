@@ -14,6 +14,9 @@ command! -buffer -range ConvJsonKey :silent
 			\ <line1>,<line2>s/"\(\w\+\)":/\1:/g
 			\| <line1>,<line2>s/"/'/g
 
+" Split commas into new lines
+nnoremap <buffer> <LocalLeader>split :s/, /,\r  /g<CR>
+
 " Add .only to mocha test
 nnoremap <buffer> <LocalLeader>only ?^\s\+\(it\\|describe\)(<CR>f(i.only<ESC><C-O>:w<CR>
 
