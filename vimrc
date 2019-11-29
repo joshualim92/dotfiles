@@ -135,6 +135,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-vinegar'
 Plug 'vim-scripts/ReplaceWithRegister'
+Plug 'vim-scripts/tango.vim'
 
 call plug#end()
 
