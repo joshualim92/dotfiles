@@ -121,6 +121,7 @@ Plug 'shime/vim-livedown', {
 			\ 'for': 'markdown',
 			\ 'do': 'npm install -g livedown'
 			\}
+Plug 'tomasr/molokai'
 Plug 'tpope/vim-commentary' " {{{
 	command! -range C <line1>,<line2>Commentary
 " }}}
