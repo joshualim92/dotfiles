@@ -65,6 +65,7 @@ Plug 'ciaranm/detectindent' " {{{
 " }}}
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' } " {{{
 	let g:go_fmt_command='goimports'
+	let g:go_metalinter_autosave=1
 " }}}
 Plug 'joshualim92/vim-colors-off'
 Plug 'jremmen/vim-ripgrep' " {{{
