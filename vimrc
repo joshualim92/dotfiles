@@ -108,6 +108,10 @@ Plug 'neoclide/coc.nvim', { 'branch': 'release' } " {{{
 				\]
 " }}}
 Plug 'octref/RootIgnore'
+Plug 'robertmeta/nofrils' " {{{
+	let g:nofrils_heavycomments=1
+	let g:nofrils_strbackgrounds=1
+" }}}
 Plug 'roxma/vim-window-resize-easy'
 Plug 'scrooloose/nerdtree' " {{{
 	let NERDTreeAutoDeleteBuffer=1
@@ -140,7 +144,16 @@ Plug 'vim-scripts/tango.vim'
 
 call plug#end()
 
-colorscheme gruvbox
+colorscheme nofrils-dark
+if g:colors_name == 'nofrils-dark'
+	hi Character ctermfg=darkgreen ctermbg=NONE
+	hi Normal ctermfg=231 ctermbg=NONE
+	hi String ctermfg=darkgreen ctermbg=NONE
+
+	hi link diffAdded         DiffAdd
+	hi link diffRemoved       DiffDelete
+
+endif
 nnoremap <Leader>tcs :call ToggleColor()<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
