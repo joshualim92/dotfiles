@@ -101,6 +101,7 @@ Plug 'neoclide/coc.nvim', { 'branch': 'release' } " {{{
 				\ 'coc-json',
 				\ 'coc-prettier',
 				\ 'coc-snippets',
+				\ 'coc-solargraph',
 				\ 'coc-tslint-plugin',
 				\ 'coc-tsserver',
 				\ 'coc-ultisnips',
