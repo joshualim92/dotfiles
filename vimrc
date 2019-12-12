@@ -116,6 +116,7 @@ Plug 'robertmeta/nofrils' " {{{
 Plug 'roxma/vim-window-resize-easy'
 Plug 'scrooloose/nerdtree' " {{{
 	let NERDTreeAutoDeleteBuffer=1
+	let NERDTreeHijackNetrw=0
 	let NERDTreeMapHelp='<LocalLeader>?'
 	let NERDTreeQuitOnOpen=1
 
