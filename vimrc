@@ -89,6 +89,10 @@ Plug 'mbbill/undotree' " {{{
 " }}}
 Plug 'morhetz/gruvbox'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' } " {{{
+	nmap <Leader>gd <Plug>(coc-definition)
+	nmap <Leader>gi <Plug>(coc-implementation)
+	nmap <Leader>gr <Plug>(coc-references)
+	nmap <Leader>gy <Plug>(coc-type-definition)
 	nmap <Leader>rn <Plug>(coc-rename)
 
 	let g:coc_global_extensions = [
