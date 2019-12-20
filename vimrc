@@ -155,7 +155,7 @@ colorscheme nofrils-dark
 if g:colors_name == 'nofrils-dark'
 	hi Character ctermfg=darkgreen ctermbg=NONE
 	hi Constant ctermfg=darkred ctermbg=NONE
-	hi Normal ctermfg=231 ctermbg=NONE
+	hi Normal ctermbg=NONE
 	hi String ctermfg=darkgreen ctermbg=NONE
 
 	hi link diffAdded         DiffAdd
