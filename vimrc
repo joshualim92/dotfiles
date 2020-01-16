@@ -160,7 +160,17 @@ if g:colors_name == 'nofrils-dark'
 
 	hi link diffAdded         DiffAdd
 	hi link diffRemoved       DiffDelete
+endif
+if g:colors_name == 'nofrils-light'
+	hi Character ctermfg=darkgreen ctermbg=NONE
+	hi Constant ctermfg=darkred ctermbg=NONE
+	hi LineNr ctermbg=NONE
+	hi Normal ctermbg=NONE
+	hi SpecialKey ctermbg=NONE
+	hi String ctermfg=darkgreen ctermbg=NONE
 
+	hi link diffAdded         DiffAdd
+	hi link diffRemoved       DiffDelete
 endif
 nnoremap <Leader>tcs :call ToggleColor()<CR>
 
