@@ -152,6 +152,9 @@ Plug 'vim-scripts/tango.vim'
 call plug#end()
 
 colorscheme nofrils-dark
+" Show error for git commit messages
+hi def link gitcommitOverflow     Error
+
 if g:colors_name == 'nofrils-dark'
 	hi Character ctermfg=darkgreen ctermbg=NONE
 	hi Constant ctermfg=darkred ctermbg=NONE
