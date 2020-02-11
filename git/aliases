@@ -97,3 +97,7 @@
 
 	# Status
 	st = status
+
+	# Switch
+	sw = switch
+	swc = switch -c
