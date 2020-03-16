@@ -59,7 +59,7 @@ alias jb='jobs'
 
 # kubectl
 complete -o bashdefault -o default -o nospace -F __start_kubectl kc
-alias kc='kubectl'
+alias kctl='kubectl'
 
 # ls
 if ls --color -d . &> /dev/null
