@@ -21,6 +21,7 @@ set timeoutlen=1000 ttimeoutlen=0
 set wildignore+=*node_modules/*
 set wildmenu wildmode=list:longest
 set tags^=./.git/tags;
+set statusline+=%F
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                  Plugins                                   "
@@ -67,7 +68,6 @@ Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' } " {{{
 	let g:go_fmt_command='goimports'
 	let g:go_metalinter_autosave=1
 " }}}
-Plug 'itchyny/lightline.vim'
 Plug 'joshualim92/vim-colors-off'
 Plug 'jremmen/vim-ripgrep' " {{{
 	let g:rg_command='rg -i --vimgrep'
