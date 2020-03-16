@@ -247,6 +247,6 @@ nnoremap <Leader>os :!open -a Safari<CR><CR>
 nnoremap <Leader>og :!open https://google.com<CR><CR>
 
 function! ToggleColor ()
-	let color_name = g:colors_name == "off" ? "gruvbox" : "off"
+	let color_name = g:colors_name == "nofrils-dark" ? "gruvbox" : "nofrils-dark"
 	execute "colorscheme " . color_name
 endfunction
