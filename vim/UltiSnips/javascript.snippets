@@ -10,13 +10,13 @@ console.log(${2:"}here mofo $1$2, ${1:${VISUAL}}$0);
 endsnippet
 
 snippet carw "ES6 arrow function to const"
-const $1 = ($2)${3:: $4} => {
+const $1 = ${2:async }($3)${4:: $5} => {
 	${VISUAL}$0
 };
 endsnippet
 
 snippet arw "ES6 arrow function inline"
-($1)${2:: $3} => {$0}
+${1:async }($2)${3:: $4} => {$0}
 endsnippet
 
 snippet creq "const require()" b
