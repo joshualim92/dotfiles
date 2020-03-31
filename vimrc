@@ -75,7 +75,7 @@ Plug 'jremmen/vim-ripgrep' " {{{
 	nnoremap <Leader>rgg :Rg<Space>
 	nnoremap <Leader>rgh :Rg<Space><C-R>=expand('<cword>')<CR><Space><C-R>=expand('%')<CR>
 " }}}
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim' " {{{
 	nnoremap <silent> <Leader>f     :Files<CR>
 	nnoremap <silent> <Leader>b     :Buffers<CR>
