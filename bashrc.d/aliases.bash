@@ -83,6 +83,9 @@ alias addUpNext='osascript ~/Library/Mobile\ Documents/com~apple~ScriptEditor2/D
 alias mdg='mix deps.get'
 alias mip='iex -S mix phx.server'
 
+# ripgrep
+alias rg='rg --hidden'
+
 # skaffold
 alias ska='skaffold'
 

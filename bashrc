@@ -17,7 +17,7 @@ export MANPATH=/usr/local/opt/coreutils/libexec/gnuman:/usr/local/opt/findutils/
 
 export GOPATH=$(go env GOPATH)
 
-export FZF_DEFAULT_COMMAND="fd ."
+export FZF_DEFAULT_COMMAND="fd --hidden ."
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="blsd"
 export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -200'"
