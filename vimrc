@@ -40,6 +40,9 @@ Plug 'SirVer/ultisnips'
 			\ " {{{
 	let g:snips_author='joshualim'
 	let g:UltiSnipsEditSplit='vertical' " :UltiSnipsEditSplit vertically
+	let g:UltiSnipsExpandTrigger='<TAB>'
+	let g:UltiSnipsJumpBackwardTrigger='<S-TAB>'
+	let g:UltiSnipsJumpForwardTrigger='<TAB>'
 	let g:UltiSnipsSnippetsDir='~/.vim/UltiSnips'
 
 	command! UltiSnipsList call UltiSnips#ListSnippets()
