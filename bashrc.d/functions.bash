@@ -21,3 +21,7 @@ gitDeleteGoneBranches() {
 		| awk '{print $1}' \
 		| xargs git branch -d
 }
+
+dockerPullAllImages() {
+	docker images |grep -v REPOSITORY|awk '{print $1}'|xargs -L1 docker pull
+}
