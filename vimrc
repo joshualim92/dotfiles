@@ -161,6 +161,7 @@ hi def link gitcommitOverflow     Error
 
 if g:colors_name == 'nofrils-dark'
 	hi Character ctermfg=darkgreen ctermbg=NONE
+	hi Comment ctermfg=blue ctermbg=NONE
 	hi Constant ctermfg=darkred ctermbg=NONE
 	hi Normal ctermbg=NONE
 	hi String ctermfg=darkgreen ctermbg=NONE
@@ -170,6 +171,7 @@ if g:colors_name == 'nofrils-dark'
 endif
 if g:colors_name == 'nofrils-light'
 	hi Character ctermfg=darkgreen ctermbg=NONE
+	hi Comment ctermfg=blue ctermbg=NONE
 	hi Constant ctermfg=darkred ctermbg=NONE
 	hi LineNr ctermbg=NONE
 	hi Normal ctermbg=NONE
