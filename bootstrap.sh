@@ -12,7 +12,6 @@ brew install \
     coreutils \
     docker-completion \
     docker-compose-completion \
-    elixir \
     fd \
     findutils \
     fpp \
@@ -21,14 +20,9 @@ brew install \
     gnu-sed \
     go \
     htop \
-    kubernetes-cli \
     moreutils \
-    node \
     ripgrep \
-    the_silver_searcher \
     tmux \
-    trash \
-    tree \
     v \
     vim \
     wget \
