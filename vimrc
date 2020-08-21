@@ -67,6 +67,7 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'ciaranm/detectindent' " {{{
 	autocmd BufReadPost * :DetectIndent
 " }}}
+Plug 'elixir-lsp/coc-elixir', {'do': 'yarn install && yarn prepack'}
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' } " {{{
 	let g:go_fmt_command='goimports'
 	let g:go_metalinter_autosave=1
