@@ -12,13 +12,10 @@ brew install \
     coreutils \
     docker-completion \
     docker-compose-completion \
-    fd \
     findutils \
-    fpp \
     gawk \
     git \
     gnu-sed \
-    go \
     htop \
     moreutils \
     ripgrep \
