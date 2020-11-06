@@ -10,6 +10,10 @@ HISTCONTROL=ignoreboth
 HISTFILESIZE=1000000
 HISTSIZE=1000000
 
+# asdf
+. $(brew --prefix asdf)/asdf.sh
+. /usr/local/opt/asdf/etc/bash_completion.d/asdf.bash
+
 export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
 
 export PATH=$HOME/dotfiles/bin:/usr/local/bin:/usr/local/sbin:/usr/local/opt/python/libexec/bin:/usr/local/opt/coreutils/libexec/gnubin:/usr/local/opt/findutils/libexec/gnubin:/usr/local/opt/gnu-sed/libexec/gnubin:/usr/local/opt/go/libexec/bin:$(go env GOPATH)/bin:$PATH

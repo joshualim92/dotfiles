@@ -1,17 +1,18 @@
 #!/bin/bash
-# Install homebrew
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 brew tap chrokh/tap
 brew install --HEAD universal-ctags/universal-ctags/universal-ctags
 brew install --HEAD https://raw.githubusercontent.com/junegunn/blsd/master/blsd.rb
 brew install \
+    asdf \
     bash \
     bash-completion \
     cmake \
     coreutils \
+    curl \
     docker-completion \
     docker-compose-completion \
+    fd \
     findutils \
     gawk \
     git \
