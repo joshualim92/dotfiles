@@ -94,7 +94,7 @@ Plug 'mbbill/undotree' " {{{
 	nnoremap <Leader>u :UndotreeToggle<CR>
 " }}}
 Plug 'morhetz/gruvbox'
-Plug 'neoclide/coc.nvim', { 'branch': 'release' } " {{{
+Plug 'neoclide/coc.nvim', { 'do': 'npm install -g vls', 'branch': 'release' } " {{{
 	nmap <Leader>gd <Plug>(coc-definition)
 	nmap <Leader>gi <Plug>(coc-implementation)
 	nmap <Leader>gr <Plug>(coc-references)
@@ -118,6 +118,7 @@ Plug 'neoclide/coc.nvim', { 'branch': 'release' } " {{{
 				\ 'coc-vetur'
 				\]
 " }}}
+Plug 'posva/vim-vue'
 Plug 'octref/RootIgnore'
 Plug 'robertmeta/nofrils' " {{{
 	let g:nofrils_heavycomments=1
