@@ -140,10 +140,10 @@ Plug 'shime/vim-livedown', {
 			\ 'do': 'npm install -g livedown'
 			\}
 Plug 'tomasr/molokai'
-Plug 'tpope/vim-abolish'
-Plug 'tpope/vim-commentary' " {{{
-	command! -range C <line1>,<line2>Commentary
+Plug 'tomtom/tcomment_vim' " {{{
+	command! -range C <line1>,<line2>TComment
 " }}}
+Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive' " {{{
 	nnoremap <silent> <Leader>gs :Gstatus<CR>
