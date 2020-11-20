@@ -28,11 +28,17 @@ constructor(${1:props}) {
 }
 endsnippet
 
-# Mocha
+# Tests
 snippet des "describe(thing, () => { ... })" b
 describe(${1:}, () => {
 	${0:${VISUAL}}
 });
+endsnippet
+
+snippet test "test()" b
+test('$1', ${2:async }() => {
+	$0
+})
 endsnippet
 
 snippet bef "before(() => { ... })" b
@@ -135,4 +141,9 @@ from vimsnippets import get_comment_format
 endglobal
 snippet todo "TODO comment" bw
 `!p snip.rv=get_comment_format()[0]` ${2:TODO}: $0${3: <${4:`!v strftime('%d-%m-%y')`}${5:, `!v g:snips_author`}>} `!p snip.rv=get_comment_format()[2]`
+endsnippet
+
+# Vue
+snippet vnt "await wrapper.vm.$nextTick()" b
+await wrapper.vm.$nextTick()
 endsnippet
