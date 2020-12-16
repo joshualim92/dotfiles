@@ -9,3 +9,17 @@ endsnippet
 snippet ies "import styled from '@emotion/styled';" b
 import styled from '@emotion/styled';
 endsnippet
+
+snippet fc "Function Component" b
+import React, { FC } from "react";
+
+export interface $1Props {
+	$2
+}
+
+const $1: FC<$1Props> = ($3) => {
+	$0
+};
+
+export default $1;
+endsnippet
