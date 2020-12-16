@@ -4,6 +4,5 @@
   "eslint.autoFixOnSave": true,
 
   "prettier.disableLanguages": [],
-  "prettier.eslintIntegration": true,
-  "prettier.tslintIntegration": true
+  "prettier.eslintIntegration": true
 }
