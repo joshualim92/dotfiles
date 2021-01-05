@@ -6,7 +6,7 @@ brew install --HEAD https://raw.githubusercontent.com/junegunn/blsd/master/blsd.
 brew install \
     asdf \
     bash \
-    bash-completion \
+    bash-completion@2 \
     cmake \
     coreutils \
     curl \

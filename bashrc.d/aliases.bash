@@ -24,7 +24,7 @@ alias emac='emacsclient'
 alias es='emacsclient -c'
 
 # Git
-complete -o bashdefault -o default -o nospace -F _git g
+complete -o bashdefault -o default -o nospace -F __git_wrap__git_main g
 alias g='git'
 
 # google

@@ -33,7 +33,7 @@ done
 unset -v config
 
 [ -f $(brew --prefix)/etc/profile.d/z.sh ] && source $(brew --prefix)/etc/profile.d/z.sh
-[ -f $(brew --prefix)/etc/bash_completion ] && . $(brew --prefix)/etc/bash_completion
+[[ -r "$(brew --prefix)/etc/profile.d/bash_completion.sh" ]] && . "$(brew --prefix)/etc/profile.d/bash_completion.sh"
 
 generateSshKey() {
 	ssh-keygen -t rsa -b 4096 -C "joshua.lim@dominionmarinemedia.com"
