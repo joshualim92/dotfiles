@@ -19,6 +19,9 @@
 	cob = checkout -b
 	cop = checkout -p
 
+	# Cherry-Pick
+	cp = cherry-pick
+
 	# Commit
 	c = commit
 	ca = commit -a
