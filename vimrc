@@ -110,6 +110,7 @@ Plug 'neoclide/coc.nvim', { 'do': 'npm install -g vls', 'branch': 'release' } " 
 				\ 'coc-html',
 				\ 'coc-json',
 				\ 'coc-prettier',
+				\ 'coc-pyright',
 				\ 'coc-snippets',
 				\ 'coc-solargraph',
 				\ 'coc-tsserver',
