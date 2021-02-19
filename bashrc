@@ -21,6 +21,8 @@ export MANPATH=/usr/local/opt/coreutils/libexec/gnuman:/usr/local/opt/findutils/
 
 export GOPATH=$(go env GOPATH)
 
+export ERL_AFLAGS="-kernel shell_history enabled"
+
 export FZF_DEFAULT_COMMAND="fd --hidden ."
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="blsd"
