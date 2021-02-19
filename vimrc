@@ -74,20 +74,19 @@ Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' } " {{{
 	let g:go_metalinter_autosave=1
 " }}}
 Plug 'joshualim92/vim-colors-off'
-Plug 'jremmen/vim-ripgrep' " {{{
-	let g:rg_command='rg -i --vimgrep'
-	let g:rg_highlight=1
-	nnoremap <Leader>rgg :Rg<Space>
-	nnoremap <Leader>rgh :Rg<Space><C-R>=expand('<cword>')<CR><Space><C-R>=expand('%')<CR>
-" }}}
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim' " {{{
 	nnoremap <silent> <Leader>f     :Files<CR>
 	nnoremap <silent> <Leader>b     :Buffers<CR>
-	nnoremap <Leader>ag             :Ag<Space>
-	xnoremap <silent> <Leader>ag    y:Ag <C-R>"<CR>
+
+	command! -bang -nargs=* Rgh call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case -- ".shellescape(<q-args>), 1, fzf#vim#with_preview({ 'dir': expand('%:h') }), <bang>0)
+
+	nnoremap <Leader>rgg             :Rg<Space>
+	nnoremap <Leader>rgh            :Rgh<Space>
+	xnoremap <silent> <Leader>rg    y:Rg <C-R>"<CR>
+
 	nnoremap <silent> <Leader>`     :Marks<CR>
-	nnoremap <silent> <Leader>af    :call fzf#vim#files( '.', {'options':'--query ' . split(expand("%:t"), '\.')[0]})<CR>
+	nnoremap <silent> <Leader>af    :call fzf#vim#files('.', {'options':'--query ' . split(expand("%:t"), '\.')[0]})<CR>
 " }}}
 Plug 'markonm/traces.vim'
 Plug 'mbbill/undotree' " {{{
