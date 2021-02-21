@@ -18,7 +18,7 @@ command! -buffer -range ConvJsonKey :silent
 nnoremap <buffer> <LocalLeader>split :s/, /,\r  /g<CR>
 
 " Add .only to mocha test
-nnoremap <buffer> <LocalLeader>only ?^\s\+\(it\\|describe\)(<CR>f(i.only<ESC><C-O>:w<CR>
+nnoremap <buffer> <LocalLeader>only ?^\s\+\(it\\|describe\\|test\)(<CR>f(i.only<ESC><C-O>:w<CR>
 
 " Run nodemon npm t in vimux
 nnoremap <buffer> <LocalLeader>vpnt :VimuxPromptCommand<CR>nodemon -x "npm t"<CR>
