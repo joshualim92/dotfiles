@@ -25,8 +25,6 @@ export ERL_AFLAGS="-kernel shell_history enabled"
 
 export FZF_DEFAULT_COMMAND="fd --hidden ."
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-export FZF_ALT_C_COMMAND="blsd"
-export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -200'"
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 for config in "$HOME"/dotfiles/bashrc.d/*.bash ; do

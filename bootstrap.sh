@@ -2,7 +2,6 @@
 
 brew tap chrokh/tap
 brew install --HEAD universal-ctags/universal-ctags/universal-ctags
-brew install --HEAD https://raw.githubusercontent.com/junegunn/blsd/master/blsd.rb
 brew install \
     asdf \
     bash \
