@@ -32,3 +32,7 @@ goModOutdated() {
 newTmuxSessionInPwd() {
 	tmux new -s `printf '%s\n' "${PWD##*/}"`
 }
+
+changeTmuxSessionDir() {
+	tmux command-prompt "attach-session -c `pwd`"
+}

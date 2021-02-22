@@ -107,6 +107,7 @@ alias tm='tmux move-window -t'
 alias tn='newTmuxSessionInPwd'
 alias tns='tmux new -s'
 alias tnt='tmux new -t'
+alias tpwd='changeTmuxSessionDir'
 alias ts='tmux switchc -t'
 alias tsl='tmux switchc -l'
 
