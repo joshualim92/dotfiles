@@ -3,8 +3,16 @@ snippet comp "Vue component"
 </template>
 
 <script>
-export default {
+import { defineComponent } from '@vue/composition-api'
 
-}
+export default defineComponent({
+	name: '$1',
+
+	${2:props: {}}
+
+	setup(props, ctx) {
+		$0
+	}
+})
 </script>
 endsnippet
