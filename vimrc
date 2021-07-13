@@ -119,7 +119,6 @@ Plug 'neoclide/coc.nvim', { 'do': 'npm install -g vls', 'branch': 'release' } " 
 				\]
 " }}}
 Plug 'posva/vim-vue'
-Plug 'octref/RootIgnore'
 Plug 'robertmeta/nofrils' " {{{
 	let g:nofrils_heavycomments=1
 	let g:nofrils_strbackgrounds=1
