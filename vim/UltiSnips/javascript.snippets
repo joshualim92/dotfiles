@@ -69,24 +69,46 @@ afterEach(() => {
 $0
 endsnippet
 
-snippet ut "underTest"
-underTest$1($0);
-endsnippet
-
-snippet st "sinon stub" b
-sinon.stub($1, $2);$0
-endsnippet
-
-snippet re "sinon .restore()" b
-$1.$2.restore();$0
-endsnippet
-
 snippet jf "jest.fn()" i
 jest.fn()
 endsnippet
 
 snippet exp "expect()" b
 expect(${1:${VISUAL}})
+endsnippet
+
+snippet vuetest "Vue test skaffolding" b
+import Vue from 'vue'
+import CompositionApi from '@vue/composition-api'
+import { createLocalVue, mount, Wrapper } from '@vue/test-utils'
+
+const localVue = createLocalVue()
+localVue.use(CompositionApi)
+
+import $1 from './$1.vue'
+
+describe('$1', () => {
+	let wrapper: Wrapper<Vue>
+
+	beforeEach(() => {
+		wrapper = mount($1, { localVue })
+	})
+
+	afterEach(() => {
+		wrapper?.destroy()
+	})
+
+	$0
+})
+endsnippet
+
+snippet wnt "await wrapper.vm.$nextTick()" i
+await wrapper.vm.$nextTick()
+$0
+endsnippet
+
+snippet wfd "wrapper.find('[data-testid'']')" i
+wrapper.find('[data-testid="$1"]')$0
 endsnippet
 
 snippet prom "new Promise((resolve, reject)) => {}"
