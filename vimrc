@@ -76,6 +76,10 @@ Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' } " {{{
 Plug 'joshualim92/vim-colors-off'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim' " {{{
+	if exists('$TMUX')
+	  let g:fzf_layout = { 'tmux': '-p90%,60%' }
+	endif
+
 	nnoremap <silent> <Leader>f     :Files<CR>
 	nnoremap <silent> <Leader>b     :Buffers<CR>
 
