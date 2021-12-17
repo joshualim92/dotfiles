@@ -117,6 +117,7 @@ Plug 'neoclide/coc.nvim', { 'do': 'npm install -g vls', 'branch': 'release' } " 
 				\ 'coc-snippets',
 				\ 'coc-solargraph',
 				\ 'coc-tabnine',
+				\ 'coc-tailwindcss',
 				\ 'coc-tsserver',
 				\ 'coc-ultisnips',
 				\ 'coc-vetur'
