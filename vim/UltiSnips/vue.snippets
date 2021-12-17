@@ -1,14 +1,20 @@
 snippet comp "Vue component"
-<template>
+<template lang="pug">
 </template>
 
-<script>
+<script lang="ts">
 import { defineComponent } from '@vue/composition-api'
 
 export default defineComponent({
 	name: '$1',
 
-	${2:props: {}}
+	${2:components: {
+	},}
+
+	${3:props: {
+	},}
+
+	${4:emits: [],}
 
 	setup(props, ctx) {
 		$0
@@ -18,5 +24,5 @@ export default defineComponent({
 endsnippet
 
 snippet ref "Vue3 ref" b
-const $1 = ref($2);$0
+const $1: Ref<$2> = ref($3);$0
 endsnippet
