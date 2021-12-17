@@ -90,7 +90,7 @@ Plug 'junegunn/fzf.vim' " {{{
 	xnoremap <silent> <Leader>rg    y:Rg <C-R>"<CR>
 
 	nnoremap <silent> <Leader>`     :Marks<CR>
-	nnoremap <silent> <Leader>af    :call fzf#vim#files('.', {'options':'--query ' . split(expand("%:t"), '\.')[0]})<CR>
+	nnoremap <silent> <Leader>af    :call fzf#vim#files('.', {'options':'--query ' . split(expand("%:t"), '\.')[0]})<CR><Space>
 " }}}
 Plug 'markonm/traces.vim'
 Plug 'mbbill/undotree' " {{{
