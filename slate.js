@@ -4,7 +4,7 @@ S.configAll({
   resizePercentOf: "screenSize",
   windowHintsIgnoreHiddenWindows: true,
   windowHintsShowIcons: false,
-  windowHintsSpread: true
+  windowHintsSpread: true,
 });
 
 // Store current window states.
@@ -14,133 +14,133 @@ var full = S.op("move", {
   x: "screenOriginX",
   y: "screenOriginY",
   width: "screenSizeX",
-  height: "screenSizeY"
+  height: "screenSizeY",
 });
 var center = S.op("move", {
   x: "screenOriginX+((screenSizeX-windowSizeX)/2)",
   y: "screenOriginY+((screenSizeY-windowSizeY)/2)",
   width: "windowSizeX",
-  height: "windowSizeY"
+  height: "windowSizeY",
 });
 // Left
 var leftBarThird = S.op("push", {
   direction: "left",
-  style: "bar-resize:screenSizeX/3"
+  style: "bar-resize:screenSizeX/3",
 });
 var leftBarHalf = S.op("push", {
   direction: "left",
-  style: "bar-resize:screenSizeX/2"
+  style: "bar-resize:screenSizeX/2",
 });
 var leftBarTwoThirds = S.op("push", {
   direction: "left",
-  style: "bar-resize:screenSizeX/3*2"
+  style: "bar-resize:screenSizeX/3*2",
 });
 // Right
 var rightBarThird = S.op("push", {
   direction: "right",
-  style: "bar-resize:screenSizeX/3"
+  style: "bar-resize:screenSizeX/3",
 });
 var rightBarHalf = S.op("push", {
   direction: "right",
-  style: "bar-resize:screenSizeX/2"
+  style: "bar-resize:screenSizeX/2",
 });
 var rightBarTwoThirds = S.op("push", {
   direction: "right",
-  style: "bar-resize:screenSizeX/3*2"
+  style: "bar-resize:screenSizeX/3*2",
 });
 // Top
-var topBarThird = S.op('push', {
-	'direction': 'top',
-	'style': 'bar-resize:screenSizeY/3',
+var topBarThird = S.op("push", {
+  direction: "top",
+  style: "bar-resize:screenSizeY/3",
 });
-var topBarHalf = S.op('push', {
-	'direction': 'top',
-	'style': 'bar-resize:screenSizeY/2',
+var topBarHalf = S.op("push", {
+  direction: "top",
+  style: "bar-resize:screenSizeY/2",
 });
-var topBarTwoThirds = S.op('push', {
-	'direction': 'top',
-	'style': 'bar-resize:screenSizeY/3*2',
+var topBarTwoThirds = S.op("push", {
+  direction: "top",
+  style: "bar-resize:screenSizeY/3*2",
 });
 // Bottom
-var bottomBarThird = S.op('push', {
-	'direction': 'bottom',
-	'style': 'bar-resize:screenSizeY/3',
+var bottomBarThird = S.op("push", {
+  direction: "bottom",
+  style: "bar-resize:screenSizeY/3",
 });
-var bottomBarHalf = S.op('push', {
-	'direction': 'bottom',
-	'style': 'bar-resize:screenSizeY/2',
+var bottomBarHalf = S.op("push", {
+  direction: "bottom",
+  style: "bar-resize:screenSizeY/2",
 });
-var bottomBarTwoThirds = S.op('push', {
-	'direction': 'bottom',
-	'style': 'bar-resize:screenSizeY/3*2',
+var bottomBarTwoThirds = S.op("push", {
+  direction: "bottom",
+  style: "bar-resize:screenSizeY/3*2",
 });
 // Top Left
-var topLeftCorner = S.op('corner', {
-	'direction': 'top-left',
-	'width': 'screenSizeX/2',
-	'height': 'screenSizeY/2',
+var topLeftCorner = S.op("corner", {
+  direction: "top-left",
+  width: "screenSizeX/2",
+  height: "screenSizeY/2",
 });
-var topLeftTwoThird = S.op('corner', {
-	'direction': 'top-left',
-	'width': 'screenSizeX/3*2',
-	'height': 'screenSizeY/3*2',
+var topLeftTwoThird = S.op("corner", {
+  direction: "top-left",
+  width: "screenSizeX/3*2",
+  height: "screenSizeY/3*2",
 });
-var topLeftThird = S.op('corner', {
-	'direction': 'top-left',
-	'width': 'screenSizeX/3',
-	'height': 'screenSizeY/3',
+var topLeftThird = S.op("corner", {
+  direction: "top-left",
+  width: "screenSizeX/3",
+  height: "screenSizeY/3",
 });
 // Top Right
-var topRightCorner = S.op('corner', {
-	'direction': 'top-right',
-	'width': 'screenSizeX/2',
-	'height': 'screenSizeY/2',
+var topRightCorner = S.op("corner", {
+  direction: "top-right",
+  width: "screenSizeX/2",
+  height: "screenSizeY/2",
 });
-var topRightTwoThird = S.op('corner', {
-	'direction': 'top-right',
-	'width': 'screenSizeX/3*2',
-	'height': 'screenSizeY/3*2',
+var topRightTwoThird = S.op("corner", {
+  direction: "top-right",
+  width: "screenSizeX/3*2",
+  height: "screenSizeY/3*2",
 });
-var topRightThird = S.op('corner', {
-	'direction': 'top-right',
-	'width': 'screenSizeX/3',
-	'height': 'screenSizeY/3',
+var topRightThird = S.op("corner", {
+  direction: "top-right",
+  width: "screenSizeX/3",
+  height: "screenSizeY/3",
 });
 // Bottom Left
-var bottomLeftCorner = S.op('corner', {
-	'direction': 'bottom-left',
-	'width': 'screenSizeX/2',
-	'height': 'screenSizeY/2',
+var bottomLeftCorner = S.op("corner", {
+  direction: "bottom-left",
+  width: "screenSizeX/2",
+  height: "screenSizeY/2",
 });
-var bottomLeftTwoThird = S.op('corner', {
-	'direction': 'bottom-left',
-	'width': 'screenSizeX/3*2',
-	'height': 'screenSizeY/3*2',
+var bottomLeftTwoThird = S.op("corner", {
+  direction: "bottom-left",
+  width: "screenSizeX/3*2",
+  height: "screenSizeY/3*2",
 });
-var bottomLeftThird = S.op('corner', {
-	'direction': 'bottom-left',
-	'width': 'screenSizeX/3',
-	'height': 'screenSizeY/3',
+var bottomLeftThird = S.op("corner", {
+  direction: "bottom-left",
+  width: "screenSizeX/3",
+  height: "screenSizeY/3",
 });
 // Bottom Right
-var bottomRightCorner = S.op('corner', {
-	'direction': 'bottom-right',
-	'width': 'screenSizeX/2',
-	'height': 'screenSizeY/2',
+var bottomRightCorner = S.op("corner", {
+  direction: "bottom-right",
+  width: "screenSizeX/2",
+  height: "screenSizeY/2",
 });
-var bottomRightTwoThird = S.op('corner', {
-	'direction': 'bottom-right',
-	'width': 'screenSizeX/3*2',
-	'height': 'screenSizeY/3*2',
+var bottomRightTwoThird = S.op("corner", {
+  direction: "bottom-right",
+  width: "screenSizeX/3*2",
+  height: "screenSizeY/3*2",
 });
-var bottomRightThird = S.op('corner', {
-	'direction': 'bottom-right',
-	'width': 'screenSizeX/3',
-	'height': 'screenSizeY/3',
+var bottomRightThird = S.op("corner", {
+  direction: "bottom-right",
+  width: "screenSizeX/3",
+  height: "screenSizeY/3",
 });
 
 function getCycleStates(states) {
-  return function(win) {
+  return function (win) {
     if (
       win.pid in windowStates &&
       windowStates[win.pid] !== undefined &&
@@ -164,42 +164,42 @@ var centerCycleOp = getCycleStates(["center"]);
 var leftCycleOp = getCycleStates([
   "leftBarHalf",
   "leftBarTwoThirds",
-  "leftBarThird"
+  "leftBarThird",
 ]);
 var rightCycleOp = getCycleStates([
   "rightBarHalf",
   "rightBarTwoThirds",
-  "rightBarThird"
+  "rightBarThird",
 ]);
 var topCycleOp = getCycleStates([
   "topBarHalf",
   "topBarTwoThirds",
-  "topBarThird"
+  "topBarThird",
 ]);
 var bottomCycleOp = getCycleStates([
   "bottomBarHalf",
   "bottomBarTwoThirds",
-  "bottomBarThird"
+  "bottomBarThird",
 ]);
 var topLeftCornerCycleOp = getCycleStates([
   "topLeftCorner",
   "topLeftTwoThird",
-  "topLeftThird"
+  "topLeftThird",
 ]);
 var topRightCornerCycleOp = getCycleStates([
   "topRightCorner",
   "topRightTwoThird",
-  "topRightThird"
+  "topRightThird",
 ]);
 var bottomLeftCornerCycleOp = getCycleStates([
   "bottomLeftCorner",
   "bottomLeftTwoThird",
-  "bottomLeftThird"
+  "bottomLeftThird",
 ]);
 var bottomRightCornerCycleOp = getCycleStates([
   "bottomRightCorner",
   "bottomRightTwoThird",
-  "bottomRightThird"
+  "bottomRightThird",
 ]);
 
 // 1/8th grids
@@ -207,67 +207,67 @@ var topLeftSubLeft = S.op("move", {
   x: "screenOriginX",
   y: "screenOriginY",
   width: "windowSizeX",
-  height: "windowSizeY"
+  height: "windowSizeY",
 });
 var topLeftSubRight = S.op("move", {
   x: "screenOriginX+screenSizeX/4",
   y: "screenOriginY",
   width: "screenSizeX/4",
-  height: "windowSizeY"
+  height: "windowSizeY",
 });
 var topRightSubLeft = S.op("move", {
   x: "screenOriginX+screenSizeX/2",
   y: "screenOriginY",
   width: "screenSizeX/4",
-  height: "windowSizeY"
+  height: "windowSizeY",
 });
 var topRightSubRight = S.op("move", {
   x: "screenOriginX+screenSizeX/4*3",
   y: "screenOriginY",
   width: "screenSizeX/4",
-  height: "windowSizeY"
+  height: "windowSizeY",
 });
 var bottomLeftSubLeft = S.op("move", {
   x: "screenOriginX",
   y: "screenOriginY+screenSizeY-windowSizeY",
   width: "screenSizeX/4",
-  height: "windowSizeY"
+  height: "windowSizeY",
 });
 var bottomLeftSubRight = S.op("move", {
   x: "screenOriginX+screenSizeX/4",
   y: "screenOriginY+screenSizeY-windowSizeY",
   width: "screenSizeX/4",
-  height: "windowSizeY"
+  height: "windowSizeY",
 });
 var bottomRightSubLeft = S.op("move", {
   x: "screenOriginX+screenSizeX/2",
   y: "screenOriginY+screenSizeY-windowSizeY",
   width: "screenSizeX/4",
-  height: "windowSizeY"
+  height: "windowSizeY",
 });
 var bottomRightSubRight = S.op("move", {
   x: "screenOriginX+screenSizeX/4 * 3",
   y: "screenOriginY+screenSizeY-windowSizeY",
   width: "screenSizeX/4",
-  height: "windowSizeY"
+  height: "windowSizeY",
 });
 
 var topLeftCycleOp = getCycleStates(["topLeftSubLeft", "topLeftSubRight"]);
 var topRightCycleOp = getCycleStates(["topRightSubLeft", "topRightSubRight"]);
 var bottomLeftCycleOp = getCycleStates([
   "bottomLeftSubLeft",
-  "bottomLeftSubRight"
+  "bottomLeftSubRight",
 ]);
 var bottomRightCycleOp = getCycleStates([
   "bottomRightSubLeft",
-  "bottomRightSubRight"
+  "bottomRightSubRight",
 ]);
 
 // Push bindings
 S.bind("j:ctrl,alt", leftCycleOp);
 S.bind("l:ctrl,alt", rightCycleOp);
-S.bind("i:ctrl,alt", topCycleOp);
-S.bind(",:ctrl,alt", bottomCycleOp);
+// S.bind("i:ctrl,alt", topCycleOp);
+// S.bind(",:ctrl,alt", bottomCycleOp);
 S.bind("u:ctrl,alt", topLeftCornerCycleOp);
 S.bind("o:ctrl,alt", topRightCornerCycleOp);
 S.bind("m:ctrl,alt", bottomLeftCornerCycleOp);
@@ -278,6 +278,27 @@ S.bind("n:ctrl,alt", bottomLeftCycleOp);
 S.bind("/:ctrl,alt", bottomRightCycleOp);
 S.bind("k:ctrl,alt", centerCycleOp);
 S.bind(";:ctrl,alt", fullCycleOp);
+
+// Resize bindings
+S.bind(
+  "i:ctrl,alt",
+  S.op("move", {
+    x: "windowTopLeftX - windowSizeX * .05",
+    y: "windowTopLeftY",
+    width: "windowSizeX+windowSizeX * .1",
+    height: "windowSizeY",
+  })
+);
+
+S.bind(
+  ",:ctrl,alt",
+  S.op("move", {
+    x: "windowTopLeftX + windowSizeX * .05",
+    y: "windowTopLeftY",
+    width: "windowSizeX - windowSizeX * .1",
+    height: "windowSizeY",
+  })
+);
 
 // Throw bindings
 // S.bind(
@@ -322,6 +343,6 @@ S.bind(";:ctrl,alt", fullCycleOp);
 // S.bind(",:ctrl;alt", S.op("focus", { direction: "down" }));
 
 // Hint binding
-// var hintChars = "JKLASDFGH";
-// S.bind("space:ctrl;cmd", S.op("hint", { characters: hintChars }));
-// S.bind("space:ctrl;alt", S.op("hint", { characters: hintChars }));
+var hintChars = "JKLASDFGH";
+S.bind("space:ctrl;cmd", S.op("hint", { characters: hintChars }));
+S.bind("space:ctrl;alt", S.op("hint", { characters: hintChars }));
