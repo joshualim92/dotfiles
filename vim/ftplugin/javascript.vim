@@ -8,7 +8,7 @@ let g:tern_map_keys=1 "enable keyboard shortcuts
 let g:tern_show_argument_hints='on_hold' "show argument hints
 
 " Cleanup mocha test file of .only
-command! -buffer CleanUpTest %s/.only(/(/g
+command! -buffer CleanUpTest %s/\.only(/(/g
 " Remove \" in JSON keys and convert \" to \' in values
 command! -buffer -range ConvJsonKey :silent
 			\ <line1>,<line2>s/"\(\w\+\)":/\1:/g
@@ -17,7 +17,7 @@ command! -buffer -range ConvJsonKey :silent
 " Split commas into new lines
 nnoremap <buffer> <LocalLeader>split :s/, /,\r  /g<CR>
 
-" Add .only to mocha test
+" Add .only to test
 nnoremap <buffer> <LocalLeader>only ?^\s\+\(it\\|describe\\|test\)(<CR>f(i.only<ESC><C-O>:w<CR>
 
 " Run nodemon npm t in vimux
