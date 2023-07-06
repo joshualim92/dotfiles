@@ -106,6 +106,8 @@ Plug 'neoclide/coc.nvim', { 'do': 'npm install -g vls', 'branch': 'release' } " 
 	nnoremap <silent><nowait> <Leader>p :<C-u>CocListResume<CR>
 
 	let g:coc_global_extensions = [
+				\ '@yaegassy/coc-volar',
+				\ '@yaegassy/coc-volar-tools',
 				\ 'coc-css',
 				\ 'coc-elixir',
 				\ 'coc-eslint',
@@ -117,11 +119,9 @@ Plug 'neoclide/coc.nvim', { 'do': 'npm install -g vls', 'branch': 'release' } " 
 				\ 'coc-pyright',
 				\ 'coc-snippets',
 				\ 'coc-solargraph',
-				\ 'coc-tabnine',
-				\ 'coc-tailwindcss',
+				\ '@yaegassy/coc-tailwindcss3',
 				\ 'coc-tsserver',
 				\ 'coc-ultisnips',
-				\ 'coc-vetur'
 				\]
 " }}}
 Plug 'posva/vim-vue'
