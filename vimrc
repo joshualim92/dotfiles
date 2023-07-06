@@ -103,6 +103,7 @@ Plug 'neoclide/coc.nvim', { 'do': 'npm install -g vls', 'branch': 'release' } " 
 	nmap <Leader>gr <Plug>(coc-references)
 	nmap <Leader>gy <Plug>(coc-type-definition)
 	nmap <Leader>rn <Plug>(coc-rename)
+	nnoremap <silent><nowait> <Leader>p :<C-u>CocListResume<CR>
 
 	let g:coc_global_extensions = [
 				\ 'coc-css',
