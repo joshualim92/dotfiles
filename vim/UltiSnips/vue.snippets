@@ -26,3 +26,15 @@ endsnippet
 snippet ref "Vue3 ref" b
 const $1: Ref<$2> = ref($3);$0
 endsnippet
+
+snippet watch "watch()" b
+watch(() => $1, () => {
+	console.log("$1:", $1)
+}, { immediate: true })
+endsnippet
+
+snippet we "watchEffect()" b
+watchEffect(() => {
+	console.log('$1:', $1)
+})
+endsnippet
