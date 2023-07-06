@@ -179,6 +179,10 @@ snippet todo "TODO comment" bw
 `!p snip.rv=get_comment_format()[0]` ${2:TODO}: $0${3: <${4:`!v strftime('%d-%m-%y')`}${5:, `!v g:snips_author`}>} `!p snip.rv=get_comment_format()[2]`
 endsnippet
 
+snippet sst "Surround in string template" i
+\`${${1:${VISUAL}}}\`
+endsnippet
+
 # Vue
 snippet vnt "await wrapper.vm.$nextTick()" b
 await wrapper.vm.$nextTick()
