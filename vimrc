@@ -22,6 +22,7 @@ set wildignore+=*node_modules/*
 set wildmenu wildmode=list:longest
 set tags^=./.git/tags;
 set statusline+=%F
+set shiftround
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                  Plugins                                   "
