@@ -124,10 +124,7 @@ Plug 'neoclide/coc.nvim', { 'do': 'npm install -g vls', 'branch': 'release' } " 
 				\]
 " }}}
 Plug 'posva/vim-vue'
-Plug 'robertmeta/nofrils' " {{{
-	let g:nofrils_heavycomments=1
-	let g:nofrils_strbackgrounds=1
-" }}}
+Plug 'robertmeta/nofrils'
 Plug 'roxma/vim-window-resize-easy'
 Plug 'scrooloose/nerdtree' " {{{
 	let NERDTreeAutoDeleteBuffer=1
@@ -163,32 +160,35 @@ Plug 'vim-scripts/tango.vim'
 call plug#end()
 
 colorscheme nofrils-dark
-" Show error for git commit messages
-hi def link gitcommitOverflow     Error
+function! SetNoFrilsColors()
+	" Show error for git commit messages
+	hi def link gitcommitOverflow     Error
+	" hi Comment ctermfg=blue ctermbg=NONE
 
-if g:colors_name == 'nofrils-dark'
-	hi Character ctermfg=darkgreen ctermbg=NONE
-	hi Comment ctermfg=blue ctermbg=NONE
-	hi Constant ctermfg=darkred ctermbg=NONE
-	hi Normal ctermbg=NONE
-	hi String ctermfg=darkgreen ctermbg=NONE
+	if g:colors_name == 'nofrils-dark'
+		" hi Character ctermfg=darkgreen ctermbg=NONE
+		hi Comment ctermfg=blue ctermbg=NONE
+		" hi Constant ctermfg=darkred ctermbg=NONE
+		hi Normal ctermbg=NONE
+		" hi String ctermfg=darkgreen ctermbg=NONE
+		"
+		hi link diffAdded         DiffAdd
+		hi link diffRemoved       DiffDelete
+	endif
+	if g:colors_name == 'nofrils-light'
+		hi Character ctermfg=darkgreen ctermbg=NONE
+		hi Comment ctermfg=blue ctermbg=NONE
+		hi Constant ctermfg=darkred ctermbg=NONE
+		hi LineNr ctermbg=NONE
+		hi Normal ctermbg=NONE
+		hi SpecialKey ctermbg=NONE
+		hi String ctermfg=darkgreen ctermbg=NONE
 
-	hi link diffAdded         DiffAdd
-	hi link diffRemoved       DiffDelete
-endif
-if g:colors_name == 'nofrils-light'
-	hi Character ctermfg=darkgreen ctermbg=NONE
-	hi Comment ctermfg=blue ctermbg=NONE
-	hi Constant ctermfg=darkred ctermbg=NONE
-	hi LineNr ctermbg=NONE
-	hi Normal ctermbg=NONE
-	hi SpecialKey ctermbg=NONE
-	hi String ctermfg=darkgreen ctermbg=NONE
-
-	hi link diffAdded         DiffAdd
-	hi link diffRemoved       DiffDelete
-endif
-nnoremap <Leader>tcs :call ToggleColor()<CR>
+		hi link diffAdded         DiffAdd
+		hi link diffRemoved       DiffDelete
+	endif
+endfunction
+call SetNoFrilsColors()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                Cursorshape                                 "
@@ -274,7 +274,13 @@ command! BD bn | bd#
 nnoremap <Leader>os :!open -a Safari<CR><CR>
 nnoremap <Leader>og :!open https://google.com<CR><CR>
 
-function! ToggleColor ()
+nnoremap <Leader>tcs :call ToggleColor()<CR>
+function! ToggleColor()
 	let color_name = g:colors_name == "nofrils-dark" ? "gruvbox" : "nofrils-dark"
+
 	execute "colorscheme " . color_name
+
+	if color_name == "nofrils-dark"
+		call SetNoFrilsColors()
+	endif
 endfunction
