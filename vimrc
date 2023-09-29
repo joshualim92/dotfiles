@@ -37,7 +37,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'SirVer/ultisnips'
 			\ | Plug 'honza/vim-snippets'
-			\ | Plug 'mlaursen/vim-react-snippets'
 			\ " {{{
 	let g:snips_author='joshualim'
 	let g:UltiSnipsEditSplit='vertical' " :UltiSnipsEditSplit vertically
@@ -49,7 +48,6 @@ Plug 'SirVer/ultisnips'
 	command! UltiSnipsList call UltiSnips#ListSnippets()
 " }}}
 Plug 'airblade/vim-gitgutter'
-Plug 'altercation/vim-colors-solarized'
 Plug 'benmills/vimux' "{{{
 	nnoremap <Leader>vp :VimuxPromptCommand<CR>
 	nnoremap <Leader>vl :VimuxRunLastCommand<CR>
