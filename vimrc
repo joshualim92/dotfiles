@@ -15,14 +15,14 @@ set mouse=a ttymouse=xterm2 " Allows for mouse mode inside tmux
 set noswapfile
 set number
 set path+=**
+set shiftround
 set showcmd " display incomplete commands
+set statusline+=%F
+set tags^=./.git/tags;
 set textwidth=78 colorcolumn=+1
 set timeoutlen=1000 ttimeoutlen=0
 set wildignore+=*node_modules/*
 set wildmenu wildmode=list:longest
-set tags^=./.git/tags;
-set statusline+=%F
-set shiftround
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                                  Plugins                                   "
