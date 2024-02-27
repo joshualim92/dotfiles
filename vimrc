@@ -106,6 +106,15 @@ Plug 'neoclide/coc.nvim', { 'do': 'npm install -g vls', 'branch': 'release' } " 
 	nmap <Leader>rn <Plug>(coc-rename)
 	nnoremap <silent><nowait> <Leader>p :<C-u>CocListResume<CR>
 
+	" Remap keys for applying code actions at the cursor position
+	nmap <Leader>cac  <Plug>(coc-codeaction-cursor)
+	" Remap keys for apply code actions affect whole buffer
+	nmap <Leader>cas  <Plug>(coc-codeaction-source)
+
+	" Remap keys for applying refactor code actions
+	nmap <silent> <Leader>re <Plug>(coc-codeaction-refactor)
+	xmap <silent> <Leader>re <Plug>(coc-codeaction-refactor-selected)
+
 	let g:coc_global_extensions = [
 				\ '@yaegassy/coc-volar',
 				\ '@yaegassy/coc-volar-tools',
