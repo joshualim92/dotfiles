@@ -151,7 +151,6 @@ Plug 'shime/vim-livedown', {
 			\ 'for': 'markdown',
 			\ 'do': 'npm install -g livedown'
 			\}
-Plug 'tomasr/molokai'
 Plug 'tomtom/tcomment_vim' " {{{
 	command! -range C <line1>,<line2>TComment
 " }}}
@@ -182,7 +181,8 @@ function! SetNoFrilsColors()
 		" hi Constant ctermfg=darkred ctermbg=NONE
 		hi Normal ctermbg=NONE
 		" hi String ctermfg=darkgreen ctermbg=NONE
-		"
+		hi CocUnusedHighlight ctermfg=gray
+
 		hi link diffAdded         DiffAdd
 		hi link diffRemoved       DiffDelete
 	endif
