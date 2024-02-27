@@ -21,6 +21,7 @@ set statusline+=%F
 set tags^=./.git/tags;
 set textwidth=78 colorcolumn=+1
 set timeoutlen=1000 ttimeoutlen=0
+set updatetime=300 " Having longer updatetime (default is 4000 ms = 4s) leads to noticeable delays and poor user experience
 set wildignore+=*node_modules/*
 set wildmenu wildmode=list:longest
 
