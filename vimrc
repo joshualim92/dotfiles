@@ -86,6 +86,7 @@ Plug 'junegunn/fzf.vim' " {{{
 	command! -bang -nargs=* Rgh call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case -- ".shellescape(<q-args>), 1, fzf#vim#with_preview({ 'dir': expand('%:h') }), <bang>0)
 
 	nnoremap <Leader>rgg             :Rg<Space>
+	nnoremap <Leader>rgf             :Rg<Space><C-R>=expand('%:t')<CR>
 	nnoremap <Leader>rgh            :Rgh<Space>
 	xnoremap <silent> <Leader>rg    y:Rg <C-R>"<CR>
 
