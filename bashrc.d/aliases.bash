@@ -86,6 +86,10 @@ alias mip='iex -S mix phx.server'
 # ripgrep
 alias rg='rg --hidden'
 
+# screencapture
+alias sc='screencapture'
+alias sci='screencapture -i screenshot.png'
+
 # skaffold
 alias ska='skaffold'
 
