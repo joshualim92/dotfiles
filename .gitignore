@@ -3,3 +3,4 @@ vim/autoload/plug.vim*
 vim/colorscheme.vim
 vim/plugged/
 vim/view/
+.aider*
