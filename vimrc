@@ -50,12 +50,21 @@ Plug 'SirVer/ultisnips'
 " }}}
 Plug 'airblade/vim-gitgutter'
 Plug 'benmills/vimux' "{{{
+	let g:VimuxHeight = "33%"
+	let g:VimuxOrientation = "h"
+	let g:VimuxUseNearest = 0
+
 	nnoremap <Leader>vp :VimuxPromptCommand<CR>
 	nnoremap <Leader>vl :VimuxRunLastCommand<CR>
 	nnoremap <Leader>vi :VimuxInspectRunner<CR>
 	nnoremap <Leader>vq :VimuxCloseRunner<CR>
 	nnoremap <Leader>vx :VimuxInterruptRunner<CR>
 	nnoremap <Leader>vz :call VimuxZoomRunner()<CR>
+
+	" Send current buffer to Vimux
+	nnoremap <Leader>aif :call VimuxRunCommand("aider " . expand('%:p'))<CR>
+	" Send list of buffers to Vimux
+	nnoremap <Leader>aib :call VimuxRunCommand("aider " . join(map(filter(range(1, bufnr('$')), 'buflisted(v:val)'), 'fnamemodify(bufname(v:val), ":p")')))<CR>
 " }}}
 Plug 'christoomey/vim-titlecase' " {{{
 	let g:titlecase_map_keys=0
