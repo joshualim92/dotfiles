@@ -10,19 +10,17 @@ HISTCONTROL=ignoreboth
 HISTFILESIZE=1000000
 HISTSIZE=1000000
 
-eval "$(/opt/homebrew/bin/brew shellenv)"
+BREW_PREFIX=$(brew --prefix)
 
 # asdf
-. $(brew --prefix asdf)/libexec/asdf.sh
-. $(brew --prefix asdf)/etc/bash_completion.d/asdf.bash
+. $BREW_PREFIX/opt/asdf/libexec/asdf.sh
+. $BREW_PREFIX/etc/bash_completion.d/asdf.bash
 
 export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
 
-export PATH=$HOME/dotfiles/bin:/usr/local/bin:/usr/local/sbin:/usr/local/opt/python/libexec/bin:$(brew --prefix)/opt/coreutils/libexec/gnubin:$(brew --prefix)/opt/findutils/libexec/gnubin:$(brew --prefix)/opt/gnu-sed/libexec/gnubin:/usr/local/opt/go/libexec/bin:$(go env GOPATH)/bin:$PATH
+export PATH=$HOME/dotfiles/bin:/usr/local/bin:/usr/local/sbin:/usr/local/opt/python/libexec/bin:$BREW_PREFIX/opt/coreutils/libexec/gnubin:$BREW_PREFIX/opt/findutils/libexec/gnubin:$BREW_PREFIX/opt/gnu-sed/libexec/gnubin:/usr/local/opt/go/libexec/bin:$PATH
 
 export MANPATH=/usr/local/opt/coreutils/libexec/gnuman:/usr/local/opt/findutils/libexec/gnuman:$MANPATH
-
-export GOPATH=$(go env GOPATH)
 
 export ERL_AFLAGS="-kernel shell_history enabled"
 
@@ -35,5 +33,5 @@ for config in "$HOME"/dotfiles/bashrc.d/*.bash ; do
 done
 unset -v config
 
-[ -f $(brew --prefix)/etc/profile.d/z.sh ] && source $(brew --prefix)/etc/profile.d/z.sh
-[[ -r "$(brew --prefix)/etc/profile.d/bash_completion.sh" ]] && . "$(brew --prefix)/etc/profile.d/bash_completion.sh"
+[ -f $BREW_PREFIX/etc/profile.d/z.sh ] && source $BREW_PREFIX/etc/profile.d/z.sh
+[[ -r "$BREW_PREFIX/etc/profile.d/bash_completion.sh" ]] && . "$BREW_PREFIX/etc/profile.d/bash_completion.sh"
