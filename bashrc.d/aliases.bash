@@ -16,7 +16,7 @@ alias vdir='vdir --color=auto'
 complete -o bashdefault -o default -o nospace -F _docker doc
 complete -o bashdefault -o default -o nospace -F _docker_compose docmp
 alias doc='docker'
-alias docmp='docker-compose'
+alias docmp='docker compose'
 alias docr='docker run -it --rm'
 
 # Emacs
