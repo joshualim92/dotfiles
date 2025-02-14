@@ -83,6 +83,17 @@ it('$1', ${2:async }() => {
 })
 endsnippet
 
+snippet nuxttest "Nuxt test" b
+import { it, expect } from 'vitest'
+import { mountSuspended } from '@nuxt/test-utils/runtime'
+import $1 from './$1.vue'
+
+it('$2', async () => {
+	const component = await mountSuspended($1)
+	expect(component.text()).toMatchInlineSnapshot('"This is an auto-imported component"')$0
+})
+endsnippet
+
 snippet vuetest "Vue test skaffolding" b
 import Vue from 'vue'
 import CompositionApi from '@vue/composition-api'

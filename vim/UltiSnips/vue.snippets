@@ -1,5 +1,15 @@
 snippet comp "Vue component"
 <template>
+$1
+</template>
+
+<script lang="ts" setup>
+$0
+</script>
+endsnippet
+
+snippet comp2 "Vue component"
+<template>
 </template>
 
 <script lang="ts">
@@ -24,7 +34,7 @@ export default defineComponent({
 endsnippet
 
 snippet ref "Vue3 ref" b
-const $1: Ref<$2> = ref($3);$0
+const $1 = ref$3($2);$0
 endsnippet
 
 snippet watch "watch()" b
