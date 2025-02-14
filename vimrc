@@ -185,6 +185,8 @@ call plug#end()
 
 colorscheme nofrils-dark
 function! SetNoFrilsColors()
+	hi markdownCodeBlock ctermbg=NONE
+
 	" Show error for git commit messages
 	hi def link gitcommitOverflow     Error
 	" hi Comment ctermfg=blue ctermbg=NONE
