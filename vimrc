@@ -82,6 +82,7 @@ Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' } " {{{
 	let g:go_fmt_command='goimports'
 	let g:go_metalinter_autosave=1
 " }}}
+Plug 'github/copilot.vim'
 Plug 'joshualim92/vim-colors-off'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim' " {{{
@@ -142,6 +143,10 @@ Plug 'neoclide/coc.nvim', { 'do': 'npm install -g vls', 'branch': 'release' } " 
 				\ 'coc-tsserver',
 				\ 'coc-ultisnips',
 				\]
+" }}}
+Plug 'pasky/claude.vim' "{{{
+	nnoremap <Leader>cc :ClaudeChat<CR>
+	xnoremap <Leader>ci :ClaudeImplement<Space>
 " }}}
 Plug 'posva/vim-vue'
 Plug 'robertmeta/nofrils'
