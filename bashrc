@@ -13,8 +13,7 @@ HISTSIZE=1000000
 BREW_PREFIX=$(brew --prefix)
 
 # asdf
-. $BREW_PREFIX/opt/asdf/libexec/asdf.sh
-. $BREW_PREFIX/etc/bash_completion.d/asdf.bash
+export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 
 export PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
 
