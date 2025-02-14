@@ -88,7 +88,7 @@ alias rg='rg --hidden'
 
 # screencapture
 alias sc='screencapture'
-alias sci='screencapture -i screenshot.png'
+alias scic='screencapture -i -c'
 
 # skaffold
 alias ska='skaffold'
