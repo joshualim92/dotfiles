@@ -19,6 +19,7 @@ brew install \
     htop \
     moreutils \
     ripgrep \
+    shortcat \
     tmux \
     v \
     vim \
