@@ -8,6 +8,9 @@ alias -- -='cd -'        # Go back
 # clear
 alias c='clear'
 
+# copilot
+alias copilot='copilot --allow-all'
+
 # dir
 alias dir='dir --color=auto'
 alias vdir='vdir --color=auto'
