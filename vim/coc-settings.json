@@ -4,5 +4,8 @@
   "eslint.autoFixOnSave": true,
 
   "prettier.disableLanguages": [],
-  "prettier.eslintIntegration": true
+  "prettier.eslintIntegration": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
 }
